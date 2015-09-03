@@ -104,34 +104,36 @@ Main Components
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 800px;
+  height: 100vh;
 }
-/* line 110, ../scss/partials/_parallax.scss */
+/* line 113, ../scss/partials/_parallax.scss */
 [data-animation="parallax"] .cd-section:first-of-type > div, [data-animation="fixed"] .cd-section:first-of-type > div, [data-animation="opacity"] .cd-section:first-of-type > div {
   background-image: url("../img/aus-1.jpg");
 }
-/* line 116, ../scss/partials/_parallax.scss */
+/* line 119, ../scss/partials/_parallax.scss */
 [data-animation="parallax"] .cd-section:nth-of-type(2) > div, [data-animation="fixed"] .cd-section:nth-of-type(2) > div, [data-animation="opacity"] .cd-section:nth-of-type(2) > div {
   background-image: url("../img/aus-2.jpg");
 }
-/* line 122, ../scss/partials/_parallax.scss */
+/* line 125, ../scss/partials/_parallax.scss */
 [data-animation="parallax"] .cd-section:nth-of-type(3) > div, [data-animation="fixed"] .cd-section:nth-of-type(3) > div, [data-animation="opacity"] .cd-section:nth-of-type(3) > div {
   background-image: url("../img/aus-3.jpg");
 }
-/* line 128, ../scss/partials/_parallax.scss */
+/* line 131, ../scss/partials/_parallax.scss */
 [data-animation="parallax"] .cd-section:nth-of-type(4) > div, [data-animation="fixed"] .cd-section:nth-of-type(4) > div, [data-animation="opacity"] .cd-section:nth-of-type(4) > div {
   background-image: url("../img/aus-4.jpg");
 }
-/* line 134, ../scss/partials/_parallax.scss */
+/* line 137, ../scss/partials/_parallax.scss */
 [data-animation="parallax"] .cd-section:nth-of-type(5) > div, [data-animation="fixed"] .cd-section:nth-of-type(5) > div, [data-animation="opacity"] .cd-section:nth-of-type(5) > div {
   background-image: url("../img/aus-5.jpg");
 }
 @media only screen and (min-width: 1050px) {
-  /* line 142, ../scss/partials/_parallax.scss */
+  /* line 145, ../scss/partials/_parallax.scss */
   .cd-section h2 {
     font-size: 4rem;
     font-weight: 300;
   }
-  /* line 147, ../scss/partials/_parallax.scss */
+  /* line 150, ../scss/partials/_parallax.scss */
   [data-hijacking="on"] .cd-section {
     opacity: 0;
     visibility: hidden;
@@ -140,45 +142,45 @@ Main Components
     left: 0;
     width: 100%;
   }
-  /* line 155, ../scss/partials/_parallax.scss */
+  /* line 158, ../scss/partials/_parallax.scss */
   [data-hijacking="on"] .cd-section > div {
     visibility: visible;
   }
-  /* line 160, ../scss/partials/_parallax.scss */
+  /* line 163, ../scss/partials/_parallax.scss */
   [data-hijacking="off"] .cd-section > div {
     opacity: 0;
   }
-  /* line 164, ../scss/partials/_parallax.scss */
+  /* line 167, ../scss/partials/_parallax.scss */
   [data-animation="rotate"] .cd-section {
     /* enable a 3D-space for children elements */
     -webkit-perspective: 1800px;
     -moz-perspective: 1800px;
     perspective: 1800px;
   }
-  /* line 169, ../scss/partials/_parallax.scss */
+  /* line 172, ../scss/partials/_parallax.scss */
   [data-hijacking="on"][data-animation="rotate"] .cd-section:not(:first-of-type) {
     -webkit-perspective-origin: center 0;
     -moz-perspective-origin: center 0;
     perspective-origin: center 0;
   }
-  /* line 173, ../scss/partials/_parallax.scss */
+  /* line 176, ../scss/partials/_parallax.scss */
   [data-animation="scaleDown"] .cd-section > div, [data-animation="gallery"] .cd-section > div, [data-animation="catch"] .cd-section > div {
     box-shadow: 0 0 0 rgba(25, 30, 46, 0.4);
   }
-  /* line 180, ../scss/partials/_parallax.scss */
+  /* line 183, ../scss/partials/_parallax.scss */
   [data-animation="opacity"] .cd-section.visible > div {
     z-index: 1;
   }
 }
 
 @media only screen and (min-width: 1050px) {
-  /* line 187, ../scss/partials/_parallax.scss */
+  /* line 190, ../scss/partials/_parallax.scss */
   .cd-section:first-of-type > div::before {
     display: none;
   }
 }
 @media only screen and (min-width: 1050px) {
-  /* line 192, ../scss/partials/_parallax.scss */
+  /* line 195, ../scss/partials/_parallax.scss */
   .cd-section > div {
     position: fixed;
     top: 0;
@@ -193,11 +195,11 @@ Main Components
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
-  /* line 204, ../scss/partials/_parallax.scss */
+  /* line 207, ../scss/partials/_parallax.scss */
   [data-hijacking="on"] .cd-section > div {
     position: absolute;
   }
-  /* line 208, ../scss/partials/_parallax.scss */
+  /* line 211, ../scss/partials/_parallax.scss */
   [data-animation="rotate"] .cd-section > div {
     -webkit-transform-origin: center bottom;
     -moz-transform-origin: center bottom;
@@ -207,7 +209,7 @@ Main Components
   }
 }
 
-/* line 214, ../scss/partials/_parallax.scss */
+/* line 217, ../scss/partials/_parallax.scss */
 .cd-vertical-nav {
   /* lateral navigation */
   position: fixed;
@@ -222,7 +224,7 @@ Main Components
   transform: translateY(-50%);
   display: none;
 }
-/* line 222, ../scss/partials/_parallax.scss */
+/* line 225, ../scss/partials/_parallax.scss */
 .cd-vertical-nav a {
   display: block;
   height: 40px;
@@ -233,7 +235,7 @@ Main Components
   white-space: nowrap;
   background: url(../img/cd-icon-arrow.svg) no-repeat center center;
 }
-/* line 234, ../scss/partials/_parallax.scss */
+/* line 237, ../scss/partials/_parallax.scss */
 .cd-vertical-nav a.cd-prev {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
@@ -242,7 +244,7 @@ Main Components
   transform: rotate(180deg);
   margin-bottom: 10px;
 }
-/* line 239, ../scss/partials/_parallax.scss */
+/* line 242, ../scss/partials/_parallax.scss */
 .cd-vertical-nav a.inactive {
   visibility: hidden;
   opacity: 0;
@@ -251,7 +253,7 @@ Main Components
   transition: opacity 0.2s 0s, visibility 0s 0.2s;
 }
 @media only screen and (min-width: 1050px) {
-  /* line 214, ../scss/partials/_parallax.scss */
+  /* line 217, ../scss/partials/_parallax.scss */
   .cd-vertical-nav {
     display: block;
   }
@@ -265,4 +267,19 @@ Main Components
 /* line 5, ../scss/partials/_page-style.scss */
 #slide-one p {
   color: red !important;
+}
+
+/* line 9, ../scss/partials/_page-style.scss */
+#slide-two {
+  background-color: pink;
+}
+
+/* line 13, ../scss/partials/_page-style.scss */
+#slide-three {
+  background-color: blue;
+}
+
+/* line 17, ../scss/partials/_page-style.scss */
+.cd-section {
+  position: relative;
 }

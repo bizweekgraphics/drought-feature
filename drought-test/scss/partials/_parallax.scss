@@ -105,6 +105,9 @@ body[data-hijacking="on"] {
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
+
+		min-height: 800px;
+		height: 100vh;
 	}
 
 	[data-animation="parallax"] &:first-of-type > div,
