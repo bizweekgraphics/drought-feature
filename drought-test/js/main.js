@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
 	//variables
-	var hijacking= $('body').data('hijacking'),
-		animationType = $('body').data('animation'),
+	var hijacking= $('.parallax_wrapper').data('hijacking'),
+		animationType = $('.parallax_wrapper').data('animation'),
 		delta = 0,
         scrollThreshold = 5,
         actual = 1,

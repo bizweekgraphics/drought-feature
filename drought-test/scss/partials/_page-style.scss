@@ -19,3 +19,14 @@
 
 	// min-height: 500px;
 }
+
+
+.lede, .parallax_wrapper {
+	position: relative;
+	z-index: 2;
+}
+
+.body-copy {
+	z-index: 1;
+    min-height: 100%;
+}

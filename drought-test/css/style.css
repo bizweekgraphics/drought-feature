@@ -276,10 +276,22 @@ Main Components
 
 /* line 13, ../scss/partials/_page-style.scss */
 #slide-three {
-  background-color: blue;
+  background-color: golden-rod;
 }
 
 /* line 17, ../scss/partials/_page-style.scss */
 .cd-section {
   position: relative;
+}
+
+/* line 24, ../scss/partials/_page-style.scss */
+.lede, .parallax_wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* line 29, ../scss/partials/_page-style.scss */
+.body-copy {
+  z-index: 1;
+  min-height: 100%;
 }
