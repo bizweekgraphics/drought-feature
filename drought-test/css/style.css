@@ -3,51 +3,42 @@
 Primary style
 
 -------------------------------- */
+/* line 7, ../scss/partials/_parallax.scss */
 *, *::after, *::before {
   box-sizing: border-box;
 }
 
+/* line 11, ../scss/partials/_parallax.scss */
 html {
   font-size: 62.5%;
 }
 
+/* line 15, ../scss/partials/_parallax.scss */
 body {
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
   color: #ffffff;
-  /*background-color: #22283f;*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* line 24, ../scss/partials/_parallax.scss */
 body::before {
   /* never visible - this is used in jQuery to check the current MQ */
   content: 'mobile';
   display: none;
 }
 @media only screen and (min-width: 1050px) {
+  /* line 32, ../scss/partials/_parallax.scss */
   body::before {
     /* never visible - this is used in jQuery to check the current MQ */
     content: 'desktop';
   }
 }
 
+/* line 39, ../scss/partials/_parallax.scss */
 a {
   color: #267481;
   text-decoration: none;
-}
-
-p {
-  color: #3c3c3c;
-  font-family: Georgia;
-  font-size: 18px;
-  line-height: 29px;
-  width: 50%;
-  margin: 30px auto;
-}
-
-.body-copy p:first-of-type {
-  margin-top: 0;
-  padding-top: 30px;
 }
 
 /* -------------------------------- 
@@ -56,41 +47,29 @@ Main Components
 
 -------------------------------- */
 @media only screen and (min-width: 1050px) {
+  /* line 50, ../scss/partials/_parallax.scss */
   body[data-hijacking="on"] {
     overflow: hidden;
   }
 }
 
-.lede {
-  background-image: url("../img/aus-1.jpg");
-  height: 100vh;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.body-copy {
-  background-color: #fff;
-  height: auto;
-  position: relative;
-}
-
+/* line 57, ../scss/partials/_parallax.scss */
 .cd-section {
   height: 100vh;
 }
-.lede h2 {
+/* line 60, ../scss/partials/_parallax.scss */
+.cd-section h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  line-height: 100vh;
   text-align: center;
-  font-size: 7rem;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
+  font-size: 3rem;
 }
-.lede .dek {
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
-}
+/* line 68, ../scss/partials/_parallax.scss */
 .cd-section:first-of-type > div {
   background-color: #2b334f;
 }
+/* line 71, ../scss/partials/_parallax.scss */
 .cd-section:first-of-type > div::before {
   /* alert -> all scrolling effects are not visible on small devices */
   content: 'Effects not visible on mobile!';
@@ -104,47 +83,55 @@ Main Components
   text-transform: uppercase;
   color: #6a7083;
 }
+/* line 86, ../scss/partials/_parallax.scss */
 .cd-section:nth-of-type(2) > div {
-  background-color: #ffffff;
+  background-color: #2e5367;
 }
+/* line 90, ../scss/partials/_parallax.scss */
 .cd-section:nth-of-type(3) > div {
   background-color: #267481;
 }
+/* line 94, ../scss/partials/_parallax.scss */
 .cd-section:nth-of-type(4) > div {
   background-color: #fcb052;
 }
+/* line 98, ../scss/partials/_parallax.scss */
 .cd-section:nth-of-type(5) > div {
   background-color: #f06a59;
 }
+/* line 102, ../scss/partials/_parallax.scss */
 [data-animation="parallax"] .cd-section > div, [data-animation="fixed"] .cd-section > div, [data-animation="opacity"] .cd-section > div {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+/* line 110, ../scss/partials/_parallax.scss */
 [data-animation="parallax"] .cd-section:first-of-type > div, [data-animation="fixed"] .cd-section:first-of-type > div, [data-animation="opacity"] .cd-section:first-of-type > div {
-  background-image: url("../img/aus-2.jpg");
-  height: 100vh;
+  background-image: url("../img/aus-1.jpg");
 }
+/* line 116, ../scss/partials/_parallax.scss */
 [data-animation="parallax"] .cd-section:nth-of-type(2) > div, [data-animation="fixed"] .cd-section:nth-of-type(2) > div, [data-animation="opacity"] .cd-section:nth-of-type(2) > div {
-  background-image: url("../img/aus-3.jpg");
-  height: 100vh;
+  background-image: url("../img/aus-2.jpg");
 }
+/* line 122, ../scss/partials/_parallax.scss */
 [data-animation="parallax"] .cd-section:nth-of-type(3) > div, [data-animation="fixed"] .cd-section:nth-of-type(3) > div, [data-animation="opacity"] .cd-section:nth-of-type(3) > div {
-  background-image: url("../img/aus-4.jpg");
-  height: 100vh;
+  background-image: url("../img/aus-3.jpg");
 }
-/*[data-animation="parallax"] .cd-section:nth-of-type(4) > div, [data-animation="fixed"] .cd-section:nth-of-type(4) > div, [data-animation="opacity"] .cd-section:nth-of-type(4) > div {
+/* line 128, ../scss/partials/_parallax.scss */
+[data-animation="parallax"] .cd-section:nth-of-type(4) > div, [data-animation="fixed"] .cd-section:nth-of-type(4) > div, [data-animation="opacity"] .cd-section:nth-of-type(4) > div {
+  background-image: url("../img/aus-4.jpg");
+}
+/* line 134, ../scss/partials/_parallax.scss */
+[data-animation="parallax"] .cd-section:nth-of-type(5) > div, [data-animation="fixed"] .cd-section:nth-of-type(5) > div, [data-animation="opacity"] .cd-section:nth-of-type(5) > div {
   background-image: url("../img/aus-5.jpg");
-  height: 100vh;
-}*/
-/*[data-animation="parallax"] .cd-section:nth-of-type(5) > div, [data-animation="fixed"] .cd-section:nth-of-type(5) > div, [data-animation="opacity"] .cd-section:nth-of-type(5) > div {
-  background-image: url("../img/aus-5.jpg");
-  height: 100vh;
-}*/
+}
 @media only screen and (min-width: 1050px) {
+  /* line 142, ../scss/partials/_parallax.scss */
   .cd-section h2 {
-    font-weight: bold;
+    font-size: 4rem;
+    font-weight: 300;
   }
+  /* line 147, ../scss/partials/_parallax.scss */
   [data-hijacking="on"] .cd-section {
     opacity: 0;
     visibility: hidden;
@@ -153,37 +140,45 @@ Main Components
     left: 0;
     width: 100%;
   }
+  /* line 155, ../scss/partials/_parallax.scss */
   [data-hijacking="on"] .cd-section > div {
     visibility: visible;
   }
+  /* line 160, ../scss/partials/_parallax.scss */
   [data-hijacking="off"] .cd-section > div {
     opacity: 0;
   }
+  /* line 164, ../scss/partials/_parallax.scss */
   [data-animation="rotate"] .cd-section {
     /* enable a 3D-space for children elements */
     -webkit-perspective: 1800px;
     -moz-perspective: 1800px;
     perspective: 1800px;
   }
+  /* line 169, ../scss/partials/_parallax.scss */
   [data-hijacking="on"][data-animation="rotate"] .cd-section:not(:first-of-type) {
     -webkit-perspective-origin: center 0;
     -moz-perspective-origin: center 0;
     perspective-origin: center 0;
   }
+  /* line 173, ../scss/partials/_parallax.scss */
   [data-animation="scaleDown"] .cd-section > div, [data-animation="gallery"] .cd-section > div, [data-animation="catch"] .cd-section > div {
     box-shadow: 0 0 0 rgba(25, 30, 46, 0.4);
   }
+  /* line 180, ../scss/partials/_parallax.scss */
   [data-animation="opacity"] .cd-section.visible > div {
     z-index: 1;
   }
 }
 
 @media only screen and (min-width: 1050px) {
+  /* line 187, ../scss/partials/_parallax.scss */
   .cd-section:first-of-type > div::before {
     display: none;
   }
 }
 @media only screen and (min-width: 1050px) {
+  /* line 192, ../scss/partials/_parallax.scss */
   .cd-section > div {
     position: fixed;
     top: 0;
@@ -198,9 +193,11 @@ Main Components
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
+  /* line 204, ../scss/partials/_parallax.scss */
   [data-hijacking="on"] .cd-section > div {
     position: absolute;
   }
+  /* line 208, ../scss/partials/_parallax.scss */
   [data-animation="rotate"] .cd-section > div {
     -webkit-transform-origin: center bottom;
     -moz-transform-origin: center bottom;
@@ -210,6 +207,7 @@ Main Components
   }
 }
 
+/* line 214, ../scss/partials/_parallax.scss */
 .cd-vertical-nav {
   /* lateral navigation */
   position: fixed;
@@ -224,6 +222,7 @@ Main Components
   transform: translateY(-50%);
   display: none;
 }
+/* line 222, ../scss/partials/_parallax.scss */
 .cd-vertical-nav a {
   display: block;
   height: 40px;
@@ -234,6 +233,7 @@ Main Components
   white-space: nowrap;
   background: url(../img/cd-icon-arrow.svg) no-repeat center center;
 }
+/* line 234, ../scss/partials/_parallax.scss */
 .cd-vertical-nav a.cd-prev {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
@@ -242,6 +242,7 @@ Main Components
   transform: rotate(180deg);
   margin-bottom: 10px;
 }
+/* line 239, ../scss/partials/_parallax.scss */
 .cd-vertical-nav a.inactive {
   visibility: hidden;
   opacity: 0;
@@ -250,7 +251,18 @@ Main Components
   transition: opacity 0.2s 0s, visibility 0s 0.2s;
 }
 @media only screen and (min-width: 1050px) {
+  /* line 214, ../scss/partials/_parallax.scss */
   .cd-vertical-nav {
     display: block;
   }
+}
+
+/* line 1, ../scss/partials/_page-style.scss */
+#main-wrapper, #slider, #wrapper-slides, .slide {
+  position: relative;
+}
+
+/* line 5, ../scss/partials/_page-style.scss */
+#slide-one p {
+  color: red !important;
 }
