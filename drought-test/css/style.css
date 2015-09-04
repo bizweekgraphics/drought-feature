@@ -135,7 +135,7 @@ Main Components
   }
   /* line 150, ../scss/partials/_parallax.scss */
   [data-hijacking="on"] .cd-section {
-    opacity: 0;
+    opacity: 1;
     visibility: hidden;
     position: absolute;
     top: 0;
@@ -148,7 +148,7 @@ Main Components
   }
   /* line 163, ../scss/partials/_parallax.scss */
   [data-hijacking="off"] .cd-section > div {
-    opacity: 0;
+    opacity: 1;
   }
   /* line 167, ../scss/partials/_parallax.scss */
   [data-animation="rotate"] .cd-section {
@@ -182,7 +182,7 @@ Main Components
 @media only screen and (min-width: 1050px) {
   /* line 195, ../scss/partials/_parallax.scss */
   .cd-section > div {
-    position: fixed;
+    position: static;
     top: 0;
     left: 0;
     width: 100%;
@@ -264,11 +264,6 @@ Main Components
   position: relative;
 }
 
-/* line 5, ../scss/partials/_page-style.scss */
-#slide-one p {
-  color: red !important;
-}
-
 /* line 9, ../scss/partials/_page-style.scss */
 #slide-two {
   background-color: pink;
@@ -292,6 +287,17 @@ Main Components
 
 /* line 29, ../scss/partials/_page-style.scss */
 .body-copy {
-  z-index: 1;
+  z-index: 40;
   min-height: 100%;
+}
+
+/* line 34, ../scss/partials/_page-style.scss */
+.parallax_wrapper {
+  width: auto;
+  background: yellow;
+}
+
+/* line 39, ../scss/partials/_page-style.scss */
+[data-hijacking="off"] .cd-section > div {
+  opacity: 1;
 }

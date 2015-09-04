@@ -1,10 +1,11 @@
 
 
 
-var $j = jQuery.noConflict(),
-    windowWidth,
-    currentSlide,
-    numSlides;
+var $j = jQuery.noConflict();
+var windowWidth;
+var currentSlide;
+var numSlides;
+var scrollPos;
 
 
 $j(document).ready(function(){
@@ -19,7 +20,7 @@ $j(document).ready(function(){
     $j('.slide').eq(currentSlide).addClass('slide-selected');
 
     //add functionality
-    arrows();
+    // arrows();
     next();
     previous();
 
@@ -31,7 +32,20 @@ $j(document).ready(function(){
     $j(window).on('hashchange', getCurrentUrl);
     getCurrentUrl();
 
+    setInterval(onUserScroll, 60);
+
 });
+
+function onUserScroll() {
+    scrollPos = $j(document).scrollTop();
+    var limit = $j('#slide-one > .body-copy').height();
+    limit+=$j('#slide-one > .body-copy').offset().top;
+    limit+=30;
+
+    if (scrollPos > $j('#slide-one > .body-copy').height()) {
+
+    }
+}
 
 
 function getCurrentUrl() {

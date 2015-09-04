@@ -148,7 +148,7 @@ body[data-hijacking="on"] {
 		}
 
 		[data-hijacking="on"] & {
-			opacity: 0;
+			opacity: 1;
 			visibility: hidden;
 			position: absolute;
 			top: 0;
@@ -161,7 +161,7 @@ body[data-hijacking="on"] {
 		}
 
 		[data-hijacking="off"] & > div {
-			opacity: 0;
+			opacity: 1;
 		}
 
 		[data-animation="rotate"] & {
@@ -195,7 +195,7 @@ body[data-hijacking="on"] {
 .cd-section > div {
 
 	@include MQ(L) {
-		position: fixed;
+		position: static;
 		top: 0;
 		left: 0;
 		width: 100%;
