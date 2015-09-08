@@ -14,6 +14,56 @@
 	background-color: golden-rod;
 }
 
+
+
+/*--- VIDEO LEDE ---*/
+
+.lede-video {
+	width: 100%;
+	height: auto;
+	position: relative;
+
+	video {
+		// min-height: 100vh;
+		width: 100%;
+		margin-bottom: 30px;
+	}
+}
+
+
+.lede {
+    width: 80%;
+	margin: -20% auto 0 15%;
+	position: absolute;
+	z-index: 1;
+	
+	h2 {
+		color: $black;
+		background-color: $white;
+		display: inline;
+	}
+}
+
+.dek {
+	display: inline-block;
+	text-align: left;
+	background-color: $white;
+	width: 100%;
+}
+
+
+.byline-feat {
+	font-family: $HaasBold;
+	color: $black;
+	margin: 5px 0;
+	background-color: $white;
+	display: inline;
+}
+
+.mobile-lede {
+	display: none;
+}
+
 .cd-section {
 	position: relative;
 

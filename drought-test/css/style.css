@@ -274,30 +274,79 @@ Main Components
   background-color: golden-rod;
 }
 
-/* line 17, ../scss/partials/_page-style.scss */
+/*--- VIDEO LEDE ---*/
+/* line 21, ../scss/partials/_page-style.scss */
+.lede-video {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+/* line 26, ../scss/partials/_page-style.scss */
+.lede-video video {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* line 34, ../scss/partials/_page-style.scss */
+.lede {
+  width: 80%;
+  margin: -20% auto 0 15%;
+  position: absolute;
+  z-index: 1;
+}
+/* line 40, ../scss/partials/_page-style.scss */
+.lede h2 {
+  color: #000;
+  background-color: #ffffff;
+  display: inline;
+}
+
+/* line 47, ../scss/partials/_page-style.scss */
+.dek {
+  display: inline-block;
+  text-align: left;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+/* line 55, ../scss/partials/_page-style.scss */
+.byline-feat {
+  font-family: "HaasDisplayBold", Helvetica, Arial, sans-serif;
+  color: #000;
+  margin: 5px 0;
+  background-color: #ffffff;
+  display: inline;
+}
+
+/* line 63, ../scss/partials/_page-style.scss */
+.mobile-lede {
+  display: none;
+}
+
+/* line 67, ../scss/partials/_page-style.scss */
 .cd-section {
   position: relative;
 }
 
-/* line 24, ../scss/partials/_page-style.scss */
+/* line 74, ../scss/partials/_page-style.scss */
 .lede, .parallax_wrapper {
   position: relative;
   z-index: 2;
 }
 
-/* line 29, ../scss/partials/_page-style.scss */
+/* line 79, ../scss/partials/_page-style.scss */
 .body-copy {
   z-index: 40;
   min-height: 100%;
 }
 
-/* line 34, ../scss/partials/_page-style.scss */
+/* line 84, ../scss/partials/_page-style.scss */
 .parallax_wrapper {
   width: auto;
   background: yellow;
 }
 
-/* line 39, ../scss/partials/_page-style.scss */
+/* line 89, ../scss/partials/_page-style.scss */
 [data-hijacking="off"] .cd-section > div {
   opacity: 1;
 }
