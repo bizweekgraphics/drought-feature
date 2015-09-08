@@ -47,6 +47,13 @@ function onUserScroll() {
     }
 }
 
+// When page is loaded, first image is shown
+// user scrolls to the top of the first image.
+// other images are hidden and positioned at the bottom of the first image
+// when the scroll "scrolls" the length of the first image
+// reveal 
+
+
 
 function getCurrentUrl() {
     var page = String(window.location.hash).substring(1);
