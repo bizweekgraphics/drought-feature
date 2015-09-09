@@ -1,5 +1,46 @@
 @charset "UTF-8";
 
+
+
+@font-face{
+ 	font-family:'Druk Wide Web';
+ 	src:url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.eot);
+ 	src:url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.eot?#iefix) format('embedded-opentype'),
+ 		url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.woff) format('woff'),
+ 		url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.ttf) format('truetype'),
+ 		url('https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.svg#Druk Wide Web') format('svg');
+ 	font-weight:900;
+ 	font-style:normal;
+ 	font-stretch:normal;
+}
+
+@font-face{
+ 	font-family:'Druk Web';
+ 	src:url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.eot);
+ 	src:url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.eot?#iefix) format('embedded-opentype'),
+ 		url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.woff) format('woff'),
+ 		url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.ttf) format('truetype'),
+ 		url('https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.svg#Druk Web') format('svg');
+ 	font-weight:500;
+ 	font-style:normal;
+ 	font-stretch:normal;
+}
+
+@font-face{
+ 	font-family:'Druk Bold Web';
+ 	src:url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.eot);
+ 	src:url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.eot?#iefix) format('embedded-opentype'),
+ 		url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.woff) format('woff'),
+ 		url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.ttf) format('truetype'),
+ 		url('https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.svg#Druk Web') format('svg');
+ 	font-weight:500;
+ 	font-style:normal;
+ 	font-stretch:normal;
+}
+
+
+
+
 /// Georgia font stack.
 ///
 /// @type List
@@ -31,13 +72,18 @@ $monospace: "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace;
 $verdana: "Verdana", "Geneva", sans-serif;
 
 
-$NHaas: 'NHaasGroteskDSPro-55Rg', $helvetica, sans-serif;
-$NHaas-medium: 'NHaasGroteskDSPro-65Md', $helvetica, sans-serif;
-$NHaas-bold: 'NHaasGroteskDSPro-75Bd', $helvetica, sans-serif;
+$NHaas: 'NHaasGroteskDSPro-55Rg', $helvetica;
+$NHaas-medium: 'NHaasGroteskDSPro-65Md', $helvetica;
+$NHaas-bold: 'NHaasGroteskDSPro-75Bd', $helvetica;
 
-$tiempos: 'TiemposTextWeb-Regular', $georgia, serif;
-$tiempos-italic: 'TiemposTextWeb-RegularItalic', $georgia, serif;
-$tiempos-semibold: 'TiemposTextWeb-Semibold', $georgia, serif;
-$tiempos-bold: 'TiemposHeadlineWeb-Bold', $georgia, serif;
+$tiempos: 'TiemposTextWeb-Regular', $georgia;
+$tiempos-italic: 'TiemposTextWeb-RegularItalic', $georgia;
+$tiempos-semibold: 'TiemposTextWeb-Semibold', $georgia;
+$tiempos-bold: 'TiemposHeadlineWeb-Bold', $georgia;
 
-$HaasBold: 'HaasDisplayBold', Helvetica, Arial, sans-serif;
+$HaasBold: 'HaasDisplayBold', $helvetica;
+
+
+$druk-wide: 'Druk Wide Web', sans-serif;
+$druk: 'Druk Web', sans-serif;
+$druk-bold: 'Druk Bold Web', sans-serif;

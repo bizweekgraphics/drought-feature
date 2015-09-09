@@ -32,7 +32,8 @@
 
 
 .lede {
-    width: 80%;
+    // width: 80%;
+    width: 50%;
 	margin: -20% auto 0 15%;
 	position: absolute;
 	z-index: 1;
@@ -45,10 +46,14 @@
 }
 
 .dek {
-	display: inline-block;
-	text-align: left;
-	background-color: $white;
-	width: 100%;
+	
+
+	// :not(#slide-zero) & {
+		display: inline-block;
+		text-align: left;
+		background-color: $white;
+		width: 100%;
+	// }
 }
 
 

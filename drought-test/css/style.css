@@ -1,3 +1,27 @@
+@font-face {
+  font-family: 'Druk Wide Web';
+  src: url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.eot);
+  src: url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.eot?#iefix) format("embedded-opentype"), url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.woff) format("woff"), url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.ttf) format("truetype"), url("https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.svg#Druk Wide Web") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'Druk Web';
+  src: url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.eot);
+  src: url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.eot?#iefix) format("embedded-opentype"), url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.woff) format("woff"), url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.ttf) format("truetype"), url("https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.svg#Druk Web") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'Druk Bold Web';
+  src: url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.eot);
+  src: url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.eot?#iefix) format("embedded-opentype"), url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.woff) format("woff"), url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.ttf) format("truetype"), url("https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.svg#Druk Web") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
 /* -------------------------------- 
 
 Primary style
@@ -81,7 +105,7 @@ Main Components
   font-weight: bold;
   font-size: 1.3rem;
   text-transform: uppercase;
-  color: #6a7083;
+  color: #6b7084;
 }
 /* line 86, ../scss/partials/_parallax.scss */
 .cd-section:nth-of-type(2) > div {
@@ -289,19 +313,19 @@ Main Components
 
 /* line 34, ../scss/partials/_page-style.scss */
 .lede {
-  width: 80%;
+  width: 50%;
   margin: -20% auto 0 15%;
   position: absolute;
   z-index: 1;
 }
-/* line 40, ../scss/partials/_page-style.scss */
+/* line 41, ../scss/partials/_page-style.scss */
 .lede h2 {
   color: #000;
   background-color: #ffffff;
   display: inline;
 }
 
-/* line 47, ../scss/partials/_page-style.scss */
+/* line 48, ../scss/partials/_page-style.scss */
 .dek {
   display: inline-block;
   text-align: left;
@@ -309,44 +333,44 @@ Main Components
   width: 100%;
 }
 
-/* line 55, ../scss/partials/_page-style.scss */
+/* line 60, ../scss/partials/_page-style.scss */
 .byline-feat {
-  font-family: "HaasDisplayBold", Helvetica, Arial, sans-serif;
+  font-family: "HaasDisplayBold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   color: #000;
   margin: 5px 0;
   background-color: #ffffff;
   display: inline;
 }
 
-/* line 63, ../scss/partials/_page-style.scss */
+/* line 68, ../scss/partials/_page-style.scss */
 .mobile-lede {
   display: none;
 }
 
-/* line 67, ../scss/partials/_page-style.scss */
+/* line 72, ../scss/partials/_page-style.scss */
 .cd-section {
   position: relative;
 }
 
-/* line 74, ../scss/partials/_page-style.scss */
+/* line 79, ../scss/partials/_page-style.scss */
 .lede, .parallax_wrapper {
   position: relative;
   z-index: 2;
 }
 
-/* line 79, ../scss/partials/_page-style.scss */
+/* line 84, ../scss/partials/_page-style.scss */
 .body-copy {
   z-index: 40;
   min-height: 100%;
 }
 
-/* line 84, ../scss/partials/_page-style.scss */
+/* line 89, ../scss/partials/_page-style.scss */
 .parallax_wrapper {
   width: auto;
   background: yellow;
 }
 
-/* line 89, ../scss/partials/_page-style.scss */
+/* line 94, ../scss/partials/_page-style.scss */
 [data-hijacking="off"] .cd-section > div {
   opacity: 1;
 }
