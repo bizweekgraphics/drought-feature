@@ -1,0 +1,50 @@
+@media screen and (max-width: 760px) {
+
+	.hero-module {
+		min-height: 72vh;
+		background-position: top center;
+	}
+
+	.hero-text {
+		padding-top: 130px;
+		
+		h1 {
+			font-size: 70px;
+			line-height: 70px;
+		}
+	}
+
+	#nav-previous, #nav-next {
+		span {
+			width: 35px;
+		}
+	}
+
+	#header {
+		display: none;
+	}
+
+	#slide-zero {
+		h1 {
+			font-size: 52px;
+			line-height: 54px;
+			border-top: 1px solid #241f19;
+			border-bottom: 1px solid #241f19;
+			padding: 15px 0 10px;
+			margin-bottom: 30px;
+		}
+
+		.dek {
+			font-size: 26px;
+			line-height: 30px;
+		}
+		
+		.illo-byline {
+			font-size: 14px;
+			line-height: 16px;
+			margin: 20px auto 60px;
+			max-width: 100%;
+		}
+	}
+
+}

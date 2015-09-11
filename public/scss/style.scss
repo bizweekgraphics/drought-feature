@@ -1,0 +1,16 @@
+@import 'bourbon/bourbon'; // http://bourbon.io/
+
+@import 'partials/variables'; // colors, fonts etc...
+
+@import 'partials/mixins'; // custom mixins
+
+@import 'partials/mediaqueries_parallax'; // responsive grid and media queries
+
+@import 'partials/parallax';
+
+@import 'main';
+@import 'partials/page-style';
+
+
+@import 'mediaqueries/mobile';
+@import 'mediaqueries/tablet';

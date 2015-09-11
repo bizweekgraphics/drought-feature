@@ -1,0 +1,809 @@
+@font-face {
+  font-family: 'Druk Wide Web';
+  src: url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.eot);
+  src: url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.eot?#iefix) format("embedded-opentype"), url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.woff) format("woff"), url(https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.ttf) format("truetype"), url("https://s3.amazonaws.com/bw-fonts/DrukWide-Super-Web.svg#Druk Wide Web") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'Druk Web';
+  src: url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.eot);
+  src: url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.eot?#iefix) format("embedded-opentype"), url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.woff) format("woff"), url(https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.ttf) format("truetype"), url("https://s3.amazonaws.com/bw-fonts/Druk-Medium-Web.svg#Druk Web") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'Druk Bold Web';
+  src: url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.eot);
+  src: url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.eot?#iefix) format("embedded-opentype"), url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.woff) format("woff"), url(https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.ttf) format("truetype"), url("https://s3.amazonaws.com/bw-fonts/Druk-Bold-Web.svg#Druk Web") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+/* line 7, ../scss/partials/_parallax.scss */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+/* line 11, ../scss/partials/_parallax.scss */
+html {
+  font-size: 62.5%;
+}
+
+/* line 15, ../scss/partials/_parallax.scss */
+body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 24, ../scss/partials/_parallax.scss */
+body::before {
+  /* never visible - this is used in jQuery to check the current MQ */
+  content: 'mobile';
+  display: none;
+}
+@media only screen and (min-width: 1050px) {
+  /* line 32, ../scss/partials/_parallax.scss */
+  body::before {
+    /* never visible - this is used in jQuery to check the current MQ */
+    content: 'desktop';
+  }
+}
+
+/* line 39, ../scss/partials/_parallax.scss */
+a {
+  color: #267481;
+  text-decoration: none;
+}
+
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+@media only screen and (min-width: 1050px) {
+  /* line 50, ../scss/partials/_parallax.scss */
+  body[data-hijacking="on"] {
+    overflow: hidden;
+  }
+}
+
+/* line 57, ../scss/partials/_parallax.scss */
+.cd-section {
+  height: 100vh;
+}
+/* line 60, ../scss/partials/_parallax.scss */
+.cd-section h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  line-height: 100vh;
+  text-align: center;
+  font-size: 3rem;
+}
+/* line 68, ../scss/partials/_parallax.scss */
+.cd-section:first-of-type > div {
+  background-color: #2b334f;
+}
+/* line 71, ../scss/partials/_parallax.scss */
+.cd-section:first-of-type > div::before {
+  /* alert -> all scrolling effects are not visible on small devices */
+  content: 'Effects not visible on mobile!';
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 20px;
+  z-index: 2;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #6b7084;
+}
+/* line 86, ../scss/partials/_parallax.scss */
+.cd-section:nth-of-type(2) > div {
+  background-color: #2e5367;
+}
+/* line 90, ../scss/partials/_parallax.scss */
+.cd-section:nth-of-type(3) > div {
+  background-color: #267481;
+}
+/* line 94, ../scss/partials/_parallax.scss */
+.cd-section:nth-of-type(4) > div {
+  background-color: #fcb052;
+}
+/* line 98, ../scss/partials/_parallax.scss */
+.cd-section:nth-of-type(5) > div {
+  background-color: #f06a59;
+}
+/* line 102, ../scss/partials/_parallax.scss */
+[data-animation="parallax"] .cd-section > div, [data-animation="fixed"] .cd-section > div, [data-animation="opacity"] .cd-section > div {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 800px;
+  height: 100vh;
+}
+/* line 113, ../scss/partials/_parallax.scss */
+[data-animation="parallax"] .cd-section:first-of-type > div, [data-animation="fixed"] .cd-section:first-of-type > div, [data-animation="opacity"] .cd-section:first-of-type > div {
+  background-image: url("../img/aus-1.jpg");
+}
+/* line 119, ../scss/partials/_parallax.scss */
+[data-animation="parallax"] .cd-section:nth-of-type(2) > div, [data-animation="fixed"] .cd-section:nth-of-type(2) > div, [data-animation="opacity"] .cd-section:nth-of-type(2) > div {
+  background-image: url("../img/aus-2.jpg");
+}
+/* line 125, ../scss/partials/_parallax.scss */
+[data-animation="parallax"] .cd-section:nth-of-type(3) > div, [data-animation="fixed"] .cd-section:nth-of-type(3) > div, [data-animation="opacity"] .cd-section:nth-of-type(3) > div {
+  background-image: url("../img/aus-3.jpg");
+}
+/* line 131, ../scss/partials/_parallax.scss */
+[data-animation="parallax"] .cd-section:nth-of-type(4) > div, [data-animation="fixed"] .cd-section:nth-of-type(4) > div, [data-animation="opacity"] .cd-section:nth-of-type(4) > div {
+  background-image: url("../img/aus-4.jpg");
+}
+/* line 137, ../scss/partials/_parallax.scss */
+[data-animation="parallax"] .cd-section:nth-of-type(5) > div, [data-animation="fixed"] .cd-section:nth-of-type(5) > div, [data-animation="opacity"] .cd-section:nth-of-type(5) > div {
+  background-image: url("../img/aus-5.jpg");
+}
+@media only screen and (min-width: 1050px) {
+  /* line 145, ../scss/partials/_parallax.scss */
+  .cd-section h2 {
+    font-size: 4rem;
+    font-weight: 300;
+  }
+  /* line 150, ../scss/partials/_parallax.scss */
+  [data-hijacking="on"] .cd-section {
+    opacity: 1;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  /* line 158, ../scss/partials/_parallax.scss */
+  [data-hijacking="on"] .cd-section > div {
+    visibility: visible;
+  }
+  /* line 163, ../scss/partials/_parallax.scss */
+  [data-hijacking="off"] .cd-section > div {
+    opacity: 1;
+  }
+  /* line 167, ../scss/partials/_parallax.scss */
+  [data-animation="rotate"] .cd-section {
+    /* enable a 3D-space for children elements */
+    -webkit-perspective: 1800px;
+    -moz-perspective: 1800px;
+    perspective: 1800px;
+  }
+  /* line 172, ../scss/partials/_parallax.scss */
+  [data-hijacking="on"][data-animation="rotate"] .cd-section:not(:first-of-type) {
+    -webkit-perspective-origin: center 0;
+    -moz-perspective-origin: center 0;
+    perspective-origin: center 0;
+  }
+  /* line 176, ../scss/partials/_parallax.scss */
+  [data-animation="scaleDown"] .cd-section > div, [data-animation="gallery"] .cd-section > div, [data-animation="catch"] .cd-section > div {
+    box-shadow: 0 0 0 rgba(25, 30, 46, 0.4);
+  }
+  /* line 183, ../scss/partials/_parallax.scss */
+  [data-animation="opacity"] .cd-section.visible > div {
+    z-index: 1;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  /* line 190, ../scss/partials/_parallax.scss */
+  .cd-section:first-of-type > div::before {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  /* line 195, ../scss/partials/_parallax.scss */
+  .cd-section > div {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Force Hardware Acceleration */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  /* line 207, ../scss/partials/_parallax.scss */
+  [data-hijacking="on"] .cd-section > div {
+    position: absolute;
+  }
+  /* line 211, ../scss/partials/_parallax.scss */
+  [data-animation="rotate"] .cd-section > div {
+    -webkit-transform-origin: center bottom;
+    -moz-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    -o-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+}
+
+/* line 217, ../scss/partials/_parallax.scss */
+.cd-vertical-nav {
+  /* lateral navigation */
+  position: fixed;
+  z-index: 1;
+  right: 3%;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: none;
+}
+/* line 225, ../scss/partials/_parallax.scss */
+.cd-vertical-nav a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  /* image replace */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: url(../img/cd-icon-arrow.svg) no-repeat center center;
+}
+/* line 237, ../scss/partials/_parallax.scss */
+.cd-vertical-nav a.cd-prev {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-bottom: 10px;
+}
+/* line 242, ../scss/partials/_parallax.scss */
+.cd-vertical-nav a.inactive {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  -moz-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  transition: opacity 0.2s 0s, visibility 0s 0.2s;
+}
+@media only screen and (min-width: 1050px) {
+  /* line 217, ../scss/partials/_parallax.scss */
+  .cd-vertical-nav {
+    display: block;
+  }
+}
+
+/* line 3, ../scss/_main.scss */
+body {
+  /*background-color: #f1e6d2;*/
+}
+
+/* line 7, ../scss/_main.scss */
+.lede, p {
+  width: 50%;
+  max-width: 640px;
+}
+
+/* line 12, ../scss/_main.scss */
+p {
+  margin: 30px auto;
+  font: 18px/29px "TiemposTextWeb-Regular", "Georgia", "Cambria", "Times New Roman", "Times", serif;
+  color: #3c3c3c;
+}
+
+/* line 19, ../scss/_main.scss */
+.lede, .parallax_wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* line 24, ../scss/_main.scss */
+.body-copy {
+  z-index: 40;
+  min-height: 100%;
+}
+
+/* line 29, ../scss/_main.scss */
+.parallax_wrapper {
+  width: auto;
+}
+
+/* line 33, ../scss/_main.scss */
+[data-hijacking="off"] .cd-section > div {
+  opacity: 1;
+}
+
+/*HEADER*/
+/* line 39, ../scss/_main.scss */
+#subheader {
+  background-color: rgba(0, 0, 0, 0.7);
+  font: 16px "HaasDisplayBold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  text-align: left;
+  height: initial;
+  padding: 10px 20px;
+  border-bottom: none;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+/* line 50, ../scss/_main.scss */
+#subheader a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 10px;
+}
+
+/* line 59, ../scss/_main.scss */
+.hero-text {
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 350px;
+  text-align: center;
+}
+/* line 65, ../scss/_main.scss */
+.hero-text h1 {
+  font: 100px/100px "Druk Web", sans-serif;
+  margin: 20px 0;
+  color: #ffffff;
+}
+/* line 71, ../scss/_main.scss */
+.hero-text .dek {
+  text-align: center;
+  padding: 0;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.65);
+}
+
+/* line 78, ../scss/_main.scss */
+.body-copy {
+  position: relative;
+}
+
+/*IMAGES*/
+/* line 84, ../scss/_main.scss */
+.img_full {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto 3rem;
+}
+
+/* line 90, ../scss/_main.scss */
+.photo-info {
+  border-bottom: 1px solid #ddd;
+}
+
+/* line 94, ../scss/_main.scss */
+figcaption {
+  margin-right: 0.325em;
+  margin-top: 0.3em;
+}
+
+/* line 99, ../scss/_main.scss */
+.credit {
+  font-size: 0.6em;
+  margin-top: 3px;
+  margin-bottom: 10px;
+  color: #999;
+}
+
+/*VIDEO*/
+/* line 108, ../scss/_main.scss */
+.video-section video {
+  min-height: 100vh;
+  min-width: 100%;
+}
+/* line 112, ../scss/_main.scss */
+.video-section video:after {
+  content: 'a';
+  font: 8em 'Bloomberg';
+  position: absolute;
+  text-align: center;
+  color: #ffffff;
+  display: block;
+  margin-top: -35%;
+  z-index: 1000;
+  left: 50%;
+}
+
+/*PHOTO GALLERY*/
+/* line 127, ../scss/_main.scss */
+figure {
+  width: 100%;
+}
+/* line 130, ../scss/_main.scss */
+figure img {
+  width: 100%;
+}
+
+/* line 135, ../scss/_main.scss */
+figcaption {
+  color: #4d4d4d;
+  margin: 0.5em 0.5em 2em;
+  font: 0.925em "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+}
+
+/* line 141, ../scss/_main.scss */
+.photo-gallery img {
+  width: 100%;
+  height: 100vh;
+}
+
+/* line 146, ../scss/_main.scss */
+.ad-unit {
+  width: 300px;
+  height: 250px;
+  background-color: #444;
+  float: right;
+  margin: 20px;
+}
+
+/* line 154, ../scss/_main.scss */
+.sidebar .clearboth {
+  margin-bottom: 10px;
+}
+
+/* line 158, ../scss/_main.scss */
+.terminal a {
+  text-decoration: none;
+}
+
+/* line 1, ../scss/partials/_page-style.scss */
+#main-wrapper, #slider, #wrapper-slides, .slide {
+  position: relative;
+}
+
+/* line 5, ../scss/partials/_page-style.scss */
+#slider, #wrapper-slides, .slide {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+/* line 11, ../scss/partials/_page-style.scss */
+#slider {
+  width: 100%;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  -ms-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  -o-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* line 18, ../scss/partials/_page-style.scss */
+.slide {
+  display: block;
+  width: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+}
+/* line 27, ../scss/partials/_page-style.scss */
+.slide h2 {
+  font: 70px/68px "Druk Web", sans-serif;
+}
+/* line 32, ../scss/partials/_page-style.scss */
+.slide h3 {
+  font: 22px/28px "HaasDisplayBold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+}
+/* line 37, ../scss/partials/_page-style.scss */
+.slide a {
+  color: inherit;
+}
+
+/* line 42, ../scss/partials/_page-style.scss */
+.slide-content-wrap {
+  /*max-width: 1280px;*/
+  /*margin: 0 auto;*/
+}
+
+/* line 47, ../scss/partials/_page-style.scss */
+.slide-selected {
+  position: relative;
+}
+
+/*ARROWS*/
+/* line 53, ../scss/partials/_page-style.scss */
+#nav-previous,
+#nav-next {
+  position: fixed;
+  top: 0;
+  width: 5%;
+  height: 100%;
+  cursor: pointer;
+}
+/* line 61, ../scss/partials/_page-style.scss */
+#nav-previous span,
+#nav-next span {
+  position: absolute;
+  top: 41.4%;
+  opacity: 0.25;
+  font-size: 5em;
+  width: 60px;
+  height: 214px;
+}
+/* line 69, ../scss/partials/_page-style.scss */
+#nav-previous span:hover,
+#nav-next span:hover {
+  opacity: 0.7;
+}
+
+/* line 76, ../scss/partials/_page-style.scss */
+#nav-previous, #nav-previous span {
+  left: 0;
+}
+
+/* line 80, ../scss/partials/_page-style.scss */
+#nav-next, #nav-next span {
+  right: 0;
+}
+
+/* line 84, ../scss/partials/_page-style.scss */
+#nav-previous img {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/*HERO IMAGES*/
+/* line 90, ../scss/partials/_page-style.scss */
+.hero-module {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+/* line 98, ../scss/partials/_page-style.scss */
+#slide-zero {
+  background: url("../img/00_INTRO__DSC1788 copie.jpg") center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+/* line 104, ../scss/partials/_page-style.scss */
+#slide-zero .lede-content, #slide-zero .dek, #slide-zero .illo-byline, #slide-zero .start-btn, #slide-zero .byline {
+  text-align: center;
+  color: #ffffff;
+}
+/* line 109, ../scss/partials/_page-style.scss */
+#slide-zero .lede-content {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 80%;
+}
+/* line 118, ../scss/partials/_page-style.scss */
+#slide-zero h1 {
+  font: 100px/100px "Druk Web", sans-serif;
+  padding: 15px 0 10px;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+/* line 126, ../scss/partials/_page-style.scss */
+#slide-zero .dek {
+  font: 34px/40px "TiemposHeadlineWeb-Bold", "Georgia", "Cambria", "Times New Roman", "Times", serif;
+  margin: 10px auto;
+  width: 100%;
+  background-color: transparent;
+}
+/* line 133, ../scss/partials/_page-style.scss */
+#slide-zero .illo-byline {
+  font: 18px/22px "TiemposHeadlineWeb-Bold", "Georgia", "Cambria", "Times New Roman", "Times", serif;
+  margin: 20px auto 60px;
+  max-width: 800px;
+}
+/* line 140, ../scss/partials/_page-style.scss */
+#slide-zero .byline {
+  font-weight: 600;
+}
+/* line 144, ../scss/partials/_page-style.scss */
+#slide-zero .start-btn {
+  font: 18px "HaasDisplayBold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  background-color: #000;
+  padding: 20px;
+  text-transform: uppercase;
+  width: 200px;
+  margin: 0 auto;
+}
+
+/* line 159, ../scss/partials/_page-style.scss */
+#slide-one .lede {
+  margin-top: -18%;
+}
+
+/*--- VIDEO LEDE ---*/
+/*------------ VIDEO STYLES ------------*/
+/* line 178, ../scss/partials/_page-style.scss */
+.video {
+  margin: 40px auto;
+}
+
+/* line 182, ../scss/partials/_page-style.scss */
+.video-js, .video iframe {
+  margin: 0 auto;
+  min-width: 970px;
+  min-height: 546px;
+  display: block;
+}
+
+/* line 189, ../scss/partials/_page-style.scss */
+.terminal .video {
+  display: none;
+}
+
+/* line 195, ../scss/partials/_page-style.scss */
+.lede-video {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+/* line 200, ../scss/partials/_page-style.scss */
+.lede-video video {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* line 208, ../scss/partials/_page-style.scss */
+.lede {
+  width: 50%;
+  margin: -23.66% auto 6em;
+  position: absolute;
+  z-index: 1;
+}
+/* line 217, ../scss/partials/_page-style.scss */
+.lede h2 {
+  color: #ffffff;
+  margin-bottom: 0.01em;
+}
+/* line 226, ../scss/partials/_page-style.scss */
+.lede p {
+  width: 100%;
+  color: #ffffff;
+}
+
+/* line 232, ../scss/partials/_page-style.scss */
+.dek {
+  text-align: left;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+/* line 239, ../scss/partials/_page-style.scss */
+.illo-byline {
+  background-color: #000;
+  color: #ffffff;
+  font-family: "NHaasGroteskDSPro-75Bd", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  padding: 1px 6px 3px;
+  display: inline;
+  font-weight: 600;
+}
+
+/* line 249, ../scss/partials/_page-style.scss */
+.byline-feat {
+  font-family: "HaasDisplayBold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  color: #000;
+  margin: 5px 0;
+  background-color: #ffffff;
+  display: inline;
+}
+
+/* line 257, ../scss/partials/_page-style.scss */
+.mobile-lede {
+  display: none;
+}
+
+/* line 261, ../scss/partials/_page-style.scss */
+.cd-section {
+  position: relative;
+}
+
+/* line 268, ../scss/partials/_page-style.scss */
+.lede, .parallax_wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* line 273, ../scss/partials/_page-style.scss */
+.body-copy {
+  z-index: 40;
+  min-height: 100%;
+}
+
+/* line 278, ../scss/partials/_page-style.scss */
+.parallax_wrapper {
+  width: auto;
+}
+
+/* line 282, ../scss/partials/_page-style.scss */
+[data-hijacking="off"] .cd-section > div {
+  opacity: 1;
+}
+
+@media screen and (max-width: 760px) {
+  /* line 3, ../scss/mediaqueries/_mobile.scss */
+  .hero-module {
+    min-height: 72vh;
+    background-position: top center;
+  }
+
+  /* line 8, ../scss/mediaqueries/_mobile.scss */
+  .hero-text {
+    padding-top: 130px;
+  }
+  /* line 11, ../scss/mediaqueries/_mobile.scss */
+  .hero-text h1 {
+    font-size: 70px;
+    line-height: 70px;
+  }
+
+  /* line 18, ../scss/mediaqueries/_mobile.scss */
+  #nav-previous span, #nav-next span {
+    width: 35px;
+  }
+
+  /* line 23, ../scss/mediaqueries/_mobile.scss */
+  #header {
+    display: none;
+  }
+
+  /* line 28, ../scss/mediaqueries/_mobile.scss */
+  #slide-zero h1 {
+    font-size: 52px;
+    line-height: 54px;
+    border-top: 1px solid #241f19;
+    border-bottom: 1px solid #241f19;
+    padding: 15px 0 10px;
+    margin-bottom: 30px;
+  }
+  /* line 37, ../scss/mediaqueries/_mobile.scss */
+  #slide-zero .dek {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  /* line 42, ../scss/mediaqueries/_mobile.scss */
+  #slide-zero .illo-byline {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 20px auto 60px;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  /* line 3, ../scss/mediaqueries/_tablet.scss */
+  .slide h3 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
