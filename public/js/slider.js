@@ -30,13 +30,20 @@ $j(document).ready(function(){
     $j(window).on('hashchange', getCurrentUrl);
     getCurrentUrl();
     // scrollToTop();
+    // stickySubNav();
 
+    // onUserScroll();
+    // setInterval(stickySubNav(), 60);
     setInterval(onUserScroll, 60);
 
 });
 
 function onUserScroll() {
     scrollPos = $j(document).scrollTop();
+
+    console.log('meow');
+    // scrollPos = $j(document).scrollTop();
+
     var limit = $j('#slide-one > .body-copy').height();
     limit+=$j('#slide-one > .body-copy').offset().top;
     limit+=30;
@@ -44,13 +51,36 @@ function onUserScroll() {
     if (scrollPos > $j('#slide-one > .body-copy').height()) {
 
     }
+
+    stickySubNav();
+    
+}
+
+function stickySubNav() {
+    scrollPos = $j(document).scrollTop();
+    
+
+    console.log("hiii :: " + scrollPos);
+
+    if (scrollPos >= 121) {
+
+        $j('#subheader').css({
+            'top': '91'+ 'px'
+        });
+
+    } else if (scrollPos < 121) {
+
+        $j('#subheader').css({
+            'top': '121'+ 'px'
+        });
+    } 
 }
 
 // When page is loaded, first image is shown
 // user scrolls to the top of the first image.
 // other images are hidden and positioned at the bottom of the first image
 // when the scroll "scrolls" the length of the first image
-// reveal 
+// reveal the 
 
 
 
@@ -59,7 +89,9 @@ function getCurrentUrl() {
     currentSlide = $j('.slide[data-page="'+page+'"]').index();
     currentSlidePage();
 
-    scrollToTop();
+
+    console.log('growwwl');
+    // scrollToTop();
 }
 
 
