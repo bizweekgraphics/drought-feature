@@ -45,12 +45,12 @@ $j(document).ready(function(){
 function onUserScroll() {
     scrollPos = $j(document).scrollTop();
 
-    console.log('meow');
+    // console.log('meow');
     // scrollPos = $j(document).scrollTop();
 
     var main_img = $j('.parallax_wrapper figure:first-of-type');
 
-    
+
 
     var limit = $j('#slide-one > .body-copy').height();
     limit+=$j('#slide-one > .body-copy').offset().top;
@@ -66,22 +66,33 @@ function onUserScroll() {
 
 function stickySubNav() {
     scrollPos = $j(document).scrollTop();
+    var windowWidth = $j(window).width();
     
 
-    console.log("hiii :: " + scrollPos);
+    // console.log("hiii :: " + scrollPos);
 
-    if (scrollPos >= 121) {
+    if (windowWidth > 768 && scrollPos >= 121) {
 
         $j('#subheader').css({
             'top': '91'+ 'px'
         });
 
-    } else if (scrollPos < 121) {
+    } else if (windowWidth > 768 && scrollPos < 121) {
 
         $j('#subheader').css({
             'top': '121'+ 'px'
         });
-    } 
+
+    } else if (windowWidth <= 768 && scrollPos < 91)  {
+        $j('#subheader').css({
+            'top': '91'+ 'px'
+        });
+
+    } else if (windowWidth <= 1160 && scrollPos > 91) {
+        $j('#subheader').css({
+            'top': '0'+ 'px'
+        });
+    }
 }
 
 // When page is loaded, first image is shown

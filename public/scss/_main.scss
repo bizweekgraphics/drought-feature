@@ -14,6 +14,11 @@ p {
 	font: 18px/29px $tiempos;
 	color: #3c3c3c;
 
+
+	em {
+		font-family: $tiempos-italic;
+		font-style: normal;
+	}
 }
 
 .lede, .parallax_wrapper {
@@ -112,6 +117,7 @@ figcaption {
 
 	video {
 		min-width: 100%;
+		min-height: 70vh;
 	}
 
 	&:after {

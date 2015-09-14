@@ -24,6 +24,32 @@
 		display: none;
 	}
 
+	#main {
+		.lede, p {
+			width: 90%;
+			margin: 0 auto;
+		}
+
+		.lede p {
+			width: 100%;
+		}
+	}
+
+	.slide {
+		h2 {
+			font-size: 48px;
+			line-height: 48px;
+		}
+
+		.illo-byline {
+
+		}
+
+		p {
+			margin: 1em 0 2em;
+		}
+	}
+
 	#slide-zero {
 		h1 {
 			font-size: 52px;
@@ -35,8 +61,8 @@
 		}
 
 		.dek {
-			font-size: 26px;
-			line-height: 30px;
+			font-size: 20px;
+			line-height: 28px;
 		}
 		
 		.illo-byline {
@@ -45,10 +71,12 @@
 			margin: 20px auto 60px;
 			max-width: 100%;
 		}
+
+		.start-btn {
+			font-size: 14px;
+		}
 	}
 
-	.lede, p {
-		width: 90%;
-	}
+
 
 }
