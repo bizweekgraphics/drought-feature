@@ -108,9 +108,12 @@ figcaption {
 
 /*VIDEO*/
 
-.video-section video {
-	min-height: 100vh;
-	min-width: 100%;
+.video-section {
+
+	video {
+		min-height: 100vh;
+		min-width: 100%;
+	}
 	
 	&:after {
 		content: 'a';
@@ -123,6 +126,21 @@ figcaption {
 		z-index: 1000;
 		left: 50%;
 	}
+}
+
+.video-section.hidden:after {
+  display: none;
+}
+
+.video-player {
+  background-color: $black;
+  width: 100%;
+  display: none;
+  bottom: 0;
+}
+
+.video-js {
+  margin: 0 auto;
 }
 
 /*PHOTO GALLERY*/

@@ -105,7 +105,7 @@ Main Components
   font-weight: bold;
   font-size: 1.3rem;
   text-transform: uppercase;
-  color: #6a7083;
+  color: #6b7084;
 }
 /* line 86, ../scss/partials/_parallax.scss */
 .cd-section:nth-of-type(2) > div {
@@ -400,13 +400,13 @@ figcaption {
 }
 
 /*VIDEO*/
-/* line 111, ../scss/_main.scss */
+/* line 113, ../scss/_main.scss */
 .video-section video {
   min-height: 100vh;
   min-width: 100%;
 }
-/* line 115, ../scss/_main.scss */
-.video-section video:after {
+/* line 118, ../scss/_main.scss */
+.video-section:after {
   content: 'a';
   font: 8em 'Bloomberg';
   position: absolute;
@@ -418,30 +418,48 @@ figcaption {
   left: 50%;
 }
 
+/* line 131, ../scss/_main.scss */
+.video-section.hidden:after {
+  display: none;
+}
+
+/* line 135, ../scss/_main.scss */
+.video-player {
+  background-color: #000;
+  width: 100%;
+  display: none;
+  bottom: 0;
+}
+
+/* line 142, ../scss/_main.scss */
+.video-js {
+  margin: 0 auto;
+}
+
 /*PHOTO GALLERY*/
-/* line 130, ../scss/_main.scss */
+/* line 148, ../scss/_main.scss */
 figure {
   width: 100%;
 }
-/* line 133, ../scss/_main.scss */
+/* line 151, ../scss/_main.scss */
 figure img {
   width: 100%;
 }
 
-/* line 138, ../scss/_main.scss */
+/* line 156, ../scss/_main.scss */
 figcaption {
   color: #4d4d4d;
   margin: 0.5em 0.5em 2em;
   font: 0.925em "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 
-/* line 144, ../scss/_main.scss */
+/* line 162, ../scss/_main.scss */
 .photo-gallery img {
   width: 100%;
   height: 100vh;
 }
 
-/* line 149, ../scss/_main.scss */
+/* line 167, ../scss/_main.scss */
 .ad-unit {
   width: 300px;
   height: 250px;
@@ -450,12 +468,12 @@ figcaption {
   margin: 20px;
 }
 
-/* line 157, ../scss/_main.scss */
+/* line 175, ../scss/_main.scss */
 .sidebar .clearboth {
   margin-bottom: 10px;
 }
 
-/* line 161, ../scss/_main.scss */
+/* line 179, ../scss/_main.scss */
 .terminal a {
   text-decoration: none;
 }

@@ -7,6 +7,13 @@ var top = $j(window).scrollTop();
 
 $j(document).ready(function(){
 
+    //video functionality
+    $(".video-section").click(function(){
+        $(this).children('.video-player').fadeIn(300);
+        $(this).children('video').fadeOut(300);
+        $(this).addClass('hidden');
+    });
+
     currentSlide = 0;
     windowWidth = $j(window).width();
     numSlides = $j('.slide').length;
