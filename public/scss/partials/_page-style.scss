@@ -1,4 +1,4 @@
-s#main-wrapper, #slider, #wrapper-slides, .slide {
+#main-wrapper, #slider, #wrapper-slides, .slide {
 	position: relative;
 }
 
@@ -40,8 +40,6 @@ s#main-wrapper, #slider, #wrapper-slides, .slide {
 }
 
 .slide-content-wrap {
-	/*max-width: 1280px;*/
-	/*margin: 0 auto;*/
 }
 
 .slide-selected {
@@ -152,12 +150,9 @@ s#main-wrapper, #slider, #wrapper-slides, .slide {
 }
 
 #slide-one {
-	// .hero-module {
-	// 	background-image: url('../img/aus-1.jpg');
-	// }
 
 	.lede {
-		margin-top: -18%;
+		// margin-top: -18%;
 	}
 }
 
@@ -210,22 +205,23 @@ s#main-wrapper, #slider, #wrapper-slides, .slide {
     width: 50%;
     // width: 800px;
 	// margin: -20% auto 0 15%;
-	margin: -23.66% auto 6em;
+	// margin: -23.66% auto 6em;
+	margin: 0 auto;
 	position: absolute;
 	z-index: 1;
 	
 	h2 {
-		// color: $black;
+		color: $black;
 		// background-color: $white;
 		// display: inline;
 
-		color: $white;
+		// color: $white;
 		margin-bottom: 0.01em;
 	}
 
 	p {
 		width: 100%;
-		color: $white;
+		// color: $white;
 	}
 }
 

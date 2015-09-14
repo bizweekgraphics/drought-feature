@@ -111,7 +111,6 @@ figcaption {
 .video-section {
 
 	video {
-		// min-height: 100vh;
 		min-width: 100%;
 	}
 
@@ -140,13 +139,22 @@ figcaption {
 
 	iframe {
 	  	min-width: 100%;
-	  	min-height: 100vh;
+	  	// min-height: 100vh;
+	  	min-height: 70vh;
 	}
 }
 
 .video-js {
   margin: 0 auto;
   width: 100%;
+}
+
+.player .video-wrapper .video {
+	height: auto !important;
+}
+
+.player .target {
+	height: auto !important;
 }
 
 /*PHOTO GALLERY*/
@@ -163,6 +171,35 @@ figcaption {
 	color: lighten($black, 30%);
 	margin: 0.5em 0.5em 2em;
 	font: 0.925em $NHaas;
+}
+
+.img_full {
+	width: 90%;
+	max-width: 1280px;
+	margin: 0 auto 3rem;
+
+	img {
+		max-width: 80%;
+	}
+}
+
+.img_left, .img_right {
+	// width: 38rem;
+	max-width: 450px;
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+
+	img {
+		max-width: 80%;
+	}
+}
+
+.img_left {
+	float: left;
+}
+
+.img_right {
+	float: right;
 }
 
 .photo-gallery img {

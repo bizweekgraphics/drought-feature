@@ -48,6 +48,10 @@ function onUserScroll() {
     console.log('meow');
     // scrollPos = $j(document).scrollTop();
 
+    var main_img = $j('.parallax_wrapper figure:first-of-type');
+
+    
+
     var limit = $j('#slide-one > .body-copy').height();
     limit+=$j('#slide-one > .body-copy').offset().top;
     limit+=30;
