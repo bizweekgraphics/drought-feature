@@ -430,36 +430,41 @@ figcaption {
   display: none;
   bottom: 0;
 }
+/* line 141, ../scss/_main.scss */
+.video-player iframe {
+  min-width: 100%;
+  min-height: 100vh;
+}
 
-/* line 142, ../scss/_main.scss */
+/* line 147, ../scss/_main.scss */
 .video-js {
   margin: 0 auto;
 }
 
 /*PHOTO GALLERY*/
-/* line 148, ../scss/_main.scss */
+/* line 153, ../scss/_main.scss */
 figure {
   width: 100%;
 }
-/* line 151, ../scss/_main.scss */
+/* line 156, ../scss/_main.scss */
 figure img {
   width: 100%;
 }
 
-/* line 156, ../scss/_main.scss */
+/* line 161, ../scss/_main.scss */
 figcaption {
   color: #4d4d4d;
   margin: 0.5em 0.5em 2em;
   font: 0.925em "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 
-/* line 162, ../scss/_main.scss */
+/* line 167, ../scss/_main.scss */
 .photo-gallery img {
   width: 100%;
   height: 100vh;
 }
 
-/* line 167, ../scss/_main.scss */
+/* line 172, ../scss/_main.scss */
 .ad-unit {
   width: 300px;
   height: 250px;
@@ -468,12 +473,12 @@ figcaption {
   margin: 20px;
 }
 
-/* line 175, ../scss/_main.scss */
+/* line 180, ../scss/_main.scss */
 .sidebar .clearboth {
   margin-bottom: 10px;
 }
 
-/* line 179, ../scss/_main.scss */
+/* line 184, ../scss/_main.scss */
 .terminal a {
   text-decoration: none;
 }

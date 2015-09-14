@@ -137,6 +137,11 @@ figcaption {
   width: 100%;
   display: none;
   bottom: 0;
+
+  iframe {
+  	min-width: 100%;
+  	min-height: 100vh;
+  }
 }
 
 .video-js {
