@@ -3,4 +3,15 @@
 	.lede, p {
 		width: 80%;
 	}
+
+	.video-section {
+		&:after {
+			font-size: 6em;
+			margin-top: -40%;
+		}
+		
+		video {
+			min-height: initial;
+		}
+	}
 }

@@ -27,7 +27,7 @@
 	#main {
 		.lede, p {
 			width: 90%;
-			margin: 0 auto;
+			margin: 0 auto 1em;
 		}
 
 		.lede p {
@@ -77,6 +77,11 @@
 		}
 	}
 
-
+	.video-section {
+		&:after {
+			font-size: 4em;
+			margin-top: -44%;
+		}
+	}
 
 }

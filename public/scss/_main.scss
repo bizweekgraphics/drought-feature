@@ -33,6 +33,20 @@ p {
 
 .parallax_wrapper { 
 	width: auto;
+    // overflow: hidden;
+    // height: 79vh;
+
+    &.fixed {
+    	position: fixed;
+    	width: 100%;
+    	height: 766px;
+    	figure {
+    		position: fixed;
+    		top: 30px;
+    		left: 0;
+    	}
+
+    }
 }
 
 [data-hijacking="off"] .cd-section > div {
@@ -112,6 +126,12 @@ figcaption {
 }
 
 /*VIDEO*/
+
+#main-wrapper {
+	.video-section:after {
+		font-size: 8em;
+	}
+}
 
 .video-section {
 

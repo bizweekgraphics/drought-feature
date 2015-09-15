@@ -42,27 +42,32 @@ $j(document).ready(function(){
 
 });
 
+
 function onUserScroll() {
     scrollPos = $j(document).scrollTop();
 
-    // console.log('meow');
-    // scrollPos = $j(document).scrollTop();
-
-    var main_img = $j('.parallax_wrapper figure:first-of-type');
-
-
-
+    // Parallax starts after .body-copy
     var limit = $j('#slide-one > .body-copy').height();
     limit+=$j('#slide-one > .body-copy').offset().top;
     limit+=30;
 
-    if (scrollPos > $j('#slide-one > .body-copy').height()) {
+
+    // Check if the scroll position is more than body copy plus window height
+    if (scrollPos > limit) {
+        console.log("start parallax");
+
+        //$j('.parallax_wrapper').addClass('fixed');
+
+        //$j('.parallax_wrapper figure').height($j(window).height());
+
+        //tell first one of those image to be position fix it to be (0,30)
 
     }
 
     stickySubNav();
     
 }
+
 
 function stickySubNav() {
     scrollPos = $j(document).scrollTop();
@@ -76,7 +81,7 @@ function stickySubNav() {
             'top': '0'+ 'px'
 
         });
-        
+
     } else if (windowWidth > 768 && scrollPos >= 121) {
 
         $j('#subheader').css({
@@ -160,6 +165,7 @@ function next() {
     });
 }
 
+
 //move to the previous slide
 function previous() {
     $j('#nav-previous').on('click', function(){
@@ -170,6 +176,7 @@ function previous() {
         $j('html, body').scrollTop(0);
     });
 }
+
 
 //add selected class to current slide
 function currentSlidePage() {
@@ -218,12 +225,7 @@ function currentSlidePage() {
     });
 }
 
+
 function scrollToTop() {
-
-    // console.log("asdfad top is: " + top);
-
-
-    // if(top !=0) {
         $j('html, body').animate({scrollTop: 0}, '500', 'easein');
-    // }
 }
