@@ -4,18 +4,23 @@ var currentSlide;
 var numSlides;
 var scrollPos;
 var top = $j(window).scrollTop();
+var currentSlideImg;
+var numSlideImgs;
 
 $j(document).ready(function(){
 
     currentSlide = 0;
     windowWidth = $j(window).width();
     numSlides = $j('.slide').length;
-    
+
+    currentSlideImg = 0;
+    numSlideImgs = $j('.slide-selected .slide_img').length;
     
     //on page load, get slide number from url
     //save slide number as currentSlide
     //add slide-selected class to current slide
     $j('.slide').eq(currentSlide).addClass('slide-selected');
+    $j('.slide-selected .slide_img').eq(currentSlide).addClass('slide-show');
 
     //add functionality
     // arrows();
@@ -68,7 +73,7 @@ function onUserScroll() {
     
 }
 
-
+ 
 function stickySubNav() {
     scrollPos = $j(document).scrollTop();
     var windowWidth = $j(window).width();
