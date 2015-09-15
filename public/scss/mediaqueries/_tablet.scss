@@ -1,17 +1,36 @@
-@media screen and (max-width: 10240px) {
+@media screen and (max-width: 1024px) {
 
 	.lede, p {
 		width: 80%;
 	}
 
 	.video-section {
-		&:after {
-			font-size: 6em;
-			margin-top: -40%;
-		}
 		
 		video {
 			min-height: initial;
+		}
+	}
+
+	.parallax_wrapper {
+		overflow: visible;
+		@include transform(none);
+		@include transform-style(initial);
+
+		.slide_img {
+			position: relative;
+		}
+	}
+}
+
+@media screen and (min-width: 760px) and (max-width: 1023px) {
+	.video-js {
+		min-width: 760px;
+		min-height: 428px;
+	}
+
+	.video-section {
+		&:after {
+			font-size: 6em;
 		}
 	}
 }

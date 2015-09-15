@@ -1,18 +1,15 @@
 @media screen and (max-width: 760px) {
 
-	.hero-module {
-		min-height: 72vh;
-		background-position: top center;
+	hr {
+		margin-bottom: 2em;
 	}
 
-	.hero-text {
-		padding-top: 130px;
-		
-		h1 {
-			font-size: 70px;
-			line-height: 70px;
-		}
+	.img_right, .img_left {
+		max-width: 100%;
+		float: none;
+		text-align: center;
 	}
+
 
 	#nav-previous, #nav-next {
 		span {
@@ -30,8 +27,15 @@
 			margin: 0 auto 1em;
 		}
 
-		.lede p {
-			width: 100%;
+		.lede {
+			p {
+				width: 100%;
+
+				+ p {
+					margin-top: 0.325em;
+					// font-size: 0.925em;
+				}	
+			}
 		}
 	}
 
@@ -80,8 +84,13 @@
 	.video-section {
 		&:after {
 			font-size: 4em;
-			margin-top: -44%;
+			margin-top: -35%;
 		}
+	}
+
+	.video-js {
+		min-width: 320px;
+		min-height: 180px;
 	}
 
 }

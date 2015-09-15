@@ -50,7 +50,7 @@
 
 #nav-previous,
 #nav-next {
-    position: fixed;
+    position: relative;
     top: 0;
     width: 5%;
     height: 100%;
@@ -81,6 +81,25 @@
 
 #nav-previous img {
 	@include transform(rotate(180deg));
+}
+
+.next-story {
+	background-color: $black;
+	padding: 30px;
+	margin-top: 50px;
+
+	p {
+		font-family: $HaasBold;
+		font-size: 24px;
+		color: $white;
+	}
+}
+
+.photo-byline {
+	margin-top: 10px;
+	font-family: 'HaasText', 'Helvetica';
+	font-size: 16px;
+	color: #888;
 }
 
 /*HERO IMAGES*/
@@ -123,16 +142,16 @@
 
 	.dek {
 		font: 34px/40px $tiempos-bold;
-		margin: 10px auto;
+		margin: 0 auto 60px;
 		width: 100%;
 		background-color: transparent;
+		max-width: 850px;
 	}
 
 	.illo-byline {
 		font: 18px/22px $tiempos-bold;
 		margin: 20px auto 60px;
 		max-width: 800px;
-
 	}
 
 	.byline {
@@ -149,19 +168,10 @@
 	}
 }
 
-#slide-one {
-
-	.lede {
-		// margin-top: -18%;
-	}
-}
-
 #slide-two {
-
-}
-
-#slide-three {
-
+	.img_full {
+		max-width: 1000px;
+	}
 }
 
 
@@ -172,13 +182,6 @@
 
 .video {
 	margin: 40px auto;
-}
-
-.video-js, .video iframe {
-	margin: 0 auto;
-	min-width: 970px;
-	min-height: 546px;
-	display: block;
 }
 
 .terminal .video {
@@ -193,40 +196,28 @@
 	position: relative;
 
 	video {
-		// min-height: 100vh;
 		width: 100%;
-		margin-bottom: 30px;
 	}
 }
 
 
 .lede {
-    // width: 80%;
     width: 50%;
-    // width: 800px;
-	// margin: -20% auto 0 15%;
-	// margin: -23.66% auto 6em;
 	margin: 0 auto;
 	position: absolute;
 	z-index: 1;
 	
 	h2 {
 		color: $black;
-		// background-color: $white;
-		// display: inline;
-
-		// color: $white;
 		margin-bottom: 0.01em;
 	}
 
 	p {
 		width: 100%;
-		// color: $white;
 	}
 }
 
 .dek {
-	// display: inline-block;
 	text-align: left;
 	background-color: $white;
 	width: 100%;
@@ -256,8 +247,6 @@
 
 .cd-section {
 	position: relative;
-
-	// min-height: 500px;
 }
 
 
@@ -266,13 +255,10 @@
 	z-index: 2;
 }
 
-.body-copy {
-	z-index: 40;
-    min-height: 100%;
-}
-
 .parallax_wrapper { 
 	width: auto;
+	max-width: 1400px;
+	margin: 0 auto;
 }
 
 [data-hijacking="off"] .cd-section > div {
