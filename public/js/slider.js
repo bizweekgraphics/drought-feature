@@ -71,7 +71,13 @@ function stickySubNav() {
 
     // console.log("hiii :: " + scrollPos);
 
-    if (windowWidth > 768 && scrollPos >= 121) {
+    if (windowWidth <= 1160 && scrollPos > 91) {
+        $j('#subheader').css({
+            'top': '0'+ 'px'
+
+        });
+        
+    } else if (windowWidth > 768 && scrollPos >= 121) {
 
         $j('#subheader').css({
             'top': '91'+ 'px'
@@ -87,12 +93,13 @@ function stickySubNav() {
         $j('#subheader').css({
             'top': '91'+ 'px'
         });
-
-    } else if (windowWidth <= 1160 && scrollPos > 91) {
-        $j('#subheader').css({
-            'top': '0'+ 'px'
-        });
     }
+
+    // } else if (windowWidth <= 1160 && scrollPos > 91) {
+    //     $j('#subheader').css({
+    //         'top': '0'+ 'px'
+    //     });
+    // }
 }
 
 // When page is loaded, first image is shown
@@ -107,10 +114,8 @@ function getCurrentUrl() {
     var page = String(window.location.hash).substring(1);
     currentSlide = $j('.slide[data-page="'+page+'"]').index();
     currentSlidePage();
-
-
-    console.log('growwwl');
-    // scrollToTop();
+    
+    $j('html, body').scrollTop(0);
 }
 
 
