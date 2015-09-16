@@ -851,43 +851,57 @@ figcaption strong {
     max-width: 100%;
     float: none;
     text-align: center;
+    margin: 20px;
   }
 
-  /* line 15, ../scss/mediaqueries/_mobile.scss */
+  /* line 14, ../scss/mediaqueries/_mobile.scss */
+  .img_full {
+    width: 100%;
+  }
+  /* line 17, ../scss/mediaqueries/_mobile.scss */
+  .img_full img {
+    max-width: 100%;
+  }
+
+  /* line 24, ../scss/mediaqueries/_mobile.scss */
   #nav-previous span, #nav-next span {
     width: 35px;
   }
 
-  /* line 20, ../scss/mediaqueries/_mobile.scss */
-  #header {
+  /* line 29, ../scss/mediaqueries/_mobile.scss */
+  #header, #subheader {
     display: none;
   }
 
-  /* line 25, ../scss/mediaqueries/_mobile.scss */
+  /* line 34, ../scss/mediaqueries/_mobile.scss */
   #main .lede, #main p {
     width: 90%;
     margin: 0 auto 1em;
   }
-  /* line 31, ../scss/mediaqueries/_mobile.scss */
+  /* line 40, ../scss/mediaqueries/_mobile.scss */
   #main .lede p {
     width: 100%;
   }
-  /* line 34, ../scss/mediaqueries/_mobile.scss */
+  /* line 43, ../scss/mediaqueries/_mobile.scss */
   #main .lede p + p {
     margin-top: 0.325em;
   }
 
-  /* line 43, ../scss/mediaqueries/_mobile.scss */
+  /* line 52, ../scss/mediaqueries/_mobile.scss */
   .slide h2 {
     font-size: 48px;
     line-height: 48px;
   }
-  /* line 52, ../scss/mediaqueries/_mobile.scss */
+  /* line 61, ../scss/mediaqueries/_mobile.scss */
   .slide p {
     margin: 1em 0 2em;
   }
 
-  /* line 58, ../scss/mediaqueries/_mobile.scss */
+  /* line 67, ../scss/mediaqueries/_mobile.scss */
+  #slide-zero .lede-content {
+    bottom: 20%;
+  }
+  /* line 71, ../scss/mediaqueries/_mobile.scss */
   #slide-zero h1 {
     font-size: 52px;
     line-height: 54px;
@@ -895,31 +909,32 @@ figcaption strong {
     border-bottom: 1px solid #241f19;
     padding: 15px 0 10px;
     margin-bottom: 30px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   }
-  /* line 67, ../scss/mediaqueries/_mobile.scss */
+  /* line 81, ../scss/mediaqueries/_mobile.scss */
   #slide-zero .dek {
     font-size: 20px;
     line-height: 28px;
   }
-  /* line 72, ../scss/mediaqueries/_mobile.scss */
+  /* line 86, ../scss/mediaqueries/_mobile.scss */
   #slide-zero .illo-byline {
     font-size: 14px;
     line-height: 16px;
     margin: 20px auto 60px;
     max-width: 100%;
   }
-  /* line 79, ../scss/mediaqueries/_mobile.scss */
+  /* line 93, ../scss/mediaqueries/_mobile.scss */
   #slide-zero .start-btn {
     font-size: 14px;
   }
 
-  /* line 85, ../scss/mediaqueries/_mobile.scss */
+  /* line 99, ../scss/mediaqueries/_mobile.scss */
   .video-section:after {
     font-size: 4em;
     margin-top: -35%;
   }
 
-  /* line 91, ../scss/mediaqueries/_mobile.scss */
+  /* line 105, ../scss/mediaqueries/_mobile.scss */
   .video-js {
     min-width: 320px;
     min-height: 180px;

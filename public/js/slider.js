@@ -45,6 +45,8 @@ $j(document).ready(function(){
 
     setInterval(onUserScroll, 60);
 
+    SafariOnly();
+
 });
 
 
@@ -233,4 +235,14 @@ function currentSlidePage() {
 
 function scrollToTop() {
         $j('html, body').animate({scrollTop: 0}, '500', 'easein');
+}
+
+
+function SafariOnly() {
+    var uagent = navigator.userAgent.toLowerCase();
+    if(/safari/.test(uagent) && !/chrome/.test(uagent))
+    {
+        // window.location.href = "elsewhere.html"
+        console.log("EFFING SARARI");
+    }
 }
