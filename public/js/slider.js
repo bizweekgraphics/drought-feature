@@ -244,5 +244,22 @@ function SafariOnly() {
     {
         // window.location.href = "elsewhere.html"
         console.log("EFFING SARARI");
+
+        if(navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
+
+            console.log('ios testing');
+
+            $j('#slide-one .mobile-lede').on('click', function() {
+                window.location.href = 'http://www.bloomberg.com/news/videos/2015-09-15/how-cattle-farmers-survive-world-s-worst-drought';
+            });
+
+            $j('#slide-two .mobile-lede').on('click', function() {
+                window.location.href = 'http://www.bloomberg.com/news/videos/2015-09-15/fresno-fights-to-keep-lawns-green-during-the-drought';
+            });
+
+            $j('#slide-three .mobile-lede').on('click', function() {
+                window.location.href = 'http://www.bloomberg.com/news/videos/2015-09-14/this-pipeline-could-save-s-o-paulo-s-water-supply';
+            });
+        }
     }
 }
