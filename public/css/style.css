@@ -840,6 +840,11 @@ figcaption strong {
   opacity: 1;
 }
 
+/* line 264, ../scss/partials/_page-style.scss */
+.mobile-lede {
+  display: none;
+}
+
 @media screen and (max-width: 760px) {
   /* line 3, ../scss/mediaqueries/_mobile.scss */
   hr {
@@ -933,8 +938,17 @@ figcaption strong {
     font-size: 4em;
     margin-top: -35%;
   }
+  /* line 104, ../scss/mediaqueries/_mobile.scss */
+  .video-section video {
+    display: none;
+  }
 
-  /* line 105, ../scss/mediaqueries/_mobile.scss */
+  /* line 109, ../scss/mediaqueries/_mobile.scss */
+  .mobile-lede {
+    display: block;
+  }
+
+  /* line 113, ../scss/mediaqueries/_mobile.scss */
   .video-js {
     min-width: 320px;
     min-height: 180px;
