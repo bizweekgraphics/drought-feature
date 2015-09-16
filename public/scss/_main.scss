@@ -163,7 +163,7 @@ figcaption {
 		// min-height: 70vh;
 	}
 
-	&:after {
+	&.icon:after {
 		content: 'a';
 		font-family:'Bloomberg';
 		position: absolute;

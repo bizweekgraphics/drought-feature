@@ -37,40 +37,9 @@ $j(document).ready(function(){
 
     SafariOnly();
 
-    //video functionality
-    // $j(".video-section").on('click', function(){
-    //     $j(this).children('.video-player').fadeIn(300);
-    //     $j(this).children('video').fadeOut(300);
-    //     $j(this).addClass('hidden');
-    // });
-
-    setInterval(onUserScroll, 60);
+    setInterval(stickySubNav, 60);
 
 });
-
-// function videoClick() {
-//     $j(".video-section").children('.video-player').fadeIn(300);
-//     $j(".video-section").children('video').fadeOut(300);
-//     $j(".video-section").addClass('hidden');
-// }
-
-function onUserScroll() {
-    scrollPos = $j(document).scrollTop();
-
-    // Parallax starts after .body-copy
-    var limit = $j('#slide-one > .body-copy').height();
-    limit+=$j('#slide-one > .body-copy').offset().top;
-    limit+=30;
-
-
-    // Check if the scroll position is more than body copy plus window height
-    if (scrollPos > limit) {
-
-    }
-
-    stickySubNav();
-    
-}
 
  
 function stickySubNav() {
@@ -226,15 +195,10 @@ function SafariOnly() {
     var uagent = navigator.userAgent.toLowerCase();
     if(/safari/.test(uagent) && !/chrome/.test(uagent))
     {
-        // window.location.href = "elsewhere.html"
 
-         console.log(" safari whaaat ?? " + uagent );
-
-
+        $j('.video-section').removeClass('icon');
 
         $j(".video-section").off('click', function(){
-
-            console.log("safari clicking");
 
             $j(this).children('.video-player').fadeIn(300);
             $j(this).children('video').fadeOut(300);
@@ -244,25 +208,20 @@ function SafariOnly() {
         if(navigator.userAgent.match(/(iPhone|iPod)/i)) {
 
             $j('.safari-fix').css({'display': 'block'});
-            $j('.video-section::after').css({'content': ''});
 
-        } else (navigator.userAgent.match(/(iPad)/i)){
+        } else if(navigator.userAgent.match(/(iPad)/i)) {
 
-            console.log(" HELP ?? " + uagent );
-
-            // $j('.video-section .video-player').css({'display': 'none'});
+            $j('.video-section .video-player').css({'display': 'none'});
             $j('.safari-fix').css({'display': 'block'});
-            $j('#main .video-section::after').css({'content': ''});
 
         }
 
 
     } else {
-        
+
+        $j('.video-section').addClass('icon');
 
         $j(".video-section").on('click', function(){
-
-            console.log("ELSE ?! " + uagent);
 
              $j(this).children('.video-player').fadeIn(300);
              $j(this).children('video').fadeOut(300);
