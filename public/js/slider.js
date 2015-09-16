@@ -249,15 +249,17 @@ function SafariOnly() {
 
         } else (navigator.userAgent.match(/(iPad)/i)){
 
-            $j('#slide-one .video-player').on('click', function() {
+            $j('.video-section .video-player').css({'display' : 'none'});
+
+            $j('#slide-one .video-section').on('click', function() {
                 window.location.href = 'http://www.bloomberg.com/news/videos/2015-09-15/how-cattle-farmers-survive-world-s-worst-drought';
             });
 
-            $j('#slide-two .video-player').on('click', function() {
+            $j('#slide-two .video-section').on('click', function() {
                 window.location.href = 'http://www.bloomberg.com/news/videos/2015-09-15/fresno-fights-to-keep-lawns-green-during-the-drought';
             });
 
-            $j('#slide-three .video-player').on('click', function() {
+            $j('#slide-three .video-section').on('click', function() {
                 window.location.href = 'http://www.bloomberg.com/news/videos/2015-09-14/this-pipeline-could-save-s-o-paulo-s-water-supply';
             });
         }
