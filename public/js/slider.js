@@ -196,6 +196,9 @@ function SafariOnly() {
     if(/safari/.test(uagent) && !/chrome/.test(uagent))
     {
 
+
+        if(navigator.userAgent.match(/(iPhone|iPod)/i)) {
+
         $j('.video-section').removeClass('icon');
 
         $j(".video-section").off('click', function(){
@@ -205,11 +208,22 @@ function SafariOnly() {
             $j(this).addClass('hidden');
         });
 
-        if(navigator.userAgent.match(/(iPhone|iPod)/i)) {
+
 
             $j('.safari-fix').css({'display': 'block'});
 
-        } else if(navigator.userAgent.match(/(iPad)/i)) {
+        } else if(navigator.userAgent.match(/(iP)/i)) {
+
+
+        $j('.video-section').removeClass('icon');
+
+        $j(".video-section").off('click', function(){
+
+            $j(this).children('.video-player').fadeIn(300);
+            $j(this).children('video').fadeOut(300);
+            $j(this).addClass('hidden');
+        });
+        
 
             $j('.video-section .video-player').css({'display': 'none'});
             $j('.safari-fix').css({'display': 'block'});
