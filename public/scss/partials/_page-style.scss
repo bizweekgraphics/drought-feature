@@ -11,29 +11,25 @@
 #slider {
 	width: 100%;
 	overflow: hidden;
-	@include transform(translate(0,0)); 
-	// @include transform(translate(0,0) scale3d(1,1,1)); 
-	// @include transform-style(preserve-3d);
+	@include transform(translate(0,0) scale3d(1,1,1)); 
+	@include transform-style(preserve-3d);
 }
 
 .slide {
 	display: block;
     width: 100%;
 
-    @include transform(translate(0,0));
-    // @include transform(translate3d(0,0,0));
-	// @include transform-style(preserve-3d);
+    @include transform(translate3d(0,0,0));
+	@include transform-style(preserve-3d);
     position: absolute;
     top: 0;
 
 	h2 {
 		font: 70px/68px $druk;
-		// margin-top: 10px;
 	}
 
 	h3 {
 		font: 22px/28px $HaasBold;
-		// margin-top: 0px;
 	}
     
     a {
@@ -41,8 +37,6 @@
 	}
 }
 
-.slide-content-wrap {
-}
 
 .slide-selected {
     position: relative;
