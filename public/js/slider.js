@@ -92,7 +92,8 @@ function resizeWidth() {
     $j('.slide').width(windowWidth);
 
     $j('.slide').each(function(i) {
-        $j(this).css('left', (i * windowWidth) + 'px');
+        // $j(this).css('left', (i * windowWidth) + 'px');
+        $j(this).css('left', 0 + 'px');
     });
 }
 
@@ -173,15 +174,15 @@ function currentSlidePage() {
     //update slide css
     $j('#wrapper-slides').css({
         'transition': 'top 400ms, left 400ms, transform 400ms',
-        'transform': 'translate3d(-' + slidePos + '%, 0%, 0px) scale3d(1, 1, 1)',
+        'transform': 'translate(-' + slidePos + '%, 0%)',
         '-webkit-transition': 'top 400ms, left 400ms, -webkit-transform 400ms',
-        '-webkit-transform': '-webkit-translate3d(-' + slidePos + '%, 0%, 0px) scale3d(1, 1, 1)',
+        '-webkit-transform': '-webkit-translate(-' + slidePos + '%, 0%)',
         '-moz-transition': 'top 400ms, left 400ms, -moz-transform 400ms',
-        '-moz-transform': '-moz-translate3d(-' + slidePos + '%, 0%, 0px) scale3d(1, 1, 1)',
+        '-moz-transform': '-moz-translate(-' + slidePos + '%, 0%)',
         '-ms-transition': 'top 400ms, left 400ms, -o-transform 400ms',
-        '-ms-transform': 'translate3d(-' + slidePos + '%, 0%, 0px) scale3d(1, 1, 1)',
+        '-ms-transform': 'translate3d(-' + slidePos + '%, 0%)',
         '-o-transition': 'top 400ms, left 400ms, -o-transform 400ms',
-        '-o-transform': 'translate3d(-' + slidePos + '%, 0%, 0px) scale3d(1, 1, 1)'
+        '-o-transform': 'translate(-' + slidePos + '%, 0%)'
     });
 }
 
