@@ -841,7 +841,7 @@ figcaption strong {
 }
 
 /* line 264, ../scss/partials/_page-style.scss */
-.mobile-lede {
+.mobile-lede, .video-player {
   display: none;
 }
 
@@ -944,11 +944,16 @@ figcaption strong {
   }
 
   /* line 109, ../scss/mediaqueries/_mobile.scss */
+  .video-player {
+    display: none;
+  }
+
+  /* line 113, ../scss/mediaqueries/_mobile.scss */
   .mobile-lede {
     display: block;
   }
 
-  /* line 113, ../scss/mediaqueries/_mobile.scss */
+  /* line 117, ../scss/mediaqueries/_mobile.scss */
   .video-js {
     min-width: 320px;
     min-height: 180px;
@@ -994,6 +999,11 @@ figcaption strong {
   /* line 32, ../scss/mediaqueries/_tablet.scss */
   .video-section:after {
     font-size: 6em;
+  }
+
+  /* line 37, ../scss/mediaqueries/_tablet.scss */
+  .mobile-lede {
+    display: none;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1359px) {

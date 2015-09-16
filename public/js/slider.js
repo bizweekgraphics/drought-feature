@@ -245,9 +245,9 @@ function SafariOnly() {
         // window.location.href = "elsewhere.html"
         console.log("EFFING SARARI");
 
-        if(navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
+        if(navigator.userAgent.match(/(iPhone|iPod)/i)) {
 
-            console.log('ios testing');
+            console.log('iphone + ipod testing');
 
             $j('#slide-one .mobile-lede').on('click', function() {
                 window.location.href = 'http://www.bloomberg.com/news/videos/2015-09-15/how-cattle-farmers-survive-world-s-worst-drought';
@@ -260,6 +260,23 @@ function SafariOnly() {
             $j('#slide-three .mobile-lede').on('click', function() {
                 window.location.href = 'http://www.bloomberg.com/news/videos/2015-09-14/this-pipeline-could-save-s-o-paulo-s-water-supply';
             });
+        } else {
+
+            console.log('all ios and safari testing');
+
+            $j('#slide-one .video-player').on('click', function() {
+                window.location.href = 'http://www.bloomberg.com/news/videos/2015-09-15/how-cattle-farmers-survive-world-s-worst-drought';
+            });
+
+            $j('#slide-two .video-player').on('click', function() {
+                window.location.href = 'http://www.bloomberg.com/news/videos/2015-09-15/fresno-fights-to-keep-lawns-green-during-the-drought';
+            });
+
+            $j('#slide-three .video-player').on('click', function() {
+                window.location.href = 'http://www.bloomberg.com/news/videos/2015-09-14/this-pipeline-could-save-s-o-paulo-s-water-supply';
+            });
         }
+
+
     }
 }
