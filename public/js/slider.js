@@ -106,19 +106,7 @@ function stickySubNav() {
             'top': '91'+ 'px'
         });
     }
-
-    // } else if (windowWidth <= 1160 && scrollPos > 91) {
-    //     $j('#subheader').css({
-    //         'top': '0'+ 'px'
-    //     });
-    // }
 }
-
-// When page is loaded, first image is shown
-// user scrolls to the top of the first image.
-// other images are hidden and positioned at the bottom of the first image
-// when the scroll "scrolls" the length of the first image
-// reveal the 
 
 
 
@@ -242,8 +230,6 @@ function SafariOnly() {
     var uagent = navigator.userAgent.toLowerCase();
     if(/safari/.test(uagent) && !/chrome/.test(uagent))
     {
-        // window.location.href = "elsewhere.html"
-        console.log("EFFING SARARI");
 
         if(navigator.userAgent.match(/(iPhone|iPod)/i)) {
 
@@ -260,9 +246,8 @@ function SafariOnly() {
             $j('#slide-three .mobile-lede').on('click', function() {
                 window.location.href = 'http://www.bloomberg.com/news/videos/2015-09-14/this-pipeline-could-save-s-o-paulo-s-water-supply';
             });
-        } else {
 
-            console.log('all ios and safari testing');
+        } else (navigator.userAgent.match(/(iPad)/i)){
 
             $j('#slide-one .video-player').on('click', function() {
                 window.location.href = 'http://www.bloomberg.com/news/videos/2015-09-15/how-cattle-farmers-survive-world-s-worst-drought';
