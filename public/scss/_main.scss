@@ -210,6 +210,15 @@ figcaption {
 	height: auto !important;
 }
 
+.safari-fix {
+	display: none;
+	background-color: #000;
+	color: #fff;
+	font-family: $HaasBold;
+	padding: 10px;
+	text-align: center;
+}
+
 /*PHOTO GALLERY*/
 
 .photo-gallery img {

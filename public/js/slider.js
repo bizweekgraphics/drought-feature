@@ -35,20 +35,24 @@ $j(document).ready(function(){
     $j(window).on('hashchange', getCurrentUrl);
     getCurrentUrl();
 
+    SafariOnly();
 
     //video functionality
-    $(".video-section").click(function(){
-        $(this).children('.video-player').fadeIn(300);
-        $(this).children('video').fadeOut(300);
-        $(this).addClass('hidden');
-    });
+    // $j(".video-section").on('click', function(){
+    //     $j(this).children('.video-player').fadeIn(300);
+    //     $j(this).children('video').fadeOut(300);
+    //     $j(this).addClass('hidden');
+    // });
 
     setInterval(onUserScroll, 60);
 
-    SafariOnly();
-
 });
 
+// function videoClick() {
+//     $j(".video-section").children('.video-player').fadeIn(300);
+//     $j(".video-section").children('video').fadeOut(300);
+//     $j(".video-section").addClass('hidden');
+// }
 
 function onUserScroll() {
     scrollPos = $j(document).scrollTop();
@@ -61,13 +65,6 @@ function onUserScroll() {
 
     // Check if the scroll position is more than body copy plus window height
     if (scrollPos > limit) {
-        console.log("start parallax");
-
-        //$j('.parallax_wrapper').addClass('fixed');
-
-        //$j('.parallax_wrapper figure').height($j(window).height());
-
-        //tell first one of those image to be position fix it to be (0,30)
 
     }
 
@@ -80,8 +77,6 @@ function stickySubNav() {
     scrollPos = $j(document).scrollTop();
     var windowWidth = $j(window).width();
     
-
-    // console.log("hiii :: " + scrollPos);
 
     if (windowWidth <= 1160 && scrollPos > 91) {
         $j('#subheader').css({
@@ -106,6 +101,7 @@ function stickySubNav() {
             'top': '91'+ 'px'
         });
     }
+
 }
 
 
@@ -230,40 +226,47 @@ function SafariOnly() {
     var uagent = navigator.userAgent.toLowerCase();
     if(/safari/.test(uagent) && !/chrome/.test(uagent))
     {
+        // window.location.href = "elsewhere.html"
+
+         console.log(" safari whaaat ?? " + uagent );
+
+
+
+        $j(".video-section").off('click', function(){
+
+            console.log("safari clicking");
+
+            $j(this).children('.video-player').fadeIn(300);
+            $j(this).children('video').fadeOut(300);
+            $j(this).addClass('hidden');
+        });
 
         if(navigator.userAgent.match(/(iPhone|iPod)/i)) {
 
-            console.log('iphone + ipod testing');
-
-            $j('#slide-one .mobile-lede').on('click', function() {
-                window.location.href = 'http://www.bloomberg.com/news/videos/2015-09-15/how-cattle-farmers-survive-world-s-worst-drought';
-            });
-
-            $j('#slide-two .mobile-lede').on('click', function() {
-                window.location.href = 'http://www.bloomberg.com/news/videos/2015-09-15/fresno-fights-to-keep-lawns-green-during-the-drought';
-            });
-
-            $j('#slide-three .mobile-lede').on('click', function() {
-                window.location.href = 'http://www.bloomberg.com/news/videos/2015-09-14/this-pipeline-could-save-s-o-paulo-s-water-supply';
-            });
+            $j('.safari-fix').css({'display': 'block'});
+            $j('.video-section::after').css({'content': ''});
 
         } else (navigator.userAgent.match(/(iPad)/i)){
 
-            $j('.video-section .video-player').css({'display' : 'none'});
+            console.log(" HELP ?? " + uagent );
 
-            $j('#slide-one .video-section').on('click', function() {
-                window.location.href = 'http://www.bloomberg.com/news/videos/2015-09-15/how-cattle-farmers-survive-world-s-worst-drought';
-            });
+            // $j('.video-section .video-player').css({'display': 'none'});
+            $j('.safari-fix').css({'display': 'block'});
+            $j('#main .video-section::after').css({'content': ''});
 
-            $j('#slide-two .video-section').on('click', function() {
-                window.location.href = 'http://www.bloomberg.com/news/videos/2015-09-15/fresno-fights-to-keep-lawns-green-during-the-drought';
-            });
-
-            $j('#slide-three .video-section').on('click', function() {
-                window.location.href = 'http://www.bloomberg.com/news/videos/2015-09-14/this-pipeline-could-save-s-o-paulo-s-water-supply';
-            });
         }
 
 
+    } else {
+        
+
+        $j(".video-section").on('click', function(){
+
+            console.log("ELSE ?! " + uagent);
+
+             $j(this).children('.video-player').fadeIn(300);
+             $j(this).children('video').fadeOut(300);
+             $j(this).addClass('hidden');
+        });
     }
 }

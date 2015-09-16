@@ -507,14 +507,24 @@ figcaption strong {
   height: auto !important;
 }
 
+/* line 213, ../scss/_main.scss */
+.safari-fix {
+  display: none;
+  background-color: #000;
+  color: #fff;
+  font-family: "HaasDisplayBold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  padding: 10px;
+  text-align: center;
+}
+
 /*PHOTO GALLERY*/
-/* line 215, ../scss/_main.scss */
+/* line 224, ../scss/_main.scss */
 .photo-gallery img {
   width: 100%;
   height: 100vh;
 }
 
-/* line 220, ../scss/_main.scss */
+/* line 229, ../scss/_main.scss */
 .ad-unit {
   width: 300px;
   height: 250px;
@@ -523,22 +533,22 @@ figcaption strong {
   margin: 20px;
 }
 
-/* line 228, ../scss/_main.scss */
+/* line 237, ../scss/_main.scss */
 .sidebar .clearboth {
   margin-bottom: 10px;
 }
 
-/* line 232, ../scss/_main.scss */
+/* line 241, ../scss/_main.scss */
 .terminal a {
   text-decoration: none;
 }
 
-/* line 236, ../scss/_main.scss */
+/* line 245, ../scss/_main.scss */
 .terminal .video-player {
   display: none;
 }
 
-/* line 240, ../scss/_main.scss */
+/* line 249, ../scss/_main.scss */
 .terminal .video-section:after {
   content: none;
 }
@@ -936,7 +946,7 @@ figcaption strong {
   /* line 99, ../scss/mediaqueries/_mobile.scss */
   .video-section:after {
     font-size: 4em;
-    margin-top: -35%;
+    margin-top: 20%;
   }
   /* line 104, ../scss/mediaqueries/_mobile.scss */
   .video-section video {
@@ -951,9 +961,11 @@ figcaption strong {
   /* line 113, ../scss/mediaqueries/_mobile.scss */
   .mobile-lede {
     display: block;
+    width: 100%;
+    margin: -25px 0 20px 0;
   }
 
-  /* line 117, ../scss/mediaqueries/_mobile.scss */
+  /* line 120, ../scss/mediaqueries/_mobile.scss */
   .video-js {
     min-width: 320px;
     min-height: 180px;

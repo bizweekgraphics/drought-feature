@@ -98,7 +98,7 @@
 	.video-section {
 		&:after {
 			font-size: 4em;
-			margin-top: -35%;
+			margin-top: 20%;
 		}
 
 		video {
@@ -112,6 +112,9 @@
 
 	.mobile-lede {
 		display: block;
+		width: 100%;
+		margin: -25px 0 20px 0;
+
 	}
 
 	.video-js {
