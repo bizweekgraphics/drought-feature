@@ -559,55 +559,45 @@ figcaption strong {
 #slider {
   width: 100%;
   overflow: hidden;
-  -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-  -moz-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-  -ms-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-  -o-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 
-/* line 18, ../scss/partials/_page-style.scss */
+/* line 19, ../scss/partials/_page-style.scss */
 .slide {
   display: block;
   width: 100%;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
   position: absolute;
   top: 0;
 }
-/* line 27, ../scss/partials/_page-style.scss */
+/* line 29, ../scss/partials/_page-style.scss */
 .slide h2 {
   font: 70px/68px "Druk Web", sans-serif;
 }
-/* line 32, ../scss/partials/_page-style.scss */
+/* line 34, ../scss/partials/_page-style.scss */
 .slide h3 {
   font: 22px/28px "HaasDisplayBold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
-/* line 37, ../scss/partials/_page-style.scss */
+/* line 39, ../scss/partials/_page-style.scss */
 .slide a {
   color: inherit;
 }
 
-/* line 45, ../scss/partials/_page-style.scss */
+/* line 47, ../scss/partials/_page-style.scss */
 .slide-selected {
   position: relative;
 }
 
 /*ARROWS*/
-/* line 51, ../scss/partials/_page-style.scss */
+/* line 53, ../scss/partials/_page-style.scss */
 #nav-previous,
 #nav-next {
   position: relative;
@@ -616,7 +606,7 @@ figcaption strong {
   height: 100%;
   cursor: pointer;
 }
-/* line 59, ../scss/partials/_page-style.scss */
+/* line 61, ../scss/partials/_page-style.scss */
 #nav-previous span,
 #nav-next span {
   position: absolute;
@@ -626,23 +616,23 @@ figcaption strong {
   width: 60px;
   height: 214px;
 }
-/* line 67, ../scss/partials/_page-style.scss */
+/* line 69, ../scss/partials/_page-style.scss */
 #nav-previous span:hover,
 #nav-next span:hover {
   opacity: 0.7;
 }
 
-/* line 74, ../scss/partials/_page-style.scss */
+/* line 76, ../scss/partials/_page-style.scss */
 #nav-previous, #nav-previous span {
   left: 0;
 }
 
-/* line 78, ../scss/partials/_page-style.scss */
+/* line 80, ../scss/partials/_page-style.scss */
 #nav-next, #nav-next span {
   right: 0;
 }
 
-/* line 82, ../scss/partials/_page-style.scss */
+/* line 84, ../scss/partials/_page-style.scss */
 #nav-previous img {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
@@ -651,20 +641,20 @@ figcaption strong {
   transform: rotate(180deg);
 }
 
-/* line 86, ../scss/partials/_page-style.scss */
+/* line 88, ../scss/partials/_page-style.scss */
 .next-story {
   background-color: #000;
   padding: 30px;
   margin-top: 50px;
 }
-/* line 91, ../scss/partials/_page-style.scss */
+/* line 93, ../scss/partials/_page-style.scss */
 .next-story p {
   font-family: "HaasDisplayBold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 24px;
   color: #ffffff;
 }
 
-/* line 98, ../scss/partials/_page-style.scss */
+/* line 100, ../scss/partials/_page-style.scss */
 .photo-byline {
   margin-top: 10px;
   font-family: 'HaasText', 'Helvetica';
@@ -673,7 +663,7 @@ figcaption strong {
 }
 
 /*HERO IMAGES*/
-/* line 107, ../scss/partials/_page-style.scss */
+/* line 109, ../scss/partials/_page-style.scss */
 .hero-module {
   background-repeat: no-repeat;
   background-position: center;
@@ -682,19 +672,19 @@ figcaption strong {
   width: 100%;
 }
 
-/* line 115, ../scss/partials/_page-style.scss */
+/* line 117, ../scss/partials/_page-style.scss */
 #slide-zero {
   background: url("../img/00_INTRO__DSC1788-copie.jpg") center center no-repeat;
   background-size: cover;
   height: 100vh;
   width: 100%;
 }
-/* line 121, ../scss/partials/_page-style.scss */
+/* line 123, ../scss/partials/_page-style.scss */
 #slide-zero .lede-content, #slide-zero .dek, #slide-zero .illo-byline, #slide-zero .start-btn, #slide-zero .byline {
   text-align: center;
   color: #ffffff;
 }
-/* line 126, ../scss/partials/_page-style.scss */
+/* line 128, ../scss/partials/_page-style.scss */
 #slide-zero .lede-content {
   position: absolute;
   bottom: 30%;
@@ -706,14 +696,14 @@ figcaption strong {
   transform: translateX(-50%);
   width: 80%;
 }
-/* line 135, ../scss/partials/_page-style.scss */
+/* line 137, ../scss/partials/_page-style.scss */
 #slide-zero h1 {
   font: 100px/100px "Druk Web", sans-serif;
   padding: 15px 0 10px;
   margin-bottom: 30px;
   margin-top: 0;
 }
-/* line 143, ../scss/partials/_page-style.scss */
+/* line 145, ../scss/partials/_page-style.scss */
 #slide-zero .dek {
   font: 34px/40px "TiemposHeadlineWeb-Bold", "Georgia", "Cambria", "Times New Roman", "Times", serif;
   margin: 0 auto 60px;
@@ -721,17 +711,17 @@ figcaption strong {
   background-color: transparent;
   max-width: 850px;
 }
-/* line 151, ../scss/partials/_page-style.scss */
+/* line 153, ../scss/partials/_page-style.scss */
 #slide-zero .illo-byline {
   font: 18px/22px "TiemposHeadlineWeb-Bold", "Georgia", "Cambria", "Times New Roman", "Times", serif;
   margin: 20px auto 60px;
   max-width: 800px;
 }
-/* line 157, ../scss/partials/_page-style.scss */
+/* line 159, ../scss/partials/_page-style.scss */
 #slide-zero .byline {
   font-weight: 600;
 }
-/* line 161, ../scss/partials/_page-style.scss */
+/* line 163, ../scss/partials/_page-style.scss */
 #slide-zero .start-btn {
   font: 18px "HaasDisplayBold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   background-color: #000;
@@ -741,59 +731,59 @@ figcaption strong {
   margin: 0 auto;
 }
 
-/* line 172, ../scss/partials/_page-style.scss */
+/* line 174, ../scss/partials/_page-style.scss */
 #slide-two .img_full {
   max-width: 1000px;
 }
 
 /*--- VIDEO LEDE ---*/
 /*------------ VIDEO STYLES ------------*/
-/* line 183, ../scss/partials/_page-style.scss */
+/* line 185, ../scss/partials/_page-style.scss */
 .video {
   margin: 40px auto;
 }
 
-/* line 187, ../scss/partials/_page-style.scss */
+/* line 189, ../scss/partials/_page-style.scss */
 .terminal .video {
   display: none;
 }
 
-/* line 193, ../scss/partials/_page-style.scss */
+/* line 195, ../scss/partials/_page-style.scss */
 .lede-video {
   width: 100%;
   height: auto;
   position: relative;
 }
-/* line 198, ../scss/partials/_page-style.scss */
+/* line 200, ../scss/partials/_page-style.scss */
 .lede-video video {
   width: 100%;
 }
 
-/* line 204, ../scss/partials/_page-style.scss */
+/* line 206, ../scss/partials/_page-style.scss */
 .lede {
   width: 50%;
   margin: 0 auto;
   position: absolute;
   z-index: 1;
 }
-/* line 210, ../scss/partials/_page-style.scss */
+/* line 212, ../scss/partials/_page-style.scss */
 .lede h2 {
   color: #000;
   margin-bottom: 0.01em;
 }
-/* line 215, ../scss/partials/_page-style.scss */
+/* line 217, ../scss/partials/_page-style.scss */
 .lede p {
   width: 100%;
 }
 
-/* line 220, ../scss/partials/_page-style.scss */
+/* line 222, ../scss/partials/_page-style.scss */
 .dek {
   text-align: left;
   background-color: #ffffff;
   width: 100%;
 }
 
-/* line 226, ../scss/partials/_page-style.scss */
+/* line 228, ../scss/partials/_page-style.scss */
 .illo-byline {
   background-color: #000;
   color: #ffffff;
@@ -803,7 +793,7 @@ figcaption strong {
   font-weight: 600;
 }
 
-/* line 236, ../scss/partials/_page-style.scss */
+/* line 238, ../scss/partials/_page-style.scss */
 .byline-feat {
   font-family: "HaasDisplayBold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   color: #000;
@@ -812,30 +802,30 @@ figcaption strong {
   display: inline;
 }
 
-/* line 244, ../scss/partials/_page-style.scss */
+/* line 246, ../scss/partials/_page-style.scss */
 .mobile-lede {
   display: none;
 }
 
-/* line 248, ../scss/partials/_page-style.scss */
+/* line 250, ../scss/partials/_page-style.scss */
 .cd-section {
   position: relative;
 }
 
-/* line 253, ../scss/partials/_page-style.scss */
+/* line 255, ../scss/partials/_page-style.scss */
 .lede, .parallax_wrapper {
   position: relative;
   z-index: 2;
 }
 
-/* line 258, ../scss/partials/_page-style.scss */
+/* line 260, ../scss/partials/_page-style.scss */
 .parallax_wrapper {
   width: auto;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-/* line 264, ../scss/partials/_page-style.scss */
+/* line 266, ../scss/partials/_page-style.scss */
 [data-hijacking="off"] .cd-section > div {
   opacity: 1;
 }
