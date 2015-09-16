@@ -197,7 +197,24 @@ function SafariOnly() {
     {
 
 
+        console.log("safari... ");
+
+        // NEED TO REMOVE THIS Later
+
+        $j('.video-section').addClass('icon');
+
+        $j(".video-section").on('click', function(){
+
+             $j(this).children('.video-player').fadeIn(300);
+             $j(this).children('video').fadeOut(300);
+             $j(this).addClass('hidden');
+        });
+
+
+
         if(navigator.userAgent.match(/(iPhone|iPod)/i)) {
+
+            console.log("mini me " + uagent);
 
         $j('.video-section').removeClass('icon');
 
@@ -215,6 +232,8 @@ function SafariOnly() {
         } else if(navigator.userAgent.match(/(iP)/i)) {
 
 
+             console.log("BIG mini me " + uagent);
+
         $j('.video-section').removeClass('icon');
 
         $j(".video-section").off('click', function(){
@@ -223,7 +242,7 @@ function SafariOnly() {
             $j(this).children('video').fadeOut(300);
             $j(this).addClass('hidden');
         });
-        
+
 
             $j('.video-section .video-player').css({'display': 'none'});
             $j('.safari-fix').css({'display': 'block'});
