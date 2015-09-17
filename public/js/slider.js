@@ -7,6 +7,8 @@ var top = $j(window).scrollTop();
 var currentSlideImg;
 var numSlideImgs;
 
+var currentSlideHeight;
+
 $j(document).ready(function(){
 
     currentSlide = 0;
@@ -34,6 +36,8 @@ $j(document).ready(function(){
     //set up hash change
     $j(window).on('hashchange', getCurrentUrl);
     getCurrentUrl();
+
+    getCurrentSlideHeight();
 
     SafariOnly();
 
@@ -81,6 +85,8 @@ function getCurrentUrl() {
     currentSlidePage();
     
     $j('html, body').scrollTop(0);
+
+    getCurrentSlideHeight();
 }
 
 
@@ -95,6 +101,12 @@ function resizeWidth() {
         // $j(this).css('left', (i * windowWidth) + 'px');
         $j(this).css('left', 0 + 'px');
     });
+}
+
+function getCurrentSlideHeight() {
+    currentSlideHeight = $j('.slide-selected').height();
+
+    $j('.slider').css({'height': currentSlideHeight + 'px'});
 }
 
 

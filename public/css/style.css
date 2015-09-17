@@ -565,6 +565,10 @@ figcaption strong {
   position: relative;
 }
 
+/* line 11, ../scss/partials/_page-style.scss */
+#wrapper-slides {
+  width: 100%;
+}
 /* line 20, ../scss/bourbon/addons/_clearfix.scss */
 #wrapper-slides::after {
   clear: both;
@@ -572,39 +576,39 @@ figcaption strong {
   display: table;
 }
 
-/* line 15, ../scss/partials/_page-style.scss */
+/* line 16, ../scss/partials/_page-style.scss */
 #slider {
   width: 100%;
   overflow: hidden;
 }
 
-/* line 22, ../scss/partials/_page-style.scss */
+/* line 23, ../scss/partials/_page-style.scss */
 .slide {
   display: block;
   width: 100%;
   float: left;
 }
-/* line 33, ../scss/partials/_page-style.scss */
+/* line 34, ../scss/partials/_page-style.scss */
 .slide h2 {
   font: 70px/68px "Druk Web", sans-serif;
 }
-/* line 37, ../scss/partials/_page-style.scss */
+/* line 38, ../scss/partials/_page-style.scss */
 .slide h3 {
   font: 22px/28px "HaasDisplayBold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
-/* line 41, ../scss/partials/_page-style.scss */
+/* line 42, ../scss/partials/_page-style.scss */
 .slide a {
   color: inherit;
 }
 
-/* line 47, ../scss/partials/_page-style.scss */
+/* line 48, ../scss/partials/_page-style.scss */
 .slide-selected {
   position: relative;
   opacity: 1;
 }
 
 /*ARROWS*/
-/* line 54, ../scss/partials/_page-style.scss */
+/* line 55, ../scss/partials/_page-style.scss */
 #nav-previous,
 #nav-next {
   position: relative;
@@ -613,7 +617,7 @@ figcaption strong {
   height: 100%;
   cursor: pointer;
 }
-/* line 62, ../scss/partials/_page-style.scss */
+/* line 63, ../scss/partials/_page-style.scss */
 #nav-previous span,
 #nav-next span {
   position: absolute;
@@ -623,23 +627,23 @@ figcaption strong {
   width: 60px;
   height: 214px;
 }
-/* line 70, ../scss/partials/_page-style.scss */
+/* line 71, ../scss/partials/_page-style.scss */
 #nav-previous span:hover,
 #nav-next span:hover {
   opacity: 0.7;
 }
 
-/* line 77, ../scss/partials/_page-style.scss */
+/* line 78, ../scss/partials/_page-style.scss */
 #nav-previous, #nav-previous span {
   left: 0;
 }
 
-/* line 81, ../scss/partials/_page-style.scss */
+/* line 82, ../scss/partials/_page-style.scss */
 #nav-next, #nav-next span {
   right: 0;
 }
 
-/* line 85, ../scss/partials/_page-style.scss */
+/* line 86, ../scss/partials/_page-style.scss */
 #nav-previous img {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
@@ -648,20 +652,20 @@ figcaption strong {
   transform: rotate(180deg);
 }
 
-/* line 89, ../scss/partials/_page-style.scss */
+/* line 90, ../scss/partials/_page-style.scss */
 .next-story {
   background-color: #000;
   padding: 30px;
   margin-top: 50px;
 }
-/* line 94, ../scss/partials/_page-style.scss */
+/* line 95, ../scss/partials/_page-style.scss */
 .next-story p {
   font-family: "HaasDisplayBold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 24px;
   color: #ffffff;
 }
 
-/* line 101, ../scss/partials/_page-style.scss */
+/* line 102, ../scss/partials/_page-style.scss */
 .photo-byline {
   margin-top: 10px;
   font-family: 'HaasText', 'Helvetica';
@@ -670,7 +674,7 @@ figcaption strong {
 }
 
 /*HERO IMAGES*/
-/* line 110, ../scss/partials/_page-style.scss */
+/* line 111, ../scss/partials/_page-style.scss */
 .hero-module {
   background-repeat: no-repeat;
   background-position: center;
@@ -679,19 +683,19 @@ figcaption strong {
   width: 100%;
 }
 
-/* line 118, ../scss/partials/_page-style.scss */
+/* line 119, ../scss/partials/_page-style.scss */
 #slide-zero {
   background: url("../img/00_INTRO__DSC1788-copie.jpg") center center no-repeat;
   background-size: cover;
   height: 100vh;
   width: 100%;
 }
-/* line 124, ../scss/partials/_page-style.scss */
+/* line 125, ../scss/partials/_page-style.scss */
 #slide-zero .lede-content, #slide-zero .dek, #slide-zero .illo-byline, #slide-zero .start-btn, #slide-zero .byline {
   text-align: center;
   color: #ffffff;
 }
-/* line 129, ../scss/partials/_page-style.scss */
+/* line 130, ../scss/partials/_page-style.scss */
 #slide-zero .lede-content {
   position: absolute;
   bottom: 30%;
@@ -703,14 +707,14 @@ figcaption strong {
   transform: translateX(-50%);
   width: 80%;
 }
-/* line 138, ../scss/partials/_page-style.scss */
+/* line 139, ../scss/partials/_page-style.scss */
 #slide-zero h1 {
   font: 100px/100px "Druk Web", sans-serif;
   padding: 15px 0 10px;
   margin-bottom: 30px;
   margin-top: 0;
 }
-/* line 146, ../scss/partials/_page-style.scss */
+/* line 147, ../scss/partials/_page-style.scss */
 #slide-zero .dek {
   font: 34px/40px "TiemposHeadlineWeb-Bold", "Georgia", "Cambria", "Times New Roman", "Times", serif;
   margin: 0 auto 60px;
@@ -718,17 +722,17 @@ figcaption strong {
   background-color: transparent;
   max-width: 850px;
 }
-/* line 154, ../scss/partials/_page-style.scss */
+/* line 155, ../scss/partials/_page-style.scss */
 #slide-zero .illo-byline {
   font: 18px/22px "TiemposHeadlineWeb-Bold", "Georgia", "Cambria", "Times New Roman", "Times", serif;
   margin: 20px auto 60px;
   max-width: 800px;
 }
-/* line 160, ../scss/partials/_page-style.scss */
+/* line 161, ../scss/partials/_page-style.scss */
 #slide-zero .byline {
   font-weight: 600;
 }
-/* line 164, ../scss/partials/_page-style.scss */
+/* line 165, ../scss/partials/_page-style.scss */
 #slide-zero .start-btn {
   font: 18px "HaasDisplayBold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   background-color: #000;
@@ -738,59 +742,59 @@ figcaption strong {
   margin: 0 auto;
 }
 
-/* line 175, ../scss/partials/_page-style.scss */
+/* line 176, ../scss/partials/_page-style.scss */
 #slide-two .img_full {
   max-width: 1000px;
 }
 
 /*--- VIDEO LEDE ---*/
 /*------------ VIDEO STYLES ------------*/
-/* line 186, ../scss/partials/_page-style.scss */
+/* line 187, ../scss/partials/_page-style.scss */
 .video {
   margin: 40px auto;
 }
 
-/* line 190, ../scss/partials/_page-style.scss */
+/* line 191, ../scss/partials/_page-style.scss */
 .terminal .video {
   display: none;
 }
 
-/* line 196, ../scss/partials/_page-style.scss */
+/* line 197, ../scss/partials/_page-style.scss */
 .lede-video {
   width: 100%;
   height: auto;
   position: relative;
 }
-/* line 201, ../scss/partials/_page-style.scss */
+/* line 202, ../scss/partials/_page-style.scss */
 .lede-video video {
   width: 100%;
 }
 
-/* line 207, ../scss/partials/_page-style.scss */
+/* line 208, ../scss/partials/_page-style.scss */
 .lede {
   width: 50%;
   margin: 0 auto;
   position: absolute;
   z-index: 1;
 }
-/* line 213, ../scss/partials/_page-style.scss */
+/* line 214, ../scss/partials/_page-style.scss */
 .lede h2 {
   color: #000;
   margin-bottom: 0.01em;
 }
-/* line 218, ../scss/partials/_page-style.scss */
+/* line 219, ../scss/partials/_page-style.scss */
 .lede p {
   width: 100%;
 }
 
-/* line 223, ../scss/partials/_page-style.scss */
+/* line 224, ../scss/partials/_page-style.scss */
 .dek {
   text-align: left;
   background-color: #ffffff;
   width: 100%;
 }
 
-/* line 229, ../scss/partials/_page-style.scss */
+/* line 230, ../scss/partials/_page-style.scss */
 .illo-byline {
   background-color: #000;
   color: #ffffff;
@@ -800,7 +804,7 @@ figcaption strong {
   font-weight: 600;
 }
 
-/* line 239, ../scss/partials/_page-style.scss */
+/* line 240, ../scss/partials/_page-style.scss */
 .byline-feat {
   font-family: "HaasDisplayBold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   color: #000;
@@ -809,35 +813,35 @@ figcaption strong {
   display: inline;
 }
 
-/* line 247, ../scss/partials/_page-style.scss */
+/* line 248, ../scss/partials/_page-style.scss */
 .mobile-lede {
   display: none;
 }
 
-/* line 251, ../scss/partials/_page-style.scss */
+/* line 252, ../scss/partials/_page-style.scss */
 .cd-section {
   position: relative;
 }
 
-/* line 256, ../scss/partials/_page-style.scss */
+/* line 257, ../scss/partials/_page-style.scss */
 .lede, .parallax_wrapper {
   position: relative;
   z-index: 2;
 }
 
-/* line 261, ../scss/partials/_page-style.scss */
+/* line 262, ../scss/partials/_page-style.scss */
 .parallax_wrapper {
   width: auto;
   max-width: 1600px;
   margin: 0 auto;
 }
 
-/* line 267, ../scss/partials/_page-style.scss */
+/* line 268, ../scss/partials/_page-style.scss */
 [data-hijacking="off"] .cd-section > div {
   opacity: 1;
 }
 
-/* line 271, ../scss/partials/_page-style.scss */
+/* line 272, ../scss/partials/_page-style.scss */
 .mobile-lede, .video-player {
   display: none;
 }
