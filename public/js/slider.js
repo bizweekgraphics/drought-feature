@@ -154,6 +154,8 @@ function previous() {
 //add selected class to current slide
 function currentSlidePage() {
 
+    var slideWidth = $j('#wrapper-slides').width();
+
     // updateSlideAd(currentSlide)
 
     if (currentSlide === -1 && window.location.hash[0] === undefined) {
@@ -165,7 +167,10 @@ function currentSlidePage() {
         
     }
 
-    var slidePos = (currentSlide / numSlides) * 100;
+    // var slidePos = (currentSlide / numSlides) * 100;
+
+    var slidePos = (currentSlide / numSlides) * slideWidth;
+    console.log('what is the slide position ? :' + slidePos);
 
     //removed selected class from all slides and circles
     $j('.slide').removeClass('slide-selected');
@@ -186,15 +191,18 @@ function currentSlidePage() {
     //update slide css
     $j('#wrapper-slides').css({
         'transition': 'top 400ms, left 400ms, transform 400ms',
-        'transform': 'translate(-' + slidePos + '%, 0%)',
+        // 'transform': 'translate(-' + slidePos + '%, 0%)',
         '-webkit-transition': 'top 400ms, left 400ms, -webkit-transform 400ms',
-        '-webkit-transform': '-webkit-translate(-' + slidePos + '%, 0%)',
+        // '-webkit-transform': '-webkit-translate(-' + slidePos + '%, 0%)',
         '-moz-transition': 'top 400ms, left 400ms, -moz-transform 400ms',
-        '-moz-transform': '-moz-translate(-' + slidePos + '%, 0%)',
+        // '-moz-transform': '-moz-translate(-' + slidePos + '%, 0%)',
         '-ms-transition': 'top 400ms, left 400ms, -o-transform 400ms',
-        '-ms-transform': 'translate3d(-' + slidePos + '%, 0%)',
+        // '-ms-transform': 'translate3d(-' + slidePos + '%, 0%)',
         '-o-transition': 'top 400ms, left 400ms, -o-transform 400ms',
-        '-o-transform': 'translate(-' + slidePos + '%, 0%)'
+        // '-o-transform': 'translate(-' + slidePos + '%, 0%)'
+
+        'left' : '-' + slidePos + 'px',
+        'top' : '0'
     });
 }
 
