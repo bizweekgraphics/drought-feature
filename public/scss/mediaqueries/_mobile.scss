@@ -26,10 +26,6 @@
 		}
 	}
 
-	#header, #subheader {
-		display: none;
-	}
-
 	#main {
 		.lede, p {
 			width: 90%;
@@ -42,7 +38,6 @@
 
 				+ p {
 					margin-top: 0.325em;
-					// font-size: 0.925em;
 				}	
 			}
 		}
@@ -52,10 +47,6 @@
 		h2 {
 			font-size: 48px;
 			line-height: 48px;
-		}
-
-		.illo-byline {
-
 		}
 
 		p {
@@ -75,7 +66,7 @@
 			border-bottom: 1px solid #241f19;
 			padding: 15px 0 10px;
 			margin-bottom: 30px;
-			text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+			text-shadow: 0px 0px 10px rgba($black,0.3);
 		}
 
 		.dek {
@@ -96,6 +87,7 @@
 	}
 
 	.video-section {
+
 		&.icon:after {
 			font-size: 4em;
 			margin-top: 20%;
@@ -106,8 +98,10 @@
 		}
 	}
 
-	.video-player {
-		display: none;
+	.photo-byline {
+		span {
+			display: block;
+		}
 	}
 
 	.mobile-lede {
@@ -121,5 +115,10 @@
 		min-width: 320px;
 		min-height: 180px;
 	}
+
+	#header, #subheader, .video-player, .lede .text_divider  {
+		display: none;
+	}
+
 
 }
