@@ -196,13 +196,15 @@ function SafariOnly() {
     if(/safari/.test(uagent) && !/chrome/.test(uagent))
     {
 
+        onsole.log('SAFARIIII');
+
         $j('.video-section').addClass('icon');
 
         $j(".video-section").on('click', function(){
 
             console.log('ughhhh');
 
-            console.log('what are the video name ' + _V_.players);
+            // console.log('what are the video name ' + _V_.players);
 
             $j(this).children('.video-player').fadeIn(300);
             $j(this).children('video').css({'display': 'none'});
@@ -215,12 +217,15 @@ function SafariOnly() {
 
         
         if(navigator.userAgent.match(/(iPhone|iPod)/i)) {
+
             
             $j('.video-section').removeClass('icon');
 
             $j('.safari-fix').css({'display': 'block'});
 
             $j(".video-section").off('click', function(){
+
+                console.log('ios iphone');
 
                 $j(this).children('.video-player').fadeIn(300);
                 $j(this).children('video').css({'display': 'none'});
@@ -232,11 +237,15 @@ function SafariOnly() {
 
         } else if(navigator.userAgent.match(/(iPad)/i)) {
 
+            
+
             $j('.video-section').removeClass('icon');
 
             $j('.safari-fix').css({'display': 'block'});
 
             $j(".video-section").off('click', function(){
+
+                console.log('ios ipad');
 
                 $j(this).children('.video-player').fadeIn(300);
                 $j(this).children('video').css({'display': 'none'});
@@ -258,7 +267,7 @@ function SafariOnly() {
 
             console.log('vwhaaaatt?!');
 
-            console.log('9823490237 what are the video name ' + _V_.players);
+            // console.log('9823490237 what are the video name ' + _V_.players);
 
             $j(this).children('.video-player').fadeIn(300);
             $j(this).children('video').css({'display': 'none'});
