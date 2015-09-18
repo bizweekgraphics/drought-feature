@@ -162,7 +162,6 @@ function currentSlidePage() {
         if($j(this).index() === currentSlide) {
             $j(this).addClass('slide-selected');
             $j('#subnav a').eq(currentSlide).addClass('active');
-            console.log('woof');
 
         }
 
@@ -201,12 +200,15 @@ function SafariOnly() {
 
         $j(".video-section").on('click', function(){
 
+            console.log('ughhhh');
+
+            console.log('what are the video name ' + _V_.players);
+
             $j(this).children('.video-player').fadeIn(300);
             $j(this).children('video').css({'display': 'none'});
             $j(this).children('.mobile-lede').css({'display': 'none'});
             $j(this).addClass('hidden');
 
-            console.log('what are the vide name ' + _V_.players);
         });
 
         
@@ -252,6 +254,11 @@ function SafariOnly() {
         $j('.video-section').addClass('icon');
 
         $j(".video-section").on('click', function(){
+
+
+            console.log('vwhaaaatt?!');
+
+            console.log('9823490237 what are the video name ' + _V_.players);
 
             $j(this).children('.video-player').fadeIn(300);
             $j(this).children('video').css({'display': 'none'});
