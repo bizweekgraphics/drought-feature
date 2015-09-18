@@ -204,7 +204,7 @@ function SafariOnly() {
 
             console.log('ughhhh');
 
-            // console.log('what are the video name ' + _V_.players);
+            console.log('what are the video name ' + _V_.players);
 
             $j(this).children('.video-player').fadeIn(300);
             $j(this).children('video').css({'display': 'none'});
