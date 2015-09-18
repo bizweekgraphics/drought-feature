@@ -196,7 +196,7 @@ function SafariOnly() {
     if(/safari/.test(uagent) && !/chrome/.test(uagent))
     {
 
-        onsole.log('SAFARIIII');
+        console.log('SAFARIIII');
 
         $j('.video-section').addClass('icon');
 
