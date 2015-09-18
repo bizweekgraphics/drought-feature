@@ -205,6 +205,8 @@ function SafariOnly() {
             $j(this).children('video').css({'display': 'none'});
             $j(this).children('.mobile-lede').css({'display': 'none'});
             $j(this).addClass('hidden');
+
+            console.log('what are the vide name ' + _V_.players);
         });
 
         
