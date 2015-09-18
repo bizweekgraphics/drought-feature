@@ -200,9 +200,9 @@ function SafariOnly() {
 
         $j('.video-section').addClass('icon');
 
-        $j(".video-section").on('click', function(){
+        $j(".video-section").on('click', function(e){
 
-            console.log('ughhhh');
+            debugger;
 
             console.log('what are the video name ' + _V_);
 
