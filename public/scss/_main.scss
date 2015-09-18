@@ -62,10 +62,20 @@ hr {
 	
 	a {
 		text-decoration: none;
-		color: $white;
+		color: rgba($white, 0.7);
 		margin: 0 10px;
+
+		&:hover {
+			color: rgba($white, 1);
+		}
+	}
+
+	.active {
+		color: rgba($white, 1);
 	}
 }
+
+
 
 
 
@@ -163,19 +173,23 @@ figcaption {
 		// min-height: 70vh;
 	}
 
-	&.icon:after {
-		content: 'a';
-		font-family:'Bloomberg';
-		position: absolute;
-		text-align: center;
-		color: rgba(255,255,255,0.6);
-		display: block;
-		margin-top: -35%;
-		left: 50%;
-		-ms-transform: translateX(-50%); 
-	    -webkit-transform: translateX(-50%);
-	    transform: translateX(-50%);
-		font-size: 8em;
+	&.icon {
+		position: relative;
+
+		&:after {
+			content: 'a';
+			font-family:'Bloomberg';
+			position: absolute;
+			text-align: center;
+			color: rgba(255,255,255,0.6);
+			display: block;
+			margin-top: -35%;
+			left: 50%;
+			-ms-transform: translateX(-50%); 
+		    -webkit-transform: translateX(-50%);
+		    transform: translateX(-50%);
+			font-size: 8em;
+		}
 	}
 	
 	&.hidden:after {

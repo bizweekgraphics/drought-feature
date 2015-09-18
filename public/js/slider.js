@@ -156,18 +156,19 @@ function currentSlidePage() {
 
     //removed selected class from all slides and circles
     $j('.slide').removeClass('slide-selected');
-    // $j('#subnav a').removeClass('active');
+    $j('#subnav a').removeClass('active');
 
     $j('.slide').each(function(i) {
         if($j(this).index() === currentSlide) {
             $j(this).addClass('slide-selected');
+            $j('#subnav a').eq(currentSlide).addClass('active');
+            console.log('woof');
 
         }
 
-        if($j(this).index() === currentSlide-1) {
-            // $j('#subnav a').eq(currentSlide-1).addClass('active');
-
-        }
+        // if($j(this).index() === currentSlide-1) {
+            
+        // }
     });
 
     //update slide css
@@ -196,53 +197,36 @@ function SafariOnly() {
     if(/safari/.test(uagent) && !/chrome/.test(uagent))
     {
 
+        $j('.video-section').removeClass('icon');
 
-        console.log("safari... ");
+        // $j(".video-section").off('click', function(){
 
-        // NEED TO REMOVE THIS Later
-
-        $j('.video-section').addClass('icon');
-
-        $j(".video-section").on('click', function(){
-
-             $j(this).children('.video-player').fadeIn(300);
-             $j(this).children('video').fadeOut(300);
-             $j(this).addClass('hidden');
-        });
-
-
+        //     $j(this).children('.video-player').fadeIn(300);
+        //     $j(this).children('video').fadeOut(300);
+        //     $j(this).addClass('hidden');
+        // });
 
         if(navigator.userAgent.match(/(iPhone|iPod)/i)) {
 
-            console.log("mini me " + uagent);
-
-        $j('.video-section').removeClass('icon');
-
-        $j(".video-section").off('click', function(){
-
-            $j(this).children('.video-player').fadeIn(300);
-            $j(this).children('video').fadeOut(300);
-            $j(this).addClass('hidden');
-        });
-
-
-
             $j('.safari-fix').css({'display': 'block'});
 
-        } else if(navigator.userAgent.match(/(iP)/i)) {
+            $j(".video-section").off('click', function(){
 
+                $j(this).children('.video-player').fadeIn(300);
+                $j(this).children('video').css({'display': 'none'});
+                $j(this).children('.mobile-lede').css({'display': 'none'});
+                $j(this).addClass('hidden');
+            });
 
-             console.log("BIG mini me " + uagent);
+        } else {
 
-        $j('.video-section').removeClass('icon');
+            $j(".video-section").off('click', function(){
 
-        $j(".video-section").off('click', function(){
-
-            $j(this).children('.video-player').fadeIn(300);
-            $j(this).children('video').fadeOut(300);
-            $j(this).addClass('hidden');
-        });
-
+                $j(this).children('.video-player').fadeIn(300);
+                $j(this).children('video').css({'display': 'none'});
+                $j(this).children('.mobile-lede').css({'display': 'none'});
+                $j(this).addClass('hidden');
+            });
 
             $j('.video-section .video-player').css({'display': 'none'});
             $j('.safari-fix').css({'display': 'block'});
@@ -256,9 +240,10 @@ function SafariOnly() {
 
         $j(".video-section").on('click', function(){
 
-             $j(this).children('.video-player').fadeIn(300);
-             $j(this).children('video').fadeOut(300);
-             $j(this).addClass('hidden');
+            $j(this).children('.video-player').fadeIn(300);
+            $j(this).children('video').css({'display': 'none'});
+            $j(this).children('.mobile-lede').css({'display': 'none'});
+            $j(this).addClass('hidden');
         });
     }
 }

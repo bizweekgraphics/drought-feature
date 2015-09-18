@@ -355,24 +355,32 @@ hr {
 /* line 63, ../scss/_main.scss */
 #subheader a {
   text-decoration: none;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.7);
   margin: 0 10px;
 }
+/* line 68, ../scss/_main.scss */
+#subheader a:hover {
+  color: white;
+}
+/* line 73, ../scss/_main.scss */
+#subheader .active {
+  color: white;
+}
 
-/* line 72, ../scss/_main.scss */
+/* line 82, ../scss/_main.scss */
 .hero-text {
   width: 60%;
   margin: 0 auto;
   padding-top: 350px;
   text-align: center;
 }
-/* line 78, ../scss/_main.scss */
+/* line 88, ../scss/_main.scss */
 .hero-text h1 {
   font: 100px/100px "Druk Web", sans-serif;
   margin: 20px 0;
   color: #ffffff;
 }
-/* line 84, ../scss/_main.scss */
+/* line 94, ../scss/_main.scss */
 .hero-text .dek {
   text-align: center;
   padding: 0;
@@ -380,69 +388,69 @@ hr {
 }
 
 /*IMAGES*/
-/* line 93, ../scss/_main.scss */
+/* line 103, ../scss/_main.scss */
 figure {
   width: 100%;
 }
-/* line 96, ../scss/_main.scss */
+/* line 106, ../scss/_main.scss */
 figure img {
   max-width: 100%;
 }
 
-/* line 101, ../scss/_main.scss */
+/* line 111, ../scss/_main.scss */
 figcaption {
   color: #4d4d4d;
   margin: 0.5em 0.5em 2em;
   font: 0.925em "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
-/* line 106, ../scss/_main.scss */
+/* line 116, ../scss/_main.scss */
 figcaption strong {
   font-family: "NHaasGroteskDSPro-75Bd", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-weight: 600;
 }
 
-/* line 112, ../scss/_main.scss */
+/* line 122, ../scss/_main.scss */
 .img_full {
   width: 90%;
   max-width: 1280px;
   margin: 0 auto 3rem;
 }
-/* line 117, ../scss/_main.scss */
+/* line 127, ../scss/_main.scss */
 .img_full img {
   max-width: 80%;
   display: block;
   margin: 0 auto;
 }
 
-/* line 124, ../scss/_main.scss */
+/* line 134, ../scss/_main.scss */
 .img_left, .img_right {
   max-width: 450px;
   width: auto;
 }
 
-/* line 129, ../scss/_main.scss */
+/* line 139, ../scss/_main.scss */
 .img_left {
   float: left;
   margin: 0.5rem 5rem 3rem 7%;
 }
 
-/* line 134, ../scss/_main.scss */
+/* line 144, ../scss/_main.scss */
 .img_right {
   float: right;
   margin: 0.5rem 7% 3rem 5rem;
 }
 
-/* line 140, ../scss/_main.scss */
+/* line 150, ../scss/_main.scss */
 .slide_img img {
   width: 100%;
 }
 
-/* line 145, ../scss/_main.scss */
+/* line 155, ../scss/_main.scss */
 .photo-info {
   border-bottom: 1px solid #ddd;
 }
 
-/* line 149, ../scss/_main.scss */
+/* line 159, ../scss/_main.scss */
 .credit {
   font-size: 0.6em;
   margin-top: 3px;
@@ -451,15 +459,19 @@ figcaption strong {
 }
 
 /*VIDEO*/
-/* line 157, ../scss/_main.scss */
+/* line 167, ../scss/_main.scss */
 .video-section {
   margin-bottom: 1.5em;
 }
-/* line 161, ../scss/_main.scss */
+/* line 171, ../scss/_main.scss */
 .video-section video {
   min-width: 100%;
 }
-/* line 166, ../scss/_main.scss */
+/* line 176, ../scss/_main.scss */
+.video-section.icon {
+  position: relative;
+}
+/* line 179, ../scss/_main.scss */
 .video-section.icon:after {
   content: 'a';
   font-family: 'Bloomberg';
@@ -474,40 +486,40 @@ figcaption strong {
   transform: translateX(-50%);
   font-size: 8em;
 }
-/* line 181, ../scss/_main.scss */
+/* line 195, ../scss/_main.scss */
 .video-section.hidden:after {
   display: none;
 }
 
-/* line 186, ../scss/_main.scss */
+/* line 200, ../scss/_main.scss */
 .video-player {
   background-color: #000;
   width: 100%;
 }
 
-/* line 191, ../scss/_main.scss */
+/* line 205, ../scss/_main.scss */
 .video-js {
   margin: 0 auto;
   min-width: 1360px;
   min-height: 765px;
   display: block;
 }
-/* line 197, ../scss/_main.scss */
+/* line 211, ../scss/_main.scss */
 #main .video-js {
   margin-top: -50%;
 }
 
-/* line 205, ../scss/_main.scss */
+/* line 219, ../scss/_main.scss */
 .player .video-wrapper .video {
   height: auto !important;
 }
 
-/* line 209, ../scss/_main.scss */
+/* line 223, ../scss/_main.scss */
 .player .target {
   height: auto !important;
 }
 
-/* line 213, ../scss/_main.scss */
+/* line 227, ../scss/_main.scss */
 .safari-fix {
   display: none;
   background-color: #000;
@@ -518,13 +530,13 @@ figcaption strong {
 }
 
 /*PHOTO GALLERY*/
-/* line 224, ../scss/_main.scss */
+/* line 238, ../scss/_main.scss */
 .photo-gallery img {
   width: 100%;
   height: 100vh;
 }
 
-/* line 229, ../scss/_main.scss */
+/* line 243, ../scss/_main.scss */
 .ad-unit {
   width: 300px;
   height: 250px;
@@ -533,22 +545,22 @@ figcaption strong {
   margin: 20px;
 }
 
-/* line 237, ../scss/_main.scss */
+/* line 251, ../scss/_main.scss */
 .sidebar .clearboth {
   margin-bottom: 10px;
 }
 
-/* line 241, ../scss/_main.scss */
+/* line 255, ../scss/_main.scss */
 .terminal a {
   text-decoration: none;
 }
 
-/* line 245, ../scss/_main.scss */
+/* line 259, ../scss/_main.scss */
 .terminal .video-player {
   display: none;
 }
 
-/* line 249, ../scss/_main.scss */
+/* line 263, ../scss/_main.scss */
 .terminal .video-section:after {
   content: none;
 }
@@ -679,13 +691,12 @@ figcaption strong {
 /* line 96, ../scss/partials/_page-style.scss */
 .photo-byline {
   margin-top: 10px;
-  font-family: 'HaasText', 'Helvetica';
-  font-size: 16px;
+  font: 1em/ 1.53em 'HaasText', 'Helvetica';
   color: #888;
 }
 
 /*HERO IMAGES*/
-/* line 105, ../scss/partials/_page-style.scss */
+/* line 104, ../scss/partials/_page-style.scss */
 .hero-module {
   background-repeat: no-repeat;
   background-position: center;
@@ -694,19 +705,19 @@ figcaption strong {
   width: 100%;
 }
 
-/* line 113, ../scss/partials/_page-style.scss */
+/* line 112, ../scss/partials/_page-style.scss */
 #slide-zero {
   background: url("../img/00_INTRO__DSC1788-copie.jpg") center center no-repeat;
   background-size: cover;
   height: 100vh;
   width: 100%;
 }
-/* line 119, ../scss/partials/_page-style.scss */
+/* line 118, ../scss/partials/_page-style.scss */
 #slide-zero .lede-content, #slide-zero .dek, #slide-zero .illo-byline, #slide-zero .start-btn, #slide-zero .byline {
   text-align: center;
   color: #ffffff;
 }
-/* line 124, ../scss/partials/_page-style.scss */
+/* line 123, ../scss/partials/_page-style.scss */
 #slide-zero .lede-content {
   position: absolute;
   bottom: 30%;
@@ -718,14 +729,14 @@ figcaption strong {
   transform: translateX(-50%);
   width: 80%;
 }
-/* line 133, ../scss/partials/_page-style.scss */
+/* line 132, ../scss/partials/_page-style.scss */
 #slide-zero h1 {
   font: 100px/100px "Druk Web", sans-serif;
   padding: 15px 0 10px;
   margin-bottom: 30px;
   margin-top: 0;
 }
-/* line 141, ../scss/partials/_page-style.scss */
+/* line 140, ../scss/partials/_page-style.scss */
 #slide-zero .dek {
   font: 34px/40px "TiemposHeadlineWeb-Bold", "Georgia", "Cambria", "Times New Roman", "Times", serif;
   margin: 0 auto 60px;
@@ -733,17 +744,17 @@ figcaption strong {
   background-color: transparent;
   max-width: 850px;
 }
-/* line 149, ../scss/partials/_page-style.scss */
+/* line 148, ../scss/partials/_page-style.scss */
 #slide-zero .illo-byline {
   font: 18px/22px "TiemposHeadlineWeb-Bold", "Georgia", "Cambria", "Times New Roman", "Times", serif;
   margin: 20px auto 60px;
   max-width: 800px;
 }
-/* line 155, ../scss/partials/_page-style.scss */
+/* line 154, ../scss/partials/_page-style.scss */
 #slide-zero .byline {
   font-weight: 600;
 }
-/* line 159, ../scss/partials/_page-style.scss */
+/* line 158, ../scss/partials/_page-style.scss */
 #slide-zero .start-btn {
   font: 18px "HaasDisplayBold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   background-color: #000;
@@ -753,59 +764,59 @@ figcaption strong {
   margin: 0 auto;
 }
 
-/* line 170, ../scss/partials/_page-style.scss */
+/* line 169, ../scss/partials/_page-style.scss */
 #slide-two .img_full {
   max-width: 1000px;
 }
 
 /*--- VIDEO LEDE ---*/
 /*------------ VIDEO STYLES ------------*/
-/* line 181, ../scss/partials/_page-style.scss */
+/* line 180, ../scss/partials/_page-style.scss */
 .video {
   margin: 40px auto;
 }
 
-/* line 185, ../scss/partials/_page-style.scss */
+/* line 184, ../scss/partials/_page-style.scss */
 .terminal .video {
   display: none;
 }
 
-/* line 191, ../scss/partials/_page-style.scss */
+/* line 190, ../scss/partials/_page-style.scss */
 .lede-video {
   width: 100%;
   height: auto;
   position: relative;
 }
-/* line 196, ../scss/partials/_page-style.scss */
+/* line 195, ../scss/partials/_page-style.scss */
 .lede-video video {
   width: 100%;
 }
 
-/* line 202, ../scss/partials/_page-style.scss */
+/* line 201, ../scss/partials/_page-style.scss */
 .lede {
   width: 50%;
   margin: 0 auto;
   position: absolute;
   z-index: 1;
 }
-/* line 208, ../scss/partials/_page-style.scss */
+/* line 207, ../scss/partials/_page-style.scss */
 .lede h2 {
   color: #000;
   margin-bottom: 0.01em;
 }
-/* line 213, ../scss/partials/_page-style.scss */
+/* line 212, ../scss/partials/_page-style.scss */
 .lede p {
   width: 100%;
 }
 
-/* line 218, ../scss/partials/_page-style.scss */
+/* line 217, ../scss/partials/_page-style.scss */
 .dek {
   text-align: left;
   background-color: #ffffff;
   width: 100%;
 }
 
-/* line 224, ../scss/partials/_page-style.scss */
+/* line 223, ../scss/partials/_page-style.scss */
 .illo-byline {
   background-color: #000;
   color: #ffffff;
@@ -815,7 +826,7 @@ figcaption strong {
   font-weight: 600;
 }
 
-/* line 234, ../scss/partials/_page-style.scss */
+/* line 233, ../scss/partials/_page-style.scss */
 .byline-feat {
   font-family: "HaasDisplayBold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   color: #000;
@@ -824,35 +835,35 @@ figcaption strong {
   display: inline;
 }
 
-/* line 242, ../scss/partials/_page-style.scss */
+/* line 241, ../scss/partials/_page-style.scss */
 .mobile-lede {
   display: none;
 }
 
-/* line 246, ../scss/partials/_page-style.scss */
+/* line 245, ../scss/partials/_page-style.scss */
 .cd-section {
   position: relative;
 }
 
-/* line 251, ../scss/partials/_page-style.scss */
+/* line 250, ../scss/partials/_page-style.scss */
 .lede, .parallax_wrapper {
   position: relative;
   z-index: 2;
 }
 
-/* line 256, ../scss/partials/_page-style.scss */
+/* line 255, ../scss/partials/_page-style.scss */
 .parallax_wrapper {
   width: auto;
   max-width: 1600px;
   margin: 0 auto;
 }
 
-/* line 262, ../scss/partials/_page-style.scss */
+/* line 261, ../scss/partials/_page-style.scss */
 [data-hijacking="off"] .cd-section > div {
   opacity: 1;
 }
 
-/* line 266, ../scss/partials/_page-style.scss */
+/* line 265, ../scss/partials/_page-style.scss */
 .mobile-lede, .video-player {
   display: none;
 }
@@ -865,7 +876,7 @@ figcaption strong {
 
   /* line 7, ../scss/mediaqueries/_mobile.scss */
   .img_right, .img_left {
-    max-width: 100%;
+    max-width: 90%;
     float: none;
     text-align: center;
     margin: 20px;
@@ -873,11 +884,11 @@ figcaption strong {
 
   /* line 14, ../scss/mediaqueries/_mobile.scss */
   .img_full {
-    width: 100%;
+    width: 90%;
   }
   /* line 17, ../scss/mediaqueries/_mobile.scss */
   .img_full img {
-    max-width: 100%;
+    max-width: 90%;
   }
 
   /* line 24, ../scss/mediaqueries/_mobile.scss */
@@ -945,29 +956,34 @@ figcaption strong {
     font-size: 14px;
   }
 
-  /* line 99, ../scss/mediaqueries/_mobile.scss */
+  /* line 100, ../scss/mediaqueries/_mobile.scss */
   .video-section.icon:after {
     font-size: 4em;
-    margin-top: 20%;
+    margin-top: -34%;
   }
-  /* line 104, ../scss/mediaqueries/_mobile.scss */
+  /* line 105, ../scss/mediaqueries/_mobile.scss */
   .video-section video {
     display: none;
   }
 
-  /* line 109, ../scss/mediaqueries/_mobile.scss */
-  .video-player {
+  /* line 111, ../scss/mediaqueries/_mobile.scss */
+  .photo-byline span {
+    display: block;
+  }
+
+  /* line 116, ../scss/mediaqueries/_mobile.scss */
+  .video-player, .lede .text_divider {
     display: none;
   }
 
-  /* line 113, ../scss/mediaqueries/_mobile.scss */
+  /* line 120, ../scss/mediaqueries/_mobile.scss */
   .mobile-lede {
     display: block;
     width: 100%;
     margin: -25px 0 20px 0;
   }
 
-  /* line 120, ../scss/mediaqueries/_mobile.scss */
+  /* line 127, ../scss/mediaqueries/_mobile.scss */
   .video-js {
     min-width: 320px;
     min-height: 180px;

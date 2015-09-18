@@ -5,17 +5,17 @@
 	}
 
 	.img_right, .img_left {
-		max-width: 100%;
+		max-width: 90%;
 		float: none;
 		text-align: center;
 		margin: 20px;
 	}
 
 	.img_full {
-		width: 100%;
+		width: 90%;
 
 		img {
-			max-width: 100%;
+			max-width: 90%;
 		}
 	}
 
@@ -96,9 +96,10 @@
 	}
 
 	.video-section {
+
 		&.icon:after {
 			font-size: 4em;
-			margin-top: 20%;
+			margin-top: -34%;
 		}
 
 		video {
@@ -106,7 +107,13 @@
 		}
 	}
 
-	.video-player {
+	.photo-byline {
+		span {
+			display: block;
+		}
+	}
+
+	.video-player, .lede .text_divider {
 		display: none;
 	}
 
