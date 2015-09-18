@@ -197,6 +197,18 @@ function SafariOnly() {
     if(/safari/.test(uagent) && !/chrome/.test(uagent))
     {
 
+        $j('.video-section').addClass('icon');
+
+        $j(".video-section").on('click', function(){
+
+            $j(this).children('.video-player').fadeIn(300);
+            $j(this).children('video').css({'display': 'none'});
+            $j(this).children('.mobile-lede').css({'display': 'none'});
+            $j(this).addClass('hidden');
+        });
+
+        
+
         
         if(navigator.userAgent.match(/(iPhone|iPod)/i)) {
             
