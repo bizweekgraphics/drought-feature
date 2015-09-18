@@ -196,15 +196,12 @@ function SafariOnly() {
     if(/safari/.test(uagent) && !/chrome/.test(uagent))
     {
 
-        console.log('SAFARIIII');
 
         $j('.video-section').addClass('icon');
 
         $j(".video-section").on('click', function(e){
 
-            debugger;
 
-            console.log('what are the video name ' + _V_);
 
             $j(this).children('.video-player').fadeIn(300);
             $j(this).children('video').css({'display': 'none'});
@@ -225,7 +222,7 @@ function SafariOnly() {
 
             $j(".video-section").off('click', function(){
 
-                console.log('ios iphone');
+
 
                 $j(this).children('.video-player').fadeIn(300);
                 $j(this).children('video').css({'display': 'none'});
@@ -245,7 +242,7 @@ function SafariOnly() {
 
             $j(".video-section").off('click', function(){
 
-                console.log('ios ipad');
+
 
                 $j(this).children('.video-player').fadeIn(300);
                 $j(this).children('video').css({'display': 'none'});
