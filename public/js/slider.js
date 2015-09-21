@@ -274,7 +274,7 @@ function SafariOnly() {
                 // 'padding-top' : videoPadding + 'px'
             });
 
-            $j('.video-player').eq(0).css({
+            $j('#video-wrapper .video-player').eq(0).css({
                 'display': 'block'
                 // 'height' : videoPadding - 15 + 'px'
             });

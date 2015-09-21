@@ -198,8 +198,15 @@ figcaption {
 }
 
 .video-player {
-  background-color: $black;
-  width: 100%;
+	background-color: $black;
+	width: 100%;
+
+  	#video-wrapper & {
+		width: 100vw;
+		position: relative;
+		background-color: $black;
+		display: block;
+	}
 }
 
 .video-js {
