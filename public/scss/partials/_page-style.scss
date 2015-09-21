@@ -6,18 +6,15 @@
 
 #video-wrapper  {
 	width: 100vw;
-	position: absolute;
+	position: relative;
 	background-color: $black;
 	display: block;
-	
-	z-index: 100;
 
 
 	.video-player {
 		display: none;
-		position: absolute;
+		position: relative;
 		left: 0;
-		height: 100px;
 	}
 
 }
