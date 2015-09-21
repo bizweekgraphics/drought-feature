@@ -516,37 +516,36 @@
     <script src='http://www.bloomberg.com/graphics/assets/js/lib/recirculator.js?'></script>
 
     <script type="text/javascript">
-		initShare()
+		initShare();
 
 		//stick header to top of page
-		var fixedHeader = null
+		var fixedHeader = null;
 		d3.select(window).on('scroll.sticky', function(){
-		var fixedHeader1 = pageYOffset > 120
-		if (fixedHeader != fixedHeader1){
-		  fixedHeader = fixedHeader1
+			var fixedHeader1 = pageYOffset > 120
+			if (fixedHeader != fixedHeader1){
+				fixedHeader = fixedHeader1
 
-		  d3.select('#full-header').classed('stuck', fixedHeader)
-		  d3.select('#full-header-space').classed('stuck', fixedHeader)
-		}
+				d3.select('#full-header').classed('stuck', fixedHeader)
+				d3.select('#full-header-space').classed('stuck', fixedHeader)
+			}
 		});
 
 		//WOW ANIMATIONS
 
 		wow = new WOW(
 		{
-		boxClass:   'reveal',
-		animateClass: 'animated',
-		offset:     100,
-		mobile: false,
-		}
-		);
+			boxClass:   'reveal',
+			animateClass: 'animated',
+			offset:     100,
+			mobile: false,
+		});
 		wow.init();
 
 		//TERMINAL LINKS
 
 		$(document).ready(function(){
 
-			if(isTerminal) { 
+			if (isTerminal){ 
 				$("a").attr("href", "#");
 			}
 		});
