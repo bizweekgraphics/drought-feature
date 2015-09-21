@@ -292,3 +292,10 @@ function playVideo() {
     });
 
 }
+
+
+function terminalCalls() {
+    if (isTerminal){ 
+                $("a").attr("href", "#");
+    }
+}
