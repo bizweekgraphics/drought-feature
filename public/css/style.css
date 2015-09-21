@@ -768,55 +768,59 @@ figcaption strong {
 #slide-two .img_full {
   max-width: 1000px;
 }
+/* line 173, ../scss/partials/_page-style.scss */
+#slide-two .video-player {
+  display: block;
+}
 
 /*--- VIDEO LEDE ---*/
 /*------------ VIDEO STYLES ------------*/
-/* line 180, ../scss/partials/_page-style.scss */
+/* line 184, ../scss/partials/_page-style.scss */
 .video {
   margin: 40px auto;
 }
 
-/* line 184, ../scss/partials/_page-style.scss */
+/* line 188, ../scss/partials/_page-style.scss */
 .terminal .video {
   display: none;
 }
 
-/* line 190, ../scss/partials/_page-style.scss */
+/* line 194, ../scss/partials/_page-style.scss */
 .lede-video {
   width: 100%;
   height: auto;
   position: relative;
 }
-/* line 195, ../scss/partials/_page-style.scss */
+/* line 199, ../scss/partials/_page-style.scss */
 .lede-video video {
   width: 100%;
 }
 
-/* line 201, ../scss/partials/_page-style.scss */
+/* line 205, ../scss/partials/_page-style.scss */
 .lede {
   width: 50%;
   margin: 0 auto;
   position: absolute;
   z-index: 1;
 }
-/* line 207, ../scss/partials/_page-style.scss */
+/* line 211, ../scss/partials/_page-style.scss */
 .lede h2 {
   color: #000;
   margin-bottom: 0.01em;
 }
-/* line 212, ../scss/partials/_page-style.scss */
+/* line 216, ../scss/partials/_page-style.scss */
 .lede p {
   width: 100%;
 }
 
-/* line 217, ../scss/partials/_page-style.scss */
+/* line 221, ../scss/partials/_page-style.scss */
 .dek {
   text-align: left;
   background-color: #ffffff;
   width: 100%;
 }
 
-/* line 223, ../scss/partials/_page-style.scss */
+/* line 227, ../scss/partials/_page-style.scss */
 .illo-byline {
   background-color: #000;
   color: #ffffff;
@@ -826,7 +830,7 @@ figcaption strong {
   font-weight: 600;
 }
 
-/* line 233, ../scss/partials/_page-style.scss */
+/* line 237, ../scss/partials/_page-style.scss */
 .byline-feat {
   font-family: "HaasDisplayBold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   color: #000;
@@ -835,35 +839,35 @@ figcaption strong {
   display: inline;
 }
 
-/* line 241, ../scss/partials/_page-style.scss */
+/* line 245, ../scss/partials/_page-style.scss */
 .mobile-lede {
   display: none;
 }
 
-/* line 245, ../scss/partials/_page-style.scss */
+/* line 249, ../scss/partials/_page-style.scss */
 .cd-section {
   position: relative;
 }
 
-/* line 250, ../scss/partials/_page-style.scss */
+/* line 254, ../scss/partials/_page-style.scss */
 .lede, .parallax_wrapper {
   position: relative;
   z-index: 2;
 }
 
-/* line 255, ../scss/partials/_page-style.scss */
+/* line 259, ../scss/partials/_page-style.scss */
 .parallax_wrapper {
   width: auto;
   max-width: 1600px;
   margin: 0 auto;
 }
 
-/* line 261, ../scss/partials/_page-style.scss */
+/* line 265, ../scss/partials/_page-style.scss */
 [data-hijacking="off"] .cd-section > div {
   opacity: 1;
 }
 
-/* line 265, ../scss/partials/_page-style.scss */
+/* line 269, ../scss/partials/_page-style.scss */
 .mobile-lede, .video-player {
   display: none;
 }
@@ -896,40 +900,35 @@ figcaption strong {
     width: 35px;
   }
 
-  /* line 29, ../scss/mediaqueries/_mobile.scss */
-  #header, #subheader {
-    display: none;
-  }
-
-  /* line 34, ../scss/mediaqueries/_mobile.scss */
+  /* line 30, ../scss/mediaqueries/_mobile.scss */
   #main .lede, #main p {
     width: 90%;
     margin: 0 auto 1em;
   }
-  /* line 40, ../scss/mediaqueries/_mobile.scss */
+  /* line 36, ../scss/mediaqueries/_mobile.scss */
   #main .lede p {
     width: 100%;
   }
-  /* line 43, ../scss/mediaqueries/_mobile.scss */
+  /* line 39, ../scss/mediaqueries/_mobile.scss */
   #main .lede p + p {
     margin-top: 0.325em;
   }
 
-  /* line 52, ../scss/mediaqueries/_mobile.scss */
+  /* line 47, ../scss/mediaqueries/_mobile.scss */
   .slide h2 {
     font-size: 48px;
     line-height: 48px;
   }
-  /* line 61, ../scss/mediaqueries/_mobile.scss */
+  /* line 52, ../scss/mediaqueries/_mobile.scss */
   .slide p {
     margin: 1em 0 2em;
   }
 
-  /* line 67, ../scss/mediaqueries/_mobile.scss */
+  /* line 58, ../scss/mediaqueries/_mobile.scss */
   #slide-zero .lede-content {
     bottom: 20%;
   }
-  /* line 71, ../scss/mediaqueries/_mobile.scss */
+  /* line 62, ../scss/mediaqueries/_mobile.scss */
   #slide-zero h1 {
     font-size: 52px;
     line-height: 54px;
@@ -939,54 +938,59 @@ figcaption strong {
     margin-bottom: 30px;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   }
-  /* line 81, ../scss/mediaqueries/_mobile.scss */
+  /* line 72, ../scss/mediaqueries/_mobile.scss */
   #slide-zero .dek {
     font-size: 20px;
     line-height: 28px;
   }
-  /* line 86, ../scss/mediaqueries/_mobile.scss */
+  /* line 77, ../scss/mediaqueries/_mobile.scss */
   #slide-zero .illo-byline {
     font-size: 14px;
     line-height: 16px;
     margin: 20px auto 60px;
     max-width: 100%;
   }
-  /* line 93, ../scss/mediaqueries/_mobile.scss */
+  /* line 84, ../scss/mediaqueries/_mobile.scss */
   #slide-zero .start-btn {
     font-size: 14px;
   }
 
-  /* line 100, ../scss/mediaqueries/_mobile.scss */
+  /* line 91, ../scss/mediaqueries/_mobile.scss */
   .video-section.icon:after {
     font-size: 4em;
     margin-top: -34%;
   }
-  /* line 105, ../scss/mediaqueries/_mobile.scss */
+  /* line 96, ../scss/mediaqueries/_mobile.scss */
   .video-section video {
     display: none;
   }
 
-  /* line 111, ../scss/mediaqueries/_mobile.scss */
+  /* line 102, ../scss/mediaqueries/_mobile.scss */
   .photo-byline span {
     display: block;
   }
 
-  /* line 116, ../scss/mediaqueries/_mobile.scss */
+  /* line 108, ../scss/mediaqueries/_mobile.scss */
   .video-player, .lede .text_divider {
     display: none;
   }
 
-  /* line 120, ../scss/mediaqueries/_mobile.scss */
+  /* line 112, ../scss/mediaqueries/_mobile.scss */
   .mobile-lede {
     display: block;
     width: 100%;
     margin: -25px 0 20px 0;
   }
 
-  /* line 127, ../scss/mediaqueries/_mobile.scss */
+  /* line 119, ../scss/mediaqueries/_mobile.scss */
   .video-js {
     min-width: 320px;
     min-height: 180px;
+  }
+
+  /* line 124, ../scss/mediaqueries/_mobile.scss */
+  #header, #subheader, .video-player, .lede .text_divider {
+    display: none;
   }
 }
 @media screen and (max-width: 1024px) {
