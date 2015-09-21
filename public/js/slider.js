@@ -193,6 +193,9 @@ function scrollToTop() {
 
 function SafariOnly() {
     var uagent = navigator.userAgent.toLowerCase();
+    var videoPadding = $j('.video-section video').height();
+
+
     if(/safari/.test(uagent) && !/chrome/.test(uagent))
     {
 
@@ -224,10 +227,10 @@ function SafariOnly() {
 
 
 
-                $j(this).children('.video-player').fadeIn(300);
-                $j(this).children('video').css({'display': 'none'});
-                $j(this).children('.mobile-lede').css({'display': 'none'});
-                $j(this).addClass('hidden');
+                // $j(this).children('.video-player').fadeIn(300);
+                // $j(this).children('video').css({'display': 'none'});
+                // $j(this).children('.mobile-lede').css({'display': 'none'});
+                // $j(this).addClass('hidden');
             });
 
             $j('.video-section .video-player').css({'display': 'none'});
@@ -244,10 +247,10 @@ function SafariOnly() {
 
 
 
-                $j(this).children('.video-player').fadeIn(300);
-                $j(this).children('video').css({'display': 'none'});
-                $j(this).children('.mobile-lede').css({'display': 'none'});
-                $j(this).addClass('hidden');
+                // $j(this).children('.video-player').fadeIn(300);
+                // $j(this).children('video').css({'display': 'none'});
+                // $j(this).children('.mobile-lede').css({'display': 'none'});
+                // $j(this).addClass('hidden');
             });
 
             $j('.video-section .video-player').css({'display': 'none'});
@@ -266,10 +269,26 @@ function SafariOnly() {
 
             // console.log('9823490237 what are the video name ' + _V_.players);
 
-            $j(this).children('.video-player').fadeIn(300);
-            $j(this).children('video').css({'display': 'none'});
-            $j(this).children('.mobile-lede').css({'display': 'none'});
-            $j(this).addClass('hidden');
+            $j('#video-wrapper').css({
+                'z-index': '10'
+                // 'padding-top' : videoPadding + 'px'
+            });
+
+            $j('.video-player').eq(0).css({
+                'display': 'block',
+                'height' : videoPadding - 15 + 'px'
+            });
+            // $j(this).children('video').css({'display': 'none'});
+            // $j(this).children('.mobile-lede').css({'display': 'none'});
+            // $j(this).addClass('hidden');
         });
     }
+}
+
+function playVideo() {
+
+    $j('#video-wrapper .video-player').css({
+
+    });
+
 }

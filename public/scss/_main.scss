@@ -207,13 +207,10 @@ figcaption {
 	min-width: 1360px;
 	min-height: 765px;
 	display: block;
-	@include backface-visibility(hidden);
+	// @include backface-visibility(hidden);
 
 	#main & {
-		// position: absolute;
-		// top: 0;
-		// z-index: 1000;
-		margin-top: -50%;
+		top: 3%;
 	}
 }
 
