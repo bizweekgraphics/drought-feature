@@ -40,9 +40,6 @@ hr {
 	margin:0 0 3em;
 }
 
-[data-hijacking="off"] .cd-section > div {
-	opacity: 1;
-}
 
 /*HEADER*/
 
@@ -55,7 +52,7 @@ hr {
 	border-bottom: none;
 	position: fixed;
 	top: 121px;
-	z-index: 1;
+	z-index: 11;
 	width: 100%;
 
 	@include transition(all 0.3s ease-out 0.1s);
