@@ -7,8 +7,6 @@ var top = $j(window).scrollTop();
 var currentSlideImg;
 var numSlideImgs;
 
-var currentSlideHeight;
-
 $j(document).ready(function(){
 
     currentSlide = 0;
@@ -36,8 +34,6 @@ $j(document).ready(function(){
     //set up hash change
     $j(window).on('hashchange', getCurrentUrl);
     getCurrentUrl();
-
-    getCurrentSlideHeight();
 
     SafariOnly();
 
@@ -85,8 +81,6 @@ function getCurrentUrl() {
     currentSlidePage();
     
     $j('html, body').scrollTop(0);
-
-    getCurrentSlideHeight();
 }
 
 
@@ -98,15 +92,8 @@ function resizeWidth() {
     $j('.slide').width(windowWidth);
 
     $j('.slide').each(function(i) {
-        // $j(this).css('left', (i * windowWidth) + 'px');
-        $j(this).css('left', 0 + 'px');
+        $j(this).css('left', (i * windowWidth) + 'px');
     });
-}
-
-function getCurrentSlideHeight() {
-    currentSlideHeight = $j('.slide-selected').height();
-
-    $j('.slider').css({'height': currentSlideHeight + 'px'});
 }
 
 
@@ -154,8 +141,6 @@ function previous() {
 //add selected class to current slide
 function currentSlidePage() {
 
-    var slideWidth = $j('#wrapper-slides').width();
-
     // updateSlideAd(currentSlide)
 
     if (currentSlide === -1 && window.location.hash[0] === undefined) {
@@ -167,42 +152,36 @@ function currentSlidePage() {
         
     }
 
-    // var slidePos = (currentSlide / numSlides) * 100;
-
-    var slidePos = (currentSlide / numSlides) * slideWidth;
-    console.log('what is the slide position ? :' + slidePos);
+    var slidePos = (currentSlide / numSlides) * 100;
 
     //removed selected class from all slides and circles
     $j('.slide').removeClass('slide-selected');
-    // $j('#subnav a').removeClass('active');
+    $j('#subnav a').removeClass('active');
 
     $j('.slide').each(function(i) {
         if($j(this).index() === currentSlide) {
             $j(this).addClass('slide-selected');
+            $j('#subnav a').eq(currentSlide).addClass('active');
 
         }
 
-        if($j(this).index() === currentSlide-1) {
-            // $j('#subnav a').eq(currentSlide-1).addClass('active');
-
-        }
+        // if($j(this).index() === currentSlide-1) {
+            
+        // }
     });
 
     //update slide css
     $j('#wrapper-slides').css({
         'transition': 'top 400ms, left 400ms, transform 400ms',
-        // 'transform': 'translate(-' + slidePos + '%, 0%)',
+        'transform': 'translate3d(-' + slidePos + '%, 0%, 0px) scale3d(1, 1, 1)',
         '-webkit-transition': 'top 400ms, left 400ms, -webkit-transform 400ms',
-        // '-webkit-transform': '-webkit-translate(-' + slidePos + '%, 0%)',
+        '-webkit-transform': '-webkit-translate3d(-' + slidePos + '%, 0%, 0px) scale3d(1, 1, 1)',
         '-moz-transition': 'top 400ms, left 400ms, -moz-transform 400ms',
-        // '-moz-transform': '-moz-translate(-' + slidePos + '%, 0%)',
+        '-moz-transform': '-moz-translate3d(-' + slidePos + '%, 0%, 0px) scale3d(1, 1, 1)',
         '-ms-transition': 'top 400ms, left 400ms, -o-transform 400ms',
-        // '-ms-transform': 'translate3d(-' + slidePos + '%, 0%)',
+        '-ms-transform': 'translate3d(-' + slidePos + '%, 0%, 0px) scale3d(1, 1, 1)',
         '-o-transition': 'top 400ms, left 400ms, -o-transform 400ms',
-        // '-o-transform': 'translate(-' + slidePos + '%, 0%)'
-
-        'left' : '-' + slidePos + 'px',
-        'top' : '0'
+        '-o-transform': 'translate3d(-' + slidePos + '%, 0%, 0px) scale3d(1, 1, 1)'
     });
 }
 
@@ -218,55 +197,60 @@ function SafariOnly() {
     {
 
 
-        console.log("safari... ");
-
-        // NEED TO REMOVE THIS Later
-
         $j('.video-section').addClass('icon');
 
-        $j(".video-section").on('click', function(){
+        $j(".video-section").on('click', function(e){
 
-             $j(this).children('.video-player').fadeIn(300);
-             $j(this).children('video').fadeOut(300);
-             $j(this).addClass('hidden');
+
+
+            $j(this).children('.video-player').fadeIn(300);
+            $j(this).children('video').css({'display': 'none'});
+            $j(this).children('.mobile-lede').css({'display': 'none'});
+            $j(this).addClass('hidden');
+
         });
 
+        
 
-
+        
         if(navigator.userAgent.match(/(iPhone|iPod)/i)) {
 
-            console.log("mini me " + uagent);
-
-        $j('.video-section').removeClass('icon');
-
-        $j(".video-section").off('click', function(){
-
-            $j(this).children('.video-player').fadeIn(300);
-            $j(this).children('video').fadeOut(300);
-            $j(this).addClass('hidden');
-        });
-
-
+            
+            $j('.video-section').removeClass('icon');
 
             $j('.safari-fix').css({'display': 'block'});
 
-        } else if(navigator.userAgent.match(/(iP)/i)) {
+            $j(".video-section").off('click', function(){
 
 
-             console.log("BIG mini me " + uagent);
 
-        $j('.video-section').removeClass('icon');
-
-        $j(".video-section").off('click', function(){
-
-            $j(this).children('.video-player').fadeIn(300);
-            $j(this).children('video').fadeOut(300);
-            $j(this).addClass('hidden');
-        });
-
+                $j(this).children('.video-player').fadeIn(300);
+                $j(this).children('video').css({'display': 'none'});
+                $j(this).children('.mobile-lede').css({'display': 'none'});
+                $j(this).addClass('hidden');
+            });
 
             $j('.video-section .video-player').css({'display': 'none'});
+
+        } else if(navigator.userAgent.match(/(iPad)/i)) {
+
+            
+
+            $j('.video-section').removeClass('icon');
+
             $j('.safari-fix').css({'display': 'block'});
+
+            $j(".video-section").off('click', function(){
+
+
+
+                $j(this).children('.video-player').fadeIn(300);
+                $j(this).children('video').css({'display': 'none'});
+                $j(this).children('.mobile-lede').css({'display': 'none'});
+                $j(this).addClass('hidden');
+            });
+
+            $j('.video-section .video-player').css({'display': 'none'});
 
         }
 
@@ -277,9 +261,15 @@ function SafariOnly() {
 
         $j(".video-section").on('click', function(){
 
-             $j(this).children('.video-player').fadeIn(300);
-             $j(this).children('video').fadeOut(300);
-             $j(this).addClass('hidden');
+
+            console.log('vwhaaaatt?!');
+
+            // console.log('9823490237 what are the video name ' + _V_.players);
+
+            $j(this).children('.video-player').fadeIn(300);
+            $j(this).children('video').css({'display': 'none'});
+            $j(this).children('.mobile-lede').css({'display': 'none'});
+            $j(this).addClass('hidden');
         });
     }
 }

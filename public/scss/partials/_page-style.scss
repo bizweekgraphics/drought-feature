@@ -8,28 +8,22 @@
     position: relative;
 }
 
-#wrapper-slides {
-	@include clearfix;
-	width: 100%;
-}
-
 #slider {
 	width: 100%;
 	overflow: hidden;
-	// @include transform(translate3d(0,0,0) scale3d(1,1,1)); 
-	// @include transform-style(preserve-3d);
+	@include transform(translate(0,0) scale3d(1,1,1)); 
+	@include transform-style(preserve-3d);
 }
 
 .slide {
 	display: block;
     width: 100%;
-    // opacity: 0;
+    opacity: 0;
 
-    // @include transform(translate3d(0,0,0));
-	// @include transform-style(preserve-3d);
-    // position: absolute;
-    // top: 0;
-    float: left;
+    @include transform(translate3d(0,0,0));
+	@include transform-style(preserve-3d);
+    position: absolute;
+    top: 0;
 
 	h2 {
 		font: 70px/68px $druk;
@@ -101,8 +95,7 @@
 
 .photo-byline {
 	margin-top: 10px;
-	font-family: 'HaasText', 'Helvetica';
-	font-size: 16px;
+	font: 1em/ 1.53em 'HaasText', 'Helvetica';
 	color: #888;
 }
 
