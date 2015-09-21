@@ -200,30 +200,30 @@ function SafariOnly() {
     {
 
 
-        $j('.video-section').addClass('icon');
+        // $j('.video-section').addClass('icon');
 
-        $j(".video-section").on('click', function(e){
+        // $j(".video-section").on('click', function(e){
 
 
 
-            $j(this).children('.video-player').fadeIn(300);
-            $j(this).children('video').css({'display': 'none'});
-            $j(this).children('.mobile-lede').css({'display': 'none'});
-            $j(this).addClass('hidden');
+        //     $j(this).children('.video-player').fadeIn(300);
+        //     $j(this).children('video').css({'display': 'none'});
+        //     $j(this).children('.mobile-lede').css({'display': 'none'});
+        //     $j(this).addClass('hidden');
 
-        });
-
-        
+        // });
 
         
-        if(navigator.userAgent.match(/(iPhone|iPod)/i)) {
+
+        
+        // if(navigator.userAgent.match(/(iPhone|iPod)/i)) {
 
             
-            $j('.video-section').removeClass('icon');
+        //     $j('.video-section').removeClass('icon');
 
-            $j('.safari-fix').css({'display': 'block'});
+        //     $j('.safari-fix').css({'display': 'block'});
 
-            $j(".video-section").off('click', function(){
+        //     $j(".video-section").off('click', function(){
 
 
 
@@ -231,34 +231,34 @@ function SafariOnly() {
                 // $j(this).children('video').css({'display': 'none'});
                 // $j(this).children('.mobile-lede').css({'display': 'none'});
                 // $j(this).addClass('hidden');
-            });
+        //     });
 
-            $j('.video-section .video-player').css({'display': 'none'});
+        //     $j('.video-section .video-player').css({'display': 'none'});
 
-        } else if(navigator.userAgent.match(/(iPad)/i)) {
+        // } else if(navigator.userAgent.match(/(iPad)/i)) {
 
             
 
-            $j('.video-section').removeClass('icon');
+        //     $j('.video-section').removeClass('icon');
 
-            $j('.safari-fix').css({'display': 'block'});
+        //     $j('.safari-fix').css({'display': 'block'});
 
-            $j(".video-section").off('click', function(){
-
-
-
-                // $j(this).children('.video-player').fadeIn(300);
-                // $j(this).children('video').css({'display': 'none'});
-                // $j(this).children('.mobile-lede').css({'display': 'none'});
-                // $j(this).addClass('hidden');
-            });
-
-            $j('.video-section .video-player').css({'display': 'none'});
-
-        }
+        //     $j(".video-section").off('click', function(){
 
 
-    } else {
+
+        //         // $j(this).children('.video-player').fadeIn(300);
+        //         // $j(this).children('video').css({'display': 'none'});
+        //         // $j(this).children('.mobile-lede').css({'display': 'none'});
+        //         // $j(this).addClass('hidden');
+        //     });
+
+        //     $j('.video-section .video-player').css({'display': 'none'});
+
+        // }
+
+
+    // } else {
 
         $j('.video-section').addClass('icon');
 
