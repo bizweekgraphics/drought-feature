@@ -196,8 +196,8 @@ function SafariOnly() {
     var videoPadding = $j('.video-section video').height();
 
 
-    if(/safari/.test(uagent) && !/chrome/.test(uagent))
-    {
+    // if(/safari/.test(uagent) && !/chrome/.test(uagent))
+    // {
 
 
         // $j('.video-section').addClass('icon');
@@ -282,7 +282,7 @@ function SafariOnly() {
             // $j(this).children('.mobile-lede').css({'display': 'none'});
             // $j(this).addClass('hidden');
         });
-    }
+    // }
 }
 
 function playVideo() {
