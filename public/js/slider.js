@@ -43,6 +43,8 @@ $j(document).ready(function(){
 
     setInterval(stickySubNav, 60);
 
+    setInterval(playVideo, 60);
+
     terminalCalls();
 
 });
@@ -302,7 +304,7 @@ function playVideo() {
             
             videoPlayerId = $j(this).attr('id');
             videoPlayerName = videoPlayerId.substring(17);
-            var s = $j(this).height()/2);
+            var s = $j(this).height()/2;
 
             console.log("what is the video player id? " + videoPlayerId);
             console.log("YOUR NAME " + videoPlayerName);
