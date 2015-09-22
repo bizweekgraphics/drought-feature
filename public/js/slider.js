@@ -277,10 +277,10 @@ function SafariOnly() {
             });
 
             $j('#video-wrapper .video-player').eq(0).css({
-                'display': 'block'
-                // 'height' : videoPadding - 15 + 'px'
+                'display': 'block',
+                'height' : videoPadding - 15 + 'px'
             });
-            // $j(this).children('video').css({'display': 'none'});
+            $j('.video-section video').css({'display': 'none'});
             // $j(this).children('.mobile-lede').css({'display': 'none'});
             $j('.video-section video').addClass('hidden');
         });
