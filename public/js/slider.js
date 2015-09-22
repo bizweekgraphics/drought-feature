@@ -313,7 +313,7 @@ function playVideo() {
 
                 console.log('playyyyyying');
 
-                _V_.players['videoPlayerName'].play()
+                _V_.players['"' + videoPlayerName + '"'].play()
 
             } else {
 
