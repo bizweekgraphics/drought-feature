@@ -282,7 +282,7 @@ function SafariOnly() {
             });
             // $j(this).children('video').css({'display': 'none'});
             // $j(this).children('.mobile-lede').css({'display': 'none'});
-            // $j(this).addClass('hidden');
+            $j('.video-section video').addClass('hidden');
         });
     // }
 }
