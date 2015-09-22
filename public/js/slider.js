@@ -39,6 +39,8 @@ $j(document).ready(function(){
 
     setInterval(stickySubNav, 60);
 
+    terminalCalls();
+
 });
 
  
@@ -295,7 +297,7 @@ function playVideo() {
 
 
 function terminalCalls() {
-    if (isTerminal){ 
-                $("a").attr("href", "#");
+    if (isTerminal) { 
+        $j('a').attr('href', '#');
     }
 }
