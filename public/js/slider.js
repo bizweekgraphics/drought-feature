@@ -294,24 +294,36 @@ function SafariOnly() {
 }
 
 function playVideo() {
+    scrollPos = $j(document).scrollTop();
+
 
     $j('#video-wrapper .video-js').each(function(i) {
         if($j(this).index() === currentSlide-1) {
             
-            videoPlayerId = $j(this).eq(i).attr('id');
+            videoPlayerId = $j(this).attr('id');
+            videoPlayerName = videoPlayerId.substring(17);
 
             console.log("what is the video player id? " + videoPlayerId);
-            // $j(this).addClass('slide-selected');
-            // $j('#subnav a').eq(currentSlide).addClass('active');
+            console.log("YOUR NAME " + videoPlayerName);
 
+
+            if (scrollPos <= $j(this).height()/2) {
+
+                console.log('my scroll position ' + scrollPos);
+
+                console.log('playyyyyying');
+
+                _V_.players['videoPlayerName'].play()
+
+            } else {
+
+                console.log('pause');
+
+                _V_.players['videoPlayerName'].pause()
+            }
         }
     });
 
-    // videoPlayerId = $j('#video-wrapper .video-js').eq(0).attr('id');
-
-    // $j('#video-wrapper .video-player').css({
-
-    // });
 
 }
 
@@ -319,5 +331,6 @@ function playVideo() {
 function terminalCalls() {
     if (isTerminal) { 
         $j('a').attr('href', '#');
+        $j('.video-player').css({'display': 'none'});
     }
 }
