@@ -228,7 +228,6 @@ figcaption strong {
 /* line 197, ../scss/_main.scss */
 .video-player {
   background-color: #000;
-  width: 100%;
   display: none;
   position: relative;
   left: 0;
@@ -238,7 +237,7 @@ figcaption strong {
 }
 /* line 207, ../scss/_main.scss */
 #video-wrapper .video-player {
-  width: 100vw;
+  width: 100%;
   position: relative;
   background-color: #000;
   display: block;
