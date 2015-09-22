@@ -323,7 +323,7 @@ function playVideo() {
                 _V_.players[videoPlayerName].pause();
             }
 
-        } else ($j(this).index() !== currentSlide-1) {
+        } else if ($j(this).index() !== currentSlide-1) {
 
             _V_.players[videoPlayerName].pause();
 
