@@ -309,17 +309,17 @@ function playVideo() {
 
             if (scrollPos <= $j(this).height()/2) {
 
-                console.log('my scroll position ' + scrollPos);
+                console.log('my scroll position ' + scrollPos + " || hieght of this video " + $j(this).height()/2));
 
                 console.log('playyyyyying');
 
-                _V_.players['"' + videoPlayerName + '"'].play()
+                _V_.players[videoPlayerName].play();
 
-            } else {
+            } else if (scrollPos > $j(this).height()/2) {
 
                 console.log('pause');
 
-                _V_.players['videoPlayerName'].pause()
+                _V_.players[videoPlayerName].pause();
             }
         }
     });
