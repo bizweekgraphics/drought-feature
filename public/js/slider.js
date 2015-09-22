@@ -278,7 +278,7 @@ function SafariOnly() {
 
             $j('#video-wrapper .video-player').eq(0).css({
                 'display': 'block',
-                'height' : videoPadding - 15 + 'px'
+                'height' : videoPadding - 30 + 'px'
             });
             $j('.video-section video').css({'display': 'none'});
             // $j(this).children('.mobile-lede').css({'display': 'none'});
