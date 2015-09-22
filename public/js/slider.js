@@ -302,16 +302,15 @@ function playVideo() {
             
             videoPlayerId = $j(this).attr('id');
             videoPlayerName = videoPlayerId.substring(17);
+            var s = $j(this).height()/2);
 
             console.log("what is the video player id? " + videoPlayerId);
             console.log("YOUR NAME " + videoPlayerName);
 
 
-            if (scrollPos <= $j(this).height()/2) {
+            if (scrollPos <= s) {
 
-                console.log('my scroll position ' + scrollPos + " || hieght of this video " + $j(this).height()/2));
-
-                console.log('playyyyyying');
+                console.log('PLAYINGGG >> my scroll position ' + scrollPos + " || hieght of this video " + s);
 
                 _V_.players[videoPlayerName].play();
 
@@ -321,11 +320,22 @@ function playVideo() {
 
                 _V_.players[videoPlayerName].pause();
             }
+
+        } else ($j(this).index() !== currentSlide-1) {
+
+            _V_.players[videoPlayerName].pause();
+
+            $j('#video-wrapper .video-player').css({
+                'display': 'none',
+                'height' : 0
+            });
         }
     });
 
 
 }
+
+
 
 
 function terminalCalls() {
