@@ -23,35 +23,30 @@
   font-stretch: normal;
 }
 /* line 1, ../scss/_main.scss */
-body {
-  /*background-color: #f1e6d2;*/
-}
-
-/* line 5, ../scss/_main.scss */
 .lede, p {
   width: 50%;
   max-width: 640px;
 }
 
-/* line 10, ../scss/_main.scss */
+/* line 6, ../scss/_main.scss */
 p {
   margin: 30px auto;
   font: 18px/29px "TiemposTextWeb-Regular", "Georgia", "Cambria", "Times New Roman", "Times", serif;
   color: #3c3c3c;
 }
-/* line 16, ../scss/_main.scss */
+/* line 12, ../scss/_main.scss */
 p em {
   font-family: "TiemposTextWeb-RegularItalic", "Georgia", "Cambria", "Times New Roman", "Times", serif;
   font-style: normal;
 }
 
-/* line 22, ../scss/_main.scss */
+/* line 18, ../scss/_main.scss */
 .lede, .parallax_wrapper {
   position: relative;
   z-index: 2;
 }
 
-/* line 27, ../scss/_main.scss */
+/* line 23, ../scss/_main.scss */
 .body-copy {
   z-index: 40;
   min-height: 100%;
@@ -60,7 +55,7 @@ p em {
   position: relative;
 }
 
-/* line 35, ../scss/_main.scss */
+/* line 31, ../scss/_main.scss */
 hr {
   height: 1px;
   background-color: #000;
@@ -70,7 +65,7 @@ hr {
 }
 
 /*HEADER*/
-/* line 46, ../scss/_main.scss */
+/* line 42, ../scss/_main.scss */
 #subheader {
   background-color: rgba(0, 0, 0, 0.7);
   font: 16px "HaasDisplayBold", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
@@ -86,35 +81,35 @@ hr {
   -moz-transition: all 0.3s ease-out 0.1s;
   transition: all 0.3s ease-out 0.1s;
 }
-/* line 60, ../scss/_main.scss */
+/* line 56, ../scss/_main.scss */
 #subheader a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.7);
   margin: 0 10px;
 }
-/* line 65, ../scss/_main.scss */
+/* line 61, ../scss/_main.scss */
 #subheader a:hover {
   color: white;
 }
-/* line 70, ../scss/_main.scss */
+/* line 66, ../scss/_main.scss */
 #subheader .active {
   color: white;
 }
 
-/* line 79, ../scss/_main.scss */
+/* line 75, ../scss/_main.scss */
 .hero-text {
   width: 60%;
   margin: 0 auto;
   padding-top: 350px;
   text-align: center;
 }
-/* line 85, ../scss/_main.scss */
+/* line 81, ../scss/_main.scss */
 .hero-text h1 {
   font: 100px/100px "Druk Web", sans-serif;
   margin: 20px 0;
   color: #ffffff;
 }
-/* line 91, ../scss/_main.scss */
+/* line 87, ../scss/_main.scss */
 .hero-text .dek {
   text-align: center;
   padding: 0;
@@ -122,69 +117,69 @@ hr {
 }
 
 /*IMAGES*/
-/* line 100, ../scss/_main.scss */
+/* line 96, ../scss/_main.scss */
 figure {
   width: 100%;
 }
-/* line 103, ../scss/_main.scss */
+/* line 99, ../scss/_main.scss */
 figure img {
   max-width: 100%;
 }
 
-/* line 108, ../scss/_main.scss */
+/* line 104, ../scss/_main.scss */
 figcaption {
   color: #4d4d4d;
   margin: 0.5em 0.5em 2em;
   font: 0.925em "NHaasGroteskDSPro-55Rg", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
-/* line 113, ../scss/_main.scss */
+/* line 109, ../scss/_main.scss */
 figcaption strong {
   font-family: "NHaasGroteskDSPro-75Bd", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-weight: 600;
 }
 
-/* line 119, ../scss/_main.scss */
+/* line 115, ../scss/_main.scss */
 .img_full {
   width: 90%;
   max-width: 1280px;
   margin: 0 auto 3rem;
 }
-/* line 124, ../scss/_main.scss */
+/* line 120, ../scss/_main.scss */
 .img_full img {
   max-width: 80%;
   display: block;
   margin: 0 auto;
 }
 
-/* line 131, ../scss/_main.scss */
+/* line 127, ../scss/_main.scss */
 .img_left, .img_right {
   max-width: 450px;
   width: auto;
 }
 
-/* line 136, ../scss/_main.scss */
+/* line 132, ../scss/_main.scss */
 .img_left {
   float: left;
   margin: 0.5rem 5rem 3rem 7%;
 }
 
-/* line 141, ../scss/_main.scss */
+/* line 137, ../scss/_main.scss */
 .img_right {
   float: right;
   margin: 0.5rem 7% 3rem 5rem;
 }
 
-/* line 147, ../scss/_main.scss */
+/* line 143, ../scss/_main.scss */
 .slide_img img {
   width: 100%;
 }
 
-/* line 152, ../scss/_main.scss */
+/* line 148, ../scss/_main.scss */
 .photo-info {
   border-bottom: 1px solid #ddd;
 }
 
-/* line 156, ../scss/_main.scss */
+/* line 152, ../scss/_main.scss */
 .credit {
   font-size: 0.6em;
   margin-top: 3px;
@@ -193,19 +188,19 @@ figcaption strong {
 }
 
 /*VIDEO*/
-/* line 164, ../scss/_main.scss */
+/* line 160, ../scss/_main.scss */
 .video-section {
   margin-bottom: 1.5em;
 }
-/* line 168, ../scss/_main.scss */
+/* line 164, ../scss/_main.scss */
 .video-section video {
   min-width: 100%;
 }
-/* line 173, ../scss/_main.scss */
+/* line 169, ../scss/_main.scss */
 .video-section.icon {
   position: relative;
 }
-/* line 176, ../scss/_main.scss */
+/* line 172, ../scss/_main.scss */
 .video-section.icon:after {
   content: 'a';
   font-family: 'Bloomberg';
@@ -220,12 +215,12 @@ figcaption strong {
   transform: translateX(-50%);
   font-size: 8em;
 }
-/* line 192, ../scss/_main.scss */
+/* line 188, ../scss/_main.scss */
 .video-section.hidden:after {
   display: none;
 }
 
-/* line 197, ../scss/_main.scss */
+/* line 193, ../scss/_main.scss */
 .video-player {
   background-color: #000;
   display: none;
@@ -235,7 +230,7 @@ figcaption strong {
   padding-top: 0;
   top: 30px;
 }
-/* line 207, ../scss/_main.scss */
+/* line 203, ../scss/_main.scss */
 #video-wrapper .video-player {
   width: 100%;
   position: relative;
@@ -244,7 +239,7 @@ figcaption strong {
   margin-bottom: 1.5em;
 }
 
-/* line 216, ../scss/_main.scss */
+/* line 212, ../scss/_main.scss */
 .video-js {
   margin: 0 auto;
   min-width: 1360px;
@@ -252,17 +247,17 @@ figcaption strong {
   display: block;
 }
 
-/* line 228, ../scss/_main.scss */
+/* line 224, ../scss/_main.scss */
 .player .video-wrapper .video {
   height: auto !important;
 }
 
-/* line 232, ../scss/_main.scss */
+/* line 228, ../scss/_main.scss */
 .player .target {
   height: auto !important;
 }
 
-/* line 236, ../scss/_main.scss */
+/* line 232, ../scss/_main.scss */
 .safari-fix {
   display: none;
   background-color: #000;
@@ -273,13 +268,13 @@ figcaption strong {
 }
 
 /*PHOTO GALLERY*/
-/* line 247, ../scss/_main.scss */
+/* line 243, ../scss/_main.scss */
 .photo-gallery img {
   width: 100%;
   height: 100vh;
 }
 
-/* line 252, ../scss/_main.scss */
+/* line 248, ../scss/_main.scss */
 .ad-unit {
   width: 300px;
   height: 250px;
@@ -288,22 +283,22 @@ figcaption strong {
   margin: 20px;
 }
 
-/* line 260, ../scss/_main.scss */
+/* line 256, ../scss/_main.scss */
 .sidebar .clearboth {
   margin-bottom: 10px;
 }
 
-/* line 264, ../scss/_main.scss */
+/* line 260, ../scss/_main.scss */
 .terminal a {
   text-decoration: none;
 }
 
-/* line 268, ../scss/_main.scss */
+/* line 264, ../scss/_main.scss */
 .terminal .video-player {
   display: none;
 }
 
-/* line 272, ../scss/_main.scss */
+/* line 268, ../scss/_main.scss */
 .terminal .video-section:after {
   content: none;
 }
