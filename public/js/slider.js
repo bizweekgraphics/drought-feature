@@ -272,23 +272,21 @@ function SafariOnly() {
 
         $j(".video-section").on('click', function(){
 
-
-            console.log('vwhaaaatt?!');
-
-            // console.log('9823490237 what are the video name ' + _V_.players);
+            var videoIndex = $j('.slide-selected').indexOf() - 1;
 
             $j('#video-wrapper').css({
                 'z-index': '10'
-                // 'padding-top' : videoPadding + 'px'
             });
 
-            $j('#video-wrapper .video-player').eq(0).css({
+            $j('#video-wrapper .video-player').eq(videoIndex).css({
                 'display': 'block',
                 'height' : videoPadding + 39 + 'px'
             });
             $j('.video-section video').css({'display': 'none'});
             // $j(this).children('.mobile-lede').css({'display': 'none'});
             $j('.video-section video').addClass('hidden');
+
+            console.log('slide index is ' + )
 
             playVideo();
         });

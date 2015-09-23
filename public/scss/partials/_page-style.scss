@@ -4,23 +4,6 @@
     position: relative;
 }
 
-#video-wrapper  {
-	width: 100%;
-	position: relative;
-	background-color: $black;
-	display: block;
-
-	.video-player {
-		display: none;
-		position: relative;
-		left: 0;
-		min-height: 800px;
-		padding-top: 0;
-		top: 30px;
-	}
-
-}
-
 #slider {
 	width: 100%;
 	overflow: hidden;
