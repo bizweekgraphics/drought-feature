@@ -272,21 +272,21 @@ function SafariOnly() {
 
         $j(".video-section").on('click', function(){
 
-            var videoIndex = $j('.slide-selected').indexOf() - 1;
+            // var videoIndex = $j('.slide-selected').index() - 1;
 
             $j('#video-wrapper').css({
                 'z-index': '10'
             });
 
-            $j('#video-wrapper .video-player').eq(videoIndex).css({
-                'display': 'block',
-                'height' : videoPadding + 39 + 'px'
-            });
+            // $j('#video-wrapper .video-player').eq(videoIndex).css({
+            //     'display': 'block',
+            //     'height' : videoPadding + 39 + 'px'
+            // });
             $j('.video-section video').css({'display': 'none'});
             // $j(this).children('.mobile-lede').css({'display': 'none'});
             $j('.video-section video').addClass('hidden');
 
-            console.log('slide index is ' + )
+            console.log('slide index is ' + videoPadding );
 
             playVideo();
         });
@@ -299,6 +299,11 @@ function playVideo() {
 
     $j('#video-wrapper .video-js').each(function(i) {
         if($j(this).index() === currentSlide-1) {
+
+            $j(this).css({
+                'display': 'block',
+                'height' : videoPadding + 39 + 'px'
+            });
             
             videoPlayerId = $j(this).attr('id');
             videoPlayerName = videoPlayerId.substring(17);
