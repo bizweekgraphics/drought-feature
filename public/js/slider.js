@@ -259,7 +259,7 @@ function playVideo() {
             console.log('this is ' + $j(this)  + " || s is " + s + " || video player id  " + videoPlayerId + " || YOUR ID IS " + videoPlayerName);
 
             // show this video
-            $j(this).css({
+            $j(this).eq(i).css({
                 'display': 'block',
                 'height' : videoPadding + 39 + 'px'
             });
