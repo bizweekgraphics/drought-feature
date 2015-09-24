@@ -241,7 +241,7 @@ function playVideo() {
         // If the current video index equals 1 less than the slide's index
         if($j(this).index() === currentSlide-1) {
 
-            console.log ('Show current video');
+            console.log ('Show current video | My index is ' + $j(this).index() );
 
             console.log('Video wrapper height is ' + videoPadding );
 
