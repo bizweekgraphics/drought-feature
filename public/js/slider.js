@@ -201,7 +201,6 @@ function scrollToTop() {
 
 function SafariOnly() {
     var uagent = navigator.userAgent.toLowerCase();
-    var videoPadding = $j('.video-section video').height();
 
 
     // Show icon player
@@ -224,8 +223,6 @@ function SafariOnly() {
         // Hide current slide's play button
         $j('.slide-selected video').addClass('hidden');
 
-        console.log('slide index is ' + videoPadding );
-
         playVideo();
     });
     // }
@@ -235,6 +232,9 @@ function playVideo() {
     // Current scroll position
     scrollPos = $j(document).scrollTop();
 
+    // Video Height
+    var videoPadding = $j('.video-section video').height();
+
     // Finding the video player name
     $j('#video-wrapper .video-js').each(function(i) {
 
@@ -242,6 +242,8 @@ function playVideo() {
         if($j(this).index() === currentSlide-1) {
 
             console.log ('Show current video');
+
+            console.log('Video wrapper height is ' + videoPadding );
 
             // show this video
             $j(this).css({
