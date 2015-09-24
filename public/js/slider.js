@@ -43,7 +43,7 @@ $j(document).ready(function(){
 
     setInterval(stickySubNav, 60);
 
-    setInterval(playVideo, 60);
+    // setInterval(playVideo, 60);
 
     terminalCalls();
 
@@ -204,40 +204,30 @@ function SafariOnly() {
     var videoPadding = $j('.video-section video').height();
 
 
-// When user is on the selected screen
-//when user click on the play button
-//
+    // Show icon player
+    $j('.video-section').addClass('icon');
 
-        // Show icon player
-        $j('.video-section').addClass('icon');
+    //user on click
+    $j(".video-section").on('click', function(){
 
-        //user on click
-        $j(".video-section").on('click', function(){
-
-            // var videoIndex = $j('.slide-selected').index() - 1;
-
-            // Raise #video-wrapper z-index above the slides
-            $j('#video-wrapper').css({
-                'z-index': '10'
-            });
-
-            // $j('#video-wrapper .video-player').eq(videoIndex).css({
-            //     'display': 'block',
-            //     'height' : videoPadding + 39 + 'px'
-            // });
-
-            // Hide current slide's looping video
-            $j('.slide-selected video').css({'display': 'none'});
-
-            // $j(this).children('.mobile-lede').css({'display': 'none'});
-
-            // Hide current slide's play button
-            $j('.slide-selected video').addClass('hidden');
-
-            console.log('slide index is ' + videoPadding );
-
-            playVideo();
+        // Raise #video-wrapper z-index above the slides and add margin bottom
+        $j('#video-wrapper').css({
+            'z-index': '10',
+            'margin-bottom' : '1.5em'
         });
+
+
+        // Hide current slide's looping video
+        $j('.slide-selected video').css({'display': 'none'});
+
+
+        // Hide current slide's play button
+        $j('.slide-selected video').addClass('hidden');
+
+        console.log('slide index is ' + videoPadding );
+
+        playVideo();
+    });
     // }
 }
 
@@ -253,9 +243,7 @@ function playVideo() {
 
             console.log ('Show current video');
 
-            // show this video.
-            $j('#video-wrapper').css({'margin-bottom' : '1.5em'});
-
+            // show this video
             $j(this).css({
                 'display': 'block',
                 'height' : videoPadding + 39 + 'px'
