@@ -204,76 +204,19 @@ function SafariOnly() {
     var videoPadding = $j('.video-section video').height();
 
 
-    // if(/safari/.test(uagent) && !/chrome/.test(uagent))
-    // {
+// When user is on the selected screen
+//when user click on the play button
+//
 
-
-        // $j('.video-section').addClass('icon');
-
-        // $j(".video-section").on('click', function(e){
-
-
-
-        //     $j(this).children('.video-player').fadeIn(300);
-        //     $j(this).children('video').css({'display': 'none'});
-        //     $j(this).children('.mobile-lede').css({'display': 'none'});
-        //     $j(this).addClass('hidden');
-
-        // });
-
-        
-
-        
-        // if(navigator.userAgent.match(/(iPhone|iPod)/i)) {
-
-            
-        //     $j('.video-section').removeClass('icon');
-
-        //     $j('.safari-fix').css({'display': 'block'});
-
-        //     $j(".video-section").off('click', function(){
-
-
-
-                // $j(this).children('.video-player').fadeIn(300);
-                // $j(this).children('video').css({'display': 'none'});
-                // $j(this).children('.mobile-lede').css({'display': 'none'});
-                // $j(this).addClass('hidden');
-        //     });
-
-        //     $j('.video-section .video-player').css({'display': 'none'});
-
-        // } else if(navigator.userAgent.match(/(iPad)/i)) {
-
-            
-
-        //     $j('.video-section').removeClass('icon');
-
-        //     $j('.safari-fix').css({'display': 'block'});
-
-        //     $j(".video-section").off('click', function(){
-
-
-
-        //         // $j(this).children('.video-player').fadeIn(300);
-        //         // $j(this).children('video').css({'display': 'none'});
-        //         // $j(this).children('.mobile-lede').css({'display': 'none'});
-        //         // $j(this).addClass('hidden');
-        //     });
-
-        //     $j('.video-section .video-player').css({'display': 'none'});
-
-        // }
-
-
-    // } else {
-
+        // Show icon player
         $j('.video-section').addClass('icon');
 
+        //user on click
         $j(".video-section").on('click', function(){
 
             // var videoIndex = $j('.slide-selected').index() - 1;
 
+            // Raise #video-wrapper z-index above the slides
             $j('#video-wrapper').css({
                 'z-index': '10'
             });
@@ -282,13 +225,18 @@ function SafariOnly() {
             //     'display': 'block',
             //     'height' : videoPadding + 39 + 'px'
             // });
-            $j('.video-section video').css({'display': 'none'});
+
+            // Hide current slide's looping video
+            $j('.slide-selected video').css({'display': 'none'});
+
             // $j(this).children('.mobile-lede').css({'display': 'none'});
-            $j('.video-section video').addClass('hidden');
+
+            // Hide current slide's play button
+            $j('.slide-selected video').addClass('hidden');
 
             console.log('slide index is ' + videoPadding );
 
-            playVideo();
+            // playVideo();
         });
     // }
 }
