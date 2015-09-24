@@ -189,12 +189,13 @@ figcaption {
 	  display: none;
 	}
 }
-#video-wrapper & {
+
+#video-wrapper {
 	width: 100%;
 	position: relative;
 	background-color: $black;
 	display: block;
-	margin-bottom: 1.5em; {
+	margin-bottom: 1.5em;
 
 	.video-player {
 		background-color: $black;
