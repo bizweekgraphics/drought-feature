@@ -245,15 +245,24 @@ function playVideo() {
 
             console.log('Video wrapper height is ' + videoPadding );
 
+            
+            // Current Video Player's #id
+            videoPlayerId = $j(this).attr('id');
+
+            // Remove bb-player-video- to acquire the video player number
+            videoPlayerName = videoPlayerId.substring(17);
+
+            //T The height of this container
+            var s = $j(this).height();
+
+
+            console.log('this is ' + $j(this)  + " || s is " + s + " || video player id  " + videoPlayerId + " || YOUR ID IS " + videoPlayerName);
+
             // show this video
             $j(this).css({
                 'display': 'block',
                 'height' : videoPadding + 39 + 'px'
             });
-            
-            // videoPlayerId = $j(this).attr('id');
-            // videoPlayerName = videoPlayerId.substring(17);
-            // var s = $j(this).height();
 
             // console.log("what is the video player id? " + videoPlayerId);
             // console.log("YOUR NAME " + videoPlayerName);
