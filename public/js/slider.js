@@ -9,7 +9,7 @@ var numSlideImgs;
 var numVideos;
 var videoPlayerId;
 var videoPlayerName;
-var videoIds = [];
+var videoIds;
 
 $j(document).ready(function(){
 
@@ -37,12 +37,20 @@ $j(document).ready(function(){
     resizeWidth();
 
     //save video ids
-    for(prop in _V_.players) {
-        videoIds.push({
-            id: prop,
+    videoIds = [
+        {
+            id: '5exZYlPaQ5uWXR4zYKHlXA',
             played: false
-        });
-    }
+        },
+        {
+            id: 'k3UQUgZAQietxJuBcf5A',
+            played: false
+        },
+        {
+            id: 'bZtWqfWRKmRuNauoi21Q',
+            played: false
+        }
+    ];
 
     //set up hash change
     $j(window).on('hashchange', getCurrentUrl);
@@ -193,19 +201,18 @@ function currentSlidePage() {
     }
 
     $j('#video-wrapper .video-player').css({
-        'display': 'none',
-        'height' : 0
+        display: 'none'/*,
+        'height' : 0*/
     });
 
+    //if a video has already been played
     if(videoIds[currentSlide-1].played) {
         //show video
         $j('#video-wrapper .video-player').eq(currentSlide-1).css({
             display: 'block'
         });
         //auto play current video
-        _V_.players[videoIds[currentSlide-1]].pause();
-    } else {
-        //show loop
+        _V_.players[videoIds[currentSlide-1].id].play();
     }
 
     //removed selected class from all slides and circles
