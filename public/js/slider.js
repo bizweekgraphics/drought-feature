@@ -197,12 +197,13 @@ function currentSlidePage() {
         'height' : 0
     });
 
-    console.log(videoIds);
     if(videoIds[currentSlide-1].played) {
         //show video
         $j('#video-wrapper .video-player').eq(currentSlide-1).css({
             display: 'block'
         });
+        //auto play current video
+        _V_.players[videoIds[currentSlide-1]].pause();
     } else {
         //show loop
     }
