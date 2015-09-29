@@ -239,7 +239,7 @@ function playVideo() {
     $j('#video-wrapper .video-js').each(function(i) {
 
         // If the current video index equals 1 less than the slide's index
-        if($j(this).index() === currentSlide-1) {
+        if(i === currentSlide) {
 
             console.log ('Show current video | My index is ' + $j(this).index() );
 
@@ -256,10 +256,10 @@ function playVideo() {
             var s = $j(this).height();
 
 
-            console.log('this is ' + $j(this)  + " || s is " + s + " || video player id  " + videoPlayerId + " || YOUR ID IS " + videoPlayerName);
+            console.log(" || s is " + s + " || video player id  " + videoPlayerId + " || YOUR ID IS " + videoPlayerName);
 
             // show this video
-            $j(this).eq(i).css({
+            $j(this).css({
                 'display': 'block',
                 'height' : videoPadding + 39 + 'px'
             });
