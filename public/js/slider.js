@@ -9,6 +9,7 @@ var numSlideImgs;
 var numVideos;
 var videoPlayerId;
 var videoPlayerName;
+var videoIds = [];
 
 $j(document).ready(function(){
 
@@ -34,6 +35,14 @@ $j(document).ready(function(){
     //set up correct screen sizing
     $j(window).resize(resizeWidth);
     resizeWidth();
+
+    //save video ids
+    for(prop in _V_.players) {
+        videoIds.push({
+            id: prop,
+            played: false
+        });
+    }
 
     //set up hash change
     $j(window).on('hashchange', getCurrentUrl);
@@ -117,7 +126,6 @@ function arrows() {
     } else if (currentSlide > 0 && currentSlide < (numSlides-1)) {
         $j('#nav-next').css('display', 'block');
         $j('#nav-previous').css('display', 'block');
-
     }
 }
 
@@ -157,10 +165,47 @@ function currentSlidePage() {
         
     } else {
         arrows();
-        
     }
 
     var slidePos = (currentSlide / numSlides) * 100;
+
+
+
+    /*
+
+    page loads
+    current slide shows video loop
+    user clicks loop, loop hides, corresponding video plays
+    navigate to another slide
+    pause all videos
+    hide all video-player divs
+    find new current video-player
+    if the new video has not been played before, show loop
+    if the new video has been played before, show video
+
+    */
+
+
+
+    //pause all videos when changing sections
+    for(prop in _V_.players) {
+        _V_.players[prop].pause();
+    }
+
+    $j('#video-wrapper .video-player').css({
+        'display': 'none',
+        'height' : 0
+    });
+
+    console.log(videoIds);
+    if(videoIds[currentSlide-1].played) {
+        //show video
+        $j('#video-wrapper .video-player').eq(currentSlide-1).css({
+            display: 'block'
+        });
+    } else {
+        //show loop
+    }
 
     //removed selected class from all slides and circles
     $j('.slide').removeClass('slide-selected');
@@ -239,59 +284,41 @@ function playVideo() {
     $j('#video-wrapper .video-js').each(function(i) {
 
         // If the current video index equals 1 less than the slide's index
-        if(i === currentSlide) {
+        if(i === currentSlide-1) {
 
-            console.log ('Show current video | My index is ' + $j(this).index() );
-
-            console.log('Video wrapper height is ' + videoPadding );
-
-            
             // Current Video Player's #id
-            videoPlayerId = $j(this).attr('id');
+            /*videoPlayerId = $j(this).attr('id');
+            console.log(videoPlayerId)*/
 
             // Remove bb-player-video- to acquire the video player number
-            videoPlayerName = videoPlayerId.substring(17);
-
+            videoPlayerName = videoIds[i].id;//videoPlayerId.substring(17);
+            videoIds[i].played = true;
             //T The height of this container
             var s = $j(this).height();
 
-
-            console.log(" || s is " + s + " || video player id  " + videoPlayerId + " || YOUR ID IS " + videoPlayerName);
-
             // show this video
+            $j('#video-wrapper .video-player').eq(i).css({
+                display: 'block'
+            });
             $j(this).css({
-                'display': 'block',
-                'height' : videoPadding + 39 + 'px'
+                display: 'block',
+                height : videoPadding + 39 + 'px'
             });
 
-            // console.log("what is the video player id? " + videoPlayerId);
-            // console.log("YOUR NAME " + videoPlayerName);
+            if (scrollPos <= s) {
 
+                console.log('PLAYINGGG :: my scroll position ' + scrollPos + ' || hieght of this video ' + s);
 
-            // if (scrollPos <= s) {
+                _V_.players[videoPlayerName].play();
 
-            //     console.log('PLAYINGGG :: my scroll position ' + scrollPos + ' || hieght of this video ' + s);
+            } else if (scrollPos > s) {
 
-            //     _V_.players[videoPlayerName].play();
+                console.log('pause');
 
-            // } else if (scrollPos > s) {
-
-            //     console.log('pause');
-
-            //     _V_.players[videoPlayerName].pause();
-            // }
+                _V_.players[videoPlayerName].pause();
+            }
 
         // If the current video index DOES NOT EQUAL 1 less than the slide's index
-        } else if ($j(this).index() !== currentSlide-1) {
-
-            console.log("pause?");
-
-            // _V_.players[videoPlayerName].pause();
-
-            // $j('#video-wrapper .video-player').css({
-            //     'display': 'none',
-            //     'height' : 0
-            // });
         }
     });
 
